@@ -1,0 +1,612 @@
+\documentclass[12pt]{article}
+
+% set indentation
+\usepackage{parskip}
+%\setlength{\parindent}{16mm}
+
+% for the figures
+\usepackage{graphicx}
+\usepackage{extsizes}
+\usepackage{wrapfig}
+% change margins
+\usepackage{geometry}
+\geometry{left=20mm,right=20mm,top=15mm,bottom=15mm}
+
+% for the reference
+\usepackage[sort]{natbib}
+\usepackage{url}
+\usepackage{placeins}
+%\usepackage{authblk}
+\usepackage{setspace}
+\usepackage{tabularx}
+%\doublespacing
+% in preamble
+%\usepackage{movie15}
+% in documenet
+
+\usepackage{authblk}
+\usepackage{graphicx}
+\usepackage{mathptmx} 
+% My packages
+\usepackage{parskip}
+\usepackage{relsize, threeparttable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{booktabs}
+\usepackage{numprint}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{multirow}
+\setlength{\parindent}{16mm}
+% for the figures
+\usepackage{graphicx}
+\usepackage{placeins}
+% for the reference
+\usepackage{natbib}
+\usepackage{floatrow}
+\usepackage{chngcntr}
+\usepackage{url}
+\usepackage{dutchcal}
+%\usepackage{boondox-calo}
+\usepackage{upgreek}
+%\date{}
+\usepackage{color,soul}
+
+\setlength{\parindent}{0pt}
+\definecolor{lightgrey}{rgb}{0.925, 0.925, 0.925}
+\sethlcolor{lightgrey}
+
+
+
+
+
+
+
+\title{Decomposition of changes over time in the value of a life annuity}
+\author{Jes\'us-Adri\'an Alvarez and Andr\'es Villegas}
+%\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+
+\section{Introduction}\label{introduction}
+
+Demographers are interested in understanding how changes in mortality translate to changes in life expectancy. There is a long-standing tradition among actuaries and financial managers aim to measure and hedge the impact of changes in interest rates in the portfolio of financial instruments.
+
+These two, apparently disconnected, lines of research are centred around the same aim: the measurement the dynamics of financial instruments due to changes in the fundamental forces of change.
+
+We build on previous research and go one step further, we examine the stochastic change in the annuities. 
+ 
+ 
+ \citet{leser1955variations} first derived a closed-form expression to the the elasticity of life expectancy based on proportional changes in $\mu(x,t)$. \citet{demetrius1974demographic} and \citet{keyfitz1977difference} named this measure as the `Entropy of life expectancy' and denoted it by the letter $H$. They proposed several applications in evolutionary biology and demography. Since then, the entropy has been used in a wide range of studies ranging from mortality in humans to the comparison of senescence across species \citep{Keyfitz1985,,Vaupel1986,fernandez2015entropy,colchero2016emergence,Aburto2019,Aburto2020}.
+
+
+\citet{Haberman2011} extend the concept of Entropy to the case of a life annuity assuming proportional changes in  $\mu(x,t)$. Along the same lines, \cite{Tsai2011,Tsai2013a,Lin2020} derive formulations for constant and proportional changes in $mu(x,t)$ in the context of longevity immunization.
+
+
+
+There is a long-standing tradition of financial and actuarial studies focusing on the sensitivity of life expectancy to changes in the force of interest.
+
+
+
+
+Historically, there has been significant interest among demographers in understanding how changes in mortality rates translate into changes in life expectancy. Key among these contributions are Vaupel (1986) and Vaupel and Canudas-Romo (2003) who extend the seminal work of Keyfitz (1985) on the Entropy of the survival function.
+
+At the same time, there has been an interest among actuaries in understanding the sensitivity of life annuities (and other life contingent products) to changes in mortality rates and interest rates. This is typically done in the context of so-called ``immunisation'' strategies for managing longevity risks (see Tsai and Jiang (2011), Lin and Tsai (2013),Tsai and Chung (2013), Lin and Tsai (2014), Zhou and Li (2019) and Lin and Tsai (2020)).
+
+With the exemption of the work of Haberman, Khalaf-Allah, and Verrall (2011), who extend the demographic concept of Entropy to the context of life annuities, these two strands of literature have remained disconnected. This work aims to fill this gap by providing the connections between the immunisation literature and the related work carried out by mathematical demographers. From an actuarial perspective, this could be useful in devising better longevity risk management strategies by leveraging on well-known formal demography results.
+
+\section{Preliminaries}\label{preliminaries}
+
+All of the quantities expressed here vary over time $t$. According to standard actuarial notation, we define the following quantities:
+
+\begin{itemize}
+
+\item
+\(\mu(x,t)\) is the force of mortality at age \(x\).
+
+\item
+$_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$ is the probability of surviving from age \(x\) to age \(x+s\).
+
+
+\item
+\(\delta(s,t)\) is the force of interest at time $s$.
+
+\item 
+
+${v}(s,t)=e^{-\int_{0}^{s}\delta(s,t)dy}$ is the interest discount factor, where $s$ is the length of the interval from issue to death.
+
+\end{itemize}
+
+As in \citet{Vaupel2003}, the derivative with respect to time $t$ is denoted by adding a point on top of the function of interest. For example, time derivatives for the forces of mortality and interest are expressed as:
+
+\begin{equation} \label{eq:mudot}
+\dot{\mu}(x,t)\equiv\frac{\partial\mu(x,t)}{\partial t},
+\end{equation}
+
+and 
+
+\begin{equation} \label{eq:mudot}
+\dot{\delta}(s,t)\equiv\frac{\partial\delta(s,t)}{\partial t}.
+\end{equation}
+
+
+
+The rate of mortality improvement (or progress in reducing mortality) is defined as
+
+
+\begin{equation} \label{eq:rho}
+\rho(x,t)=-\frac{\frac{\mu(x,t)}{\partial t}}{\mu(x,t)} = - \frac{\dot{\mu}(x,t)}{\mu(x,t)}.
+\end{equation}
+
+Similarly, the improvement in interest rates over time is captured by 
+
+
+\begin{equation} \label{eq:phi}
+\upvarphi(s,t)=-\frac{\frac{\upvarphi(s,t)}{\partial t}}{\upvarphi(s,t)} = - \frac{\dot{\upvarphi}(s,t)}{\upvarphi(s,t)}.
+\end{equation}
+
+
+The actuarial present value of a life annuity at age $x$ evaluated at time $t$ is given by
+
+\begin{equation}\label{eq:Annuity}
+\bar{a}_x(t) = \int_0^\infty {}_sp_x(t) {v}(s,t)ds = \int_0^\infty {}_sE_x(t) ds,
+\end{equation}
+
+where ${}_sE_x(t)={}_sp_x(t) {v}(s,t)$. Thus, a life annuity deferred $s$ years starting to be paid at age $x+s$ is expressed as
+
+
+\begin{equation}\label{eq:DefAnnuity}
+{}_s|\bar{a}_x(t) = {}_sE_x(t) \bar{a}_{x+s}(t)
+\end{equation}
+
+
+\section{Dynamics of a life annuity}
+
+
+We are interested on measuring the change in $\bar{a}_x(t)$ with respect to time. To achieve this aim, we first need to unravel how $\bar{a}_x(t)$ reacts to changes in the forces of mortality and interest. We denote the \textit{entropy of a life annuity}\footnote{\cite{Tsai2011,Tsai2013a,Lin2020} denoted this measure as \textit{mortality duration}. We reserve the term duration to denote changes in $\bar{a}_x(t)$ with respect to interest rates.} to the measure that captures changes in $\bar{a}_x(t)$ with respect to $\mu(x,t)$. Formally, it is defined as 
+
+\begin{equation}\label{eq:EntropyGeneral}
+{H}_{x}(t) = \frac{ \frac{\partial \bar{a}_x(t) }{\partial \mu(x,t)}}{\bar{a}_x(t)}.
+\end{equation}
+
+The measure that captures the sensitivity of $\bar{a}_x(t)$ to changes in interest rates is named \textit{duration} and it is the foundation of interest rates immunization. For a life annuity, it is defined as the relative derivative of the annuity factor with respect to changes in the force of interest \citep{Milevsky2012}:
+
+
+\begin{equation}\label{eq:EntropyGeneral}
+{D}_{x}(t) = \frac{ \frac{\partial \bar{a}_x(t) }{\partial \delta(s,t)}}{\bar{a}_x(t)}.
+\end{equation}
+
+
+The entropy and the duration of a life annuity can be measured either by assuming constant or proportional changes in $\mu(x,t)$ and $\delta(s,t)$. In the following section we revise formulations for both cases. 
+
+
+
+\subsection{Changes in $\bar{a}_x(t)$ with respect to $\mu(x,t)$}
+
+The entropy of a life annuity is denoted by ${H}^{c}_{x}(t)$ when changes in $\mu(x,t)$ are held constant and by ${H}^{p}_{x}(t)$ when  changes are performed proportional. Based on the results developed by \citet{Tsai2013a} and \citet{Lin2020}, when $\mu(x,t)$ is changed constantly to $\mu(x,t)+\gamma$ such that $\gamma$ is a small number (see proof in the Appendix), the entropy of $\bar{a}_x(t)$ becomes
+
+\begin{equation}\label{eq:EntropyC}
+{H}^{c}_{x}(t) = \frac{\int_{0}^\infty s {}_sp_x(t) {v}(s,t) ds}{\bar{a}_x(t)}=\frac{{h}^{c}_{x}(t)}{\bar{a}_x(t)},
+\end{equation}
+
+where ${h}^{c}_{x}(t)=\int_{0}^\infty s {}_sp_x(t) {v}(s,t) ds$. The term ${h}^{c}_{x}(t)$ is expressed in absolute (monetary) terms, whereas the entropy ${H}^{c}_{x}(t)$ is dimensionless because it does not depend on the absolute value of $\bar{a}_x(t)$. Greater values for ${H}^{c}_{x}(t)$ indicate that $\bar{a}_x(t)$ is highly sensitive to constant changes in $\mu(x,t)$.
+
+
+In two separate articles, \citet{Haberman2011} and \citet{Tsai2013a} show that when changes in $\mu(x,t)$ are assumed to be proportional to a small number $\gamma$ such that $\mu(x,t)(1+\gamma)$, the entropy of $\bar{a}_x(t)$ becomes
+
+\begin{equation} \label{eq:EntropyP}
+{H}^{p}_{x}(t) = -\frac{ \int_{0}^{\infty}{}_sp_x(t)\ln[{}_sp_x(t)] {v}(s,t) ds}{\int_0^\infty {}_sp_x(t) {v}(s,t) ds}.
+\end{equation}
+
+
+Alternatively, we show (see proof in the Appendix) that Equation \ref{eq:EntropyP} can be expressed as
+
+\begin{equation} \label{eq:EntropyP2}
+\begin{split}
+{H}^{p}_{x}(t) &=  \frac{\int_0^\infty \mu(x+s,t)   {}_sE_x(t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} =  \frac{{h}^{p}_{x}(t)}{\bar{a}_x(t)}, 
+\end{split}
+\end{equation}
+
+where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_sE_x(t) \bar{a}_{x+s}(t) ds$. Analogous to the case where changes are assumed to be constant (i.e. ${H}^{c}_{x}(t)$ and ${h}^{c}_{x}(t)$), quantities ${H}^{c}_{x}(t)$ and ${h}^{c}_{x}(t)$ are expressed in absolute and relative terms respectively. The formulations shown in this section are closely related to the ones developed in the mortality immunization literature \citep{Tsai2013a,Lin2020}.
+
+ 
+ 
+
+\subsection{Changes in $\bar{a}_x(t)$ with respect to $\delta(s,t)$}
+
+ Similar to the entropy, changes in $\bar{a}_x(t)$ with respect to $\delta(s,t)$ can be assumed to be constant or proportional to a specific quantity. The duration assuming constant changes in $\delta(s,t)$ is denoted by ${D}^{c}_{x}(t)$, whereas ${D}^{p}_{x}(t)$ refers to the duration assuming proportional changes. For ${D}^{c}_{x}(t)$, we have that:
+
+
+
+\begin{equation}\label{eq:DurationC}
+\begin{split}
+{D}^{c}_x(t)&= \frac{\int_0^\infty s {}_sp_x(t) {v}(s,t)ds}{\bar{a}_x(t)} \\
+&= \frac{{d}^{c}_x(t)}{\bar{a}_x(t)},
+\end{split}
+\end{equation}
+
+where ${d}^{c}_x(t)=\int_0^\infty s {}_sp_x(t) {v}(s,t)ds$. Thus, assuming constant changes in $\delta(s,t)$ results into common types of duration known in finance as dollar duration, ${d}^{c}_x(t)$, and modified duration, ${D}^{c}_x(t)$ (see \citet{Milevsky2012} and \citet{Tsai2013a} for further details). It is worth noting that Equations \ref{eq:EntropyC} and \ref{eq:DurationC} are identical, which means that constant (parallel) changes in the force of mortality have essentially the same effect as parallel changes in the force of interest.
+
+
+
+
+We now formulate duration of a life annuity by assuming proportional changes in $\delta(s,t)$ (see proof in the Appendix) as 
+
+
+\begin{equation}\label{eq:DurationP}
+\begin{split}
+{D}^{p}_{x}(t) &= -\frac{\int_0^\infty {}_sp_x(t) v(s,t) \ln(v(s,t))ds}{\bar{a}_x(t)} \\
+\end{split}
+\end{equation}
+
+Equation \ref{eq:DurationP} can also be re-expressed as:
+
+\begin{equation}\label{eq:DurationP2}
+\begin{split}
+{D}^{p}_{x}(t) &= \frac{\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t)ds} {\bar{a}_x(t)} \\
+                 &= \frac{{d}^{c}_{x}(t)}{\bar{a}_x(t)}.
+\end{split}
+\end{equation}
+
+
+where ${d}^{c}_{x}(t)=\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t) ds$. 
+
+
+
+\section{Time derivative of $\bar{a}_x(t)$}
+
+We take the derivative of $\bar{a}_x(t)$ with respect to the time variable $t$, $\dot{\bar{a}} _x(t)=\frac{\partial \bar{a}_x(t)}{\partial t}$, such that
+
+\begin{equation}\label{eq:TimeDeriv}
+\begin{split}
+\dot{\bar{a}} _x(t) &= \int_0^\infty {}_s\dot{p}_x(t) v(s,t)ds +\int_0^\infty {}_sp_x(t) \dot{v}(s,t)ds.\\
+\end{split}
+\end{equation}
+
+
+To develop a closed-form solution for Equation \ref{eq:TimeDeriv} we consider the general case where $_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$ and ${v}(s,t)=e^{-\int_{0}^{s}\delta(s,t)dy}$. However, it is also common to assume that ${}_sp_x(t)=e^{-\mu(t)s}$ and $v(s,t)=e^{-\delta(t)s}$. We analyse both cases and find the corresponding equations for $\dot{\bar{a}} _x(t)$.
+
+
+
+
+\subsection{Case 1: Assuming ${}_sp_x(t)=e^{-\mu(t)s}$ and $v(s,t)e^{-\delta(t)s}$}
+
+
+We analyse separately each of the two terms in the right side of Equation \ref{eq:TimeDeriv}. Let us first focus on the first term:
+
+\begin{equation}\label{eq:TimeDerivC1}
+\begin{split}
+\int_0^\infty {}_s\dot{p}_x(t) v(s,t)ds &=\int_0^\infty \frac{\partial \left[ e^{-\mu(t)s} \right]}{\partial t}v(s,t)da \\
+&=-\int_0^\infty s \dot{\mu}(t) e^{-\mu(t)s} v(s,t)da \\
+&=-  \dot{\mu}(t)  h^{c}_x(t) \\
+&=\rho(t) \mu(t)  h^{c}_x(t) 
+\end{split}
+\end{equation}
+
+
+For the second them we have
+
+\begin{equation}\label{eq:TimeDerivC2}
+\begin{split}
+\int_0^\infty {}_s{p}_x(t) \dot{v}(s,t)ds &=\int_0^\infty {}_s{p}_x(t) \frac{\partial \left[ e^{-\delta(t)s} \right]}{\partial t}da \\
+&=-\int_0^\infty s \dot{\delta}(t) {}_s{p}_x(t) e^{-\delta(t)s} da \\
+&=-  \dot{\delta}(t)  d^{c}_x(t) \\
+&= \upvarphi(t)\delta(t)  d^{c}_x(t).
+\end{split}
+\end{equation}
+
+Substituting Equations \ref{eq:TimeDerivC1} and \ref{eq:TimeDerivC2} in Equation \ref{eq:TimeDeriv} results into: \textbf{[WE CAN ALSO EXPRESS IT IN TERMS OF $\rho$ and $\upvarphi$ BUT I DON'T KNOW WHAT IS MORE CONVENIENT.]}
+
+\begin{equation}\label{eq:TimeDerivC}
+\begin{split}
+\dot{\bar{a}} _x(t)&=-[\dot{\mu}(t)  h^{c}_x(t)+\dot{\delta}(t)  d^{c}_x(t)].
+\end{split}
+\end{equation}
+
+Alternatively,
+
+
+\begin{equation}\label{eq:TimeDerivCA}
+\begin{split}
+\acute{\bar{a}}_x(t) =\frac{\dot{\bar{a}}_x(t)}{\bar{a}_x(t)}= -[\dot{\mu}(t) H^{c}_x(t)+\dot{\delta}(t)  D^{c}_x(t)],
+\end{split}
+\end{equation}
+
+
+
+\textbf{GIVEN THAT $H^{c}_x(t)=D^{c}_x(t)$, IT CAN BE $\acute{\bar{a}}_x(t) = -D^{c}_x(t)[\dot{\mu}(t) H^{c}_x(t)+\dot{\delta}(t)]$, SO JUST WITH THE (MODIFIED?) DURATION IS ENOUGH. WE HAVE TO CHECK EMPIRICALLY IF THIS IS THE CASE}
+
+\subsection{Case 2: Assuming that $_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$ and  ${v}(s,t)=e^{-\int_{0}^{s}\delta(s,t)dy}$}
+
+Once again we focus on the first part of the right hand side of Equation \ref{eq:TimeDeriv}
+
+\begin{equation}\label{eq:TimeDerivP1}
+\begin{split}
+\int_0^\infty {}_s\dot{p}_x(t) v(s,t) &= \int_0^\infty   v(s,t) e^{-\int_0^{s}\dot{\mu}(x+y,t)dy}ds\\
+&= -\int_0^\infty   v(s,t) {}_sp_x(t)\int_0^{s}\dot{\mu}(x+y,t)dyds\\
+&= -\int_0^\infty  \dot{\mu}(x+s,t) \int_s^{\infty} v(y,t) {}_yp_x(t) dyds\\
+&= - \int_0^\infty \dot{\mu}(x+s,t)   {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
+&= \int_0^\infty \rho(x+s,t) \mu(x+s,t)   {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
+\end{split}
+\end{equation}
+
+
+The second part equals
+
+\begin{equation}\label{eq:TimeDerivP2}
+\begin{split}
+\int_0^\infty {}_sp_x(t) \dot{v}(s,t)ds &= \int_0^\infty {}_sp_x(t)  e^{-\int_0^{s}\dot{\delta}(y,t)dy}ds\\
+&= -\int_0^\infty {}_sp_x(t) v(s,t) \int_0^{s}\dot{\delta}(y,t)dy ds\\
+&= -\int_0^\infty  \dot{\delta}(s,t)\int_s^{\infty} {}_yp_x(t) v(y,t) dy ds\\
+&= \int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
+\end{split}
+\end{equation}
+
+
+Therefore, $\dot{\bar{a}} _x(t)$ can be expressed as
+
+
+\begin{equation}\label{eq:TimeDerivP3}
+\begin{split}
+\dot{\bar{a}}_{x}(t) &=  \int_0^\infty \rho(s,t) \mu(s,t){}_sE_x(t) \bar{a}_{x+s}(t) ds +\int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_sE_x(t) \bar{a}_{x+s}(t) ds\\
+&= \int_0^\infty \rho(s,t) {}_sM_x(t)  ds +\int_0^\infty  \upvarphi(s,t) {}_sW_x(t)  ds
+\end{split}
+\end{equation}
+
+Thus, we can express \ref{eq:TimeDeriv} in terms of the duration and entropy
+
+
+\begin{equation}\label{eq:TimeDerivP}
+\begin{split}
+ \acute{\bar{a}}_x(t) = \frac{\dot{\bar{a}}_x(t)}{\bar{a}_x(t)}  = \bar{\rho}(t){H}^{p}_x(t)+\bar{\upvarphi}(t){D}^{p}_x(t),
+\end{split}
+\end{equation}
+
+where $\bar{\rho}(t)= \frac{\int_0^\infty \rho(s,t) {}_sM_x(t)  ds}{\int_0^\infty  {}_sM_x(t)ds}$ and 
+$\bar{\upvarphi}(t)= \frac{\int_0^\infty \upvarphi(s,t) {}_sW_x(t)  ds}{\int_0^\infty {}_sW_x(t) ds}$ are the average paces of change in mortality and interest rates respectively. Functions $\bar{\rho}(t)$ and $\bar{\upvarphi}(t)$ capture the stochastic change in the forces of mortality and interest whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ capure the sensitivity due to changes in $\mu$ and $\delta$.
+
+
+
+
+\section{Recap of formulations}
+
+
+  Equations \ref{eq:TimeDerivP} and \ref{eq:TimeDerivC} and suggest that to understand financial and longevity risk (at least to the first order) it suffices to use the Entropy and the Modified Duration. This means that we can leverage the demographic results regarding the Entropy of a life table to better understand the impact of longevity risk.
+
+
+\textbf{[Here I am planning to add a table with all the formulas]}
+
+
+
+\section{Work to be done}\label{work-to-be-done}
+
+A plan for the rest of project could look as follows:
+
+
+\subsection{Step 1 (Mostly done): Develop a decomposition of the time
+change of a life
+annuity}
+
+This has been developed in Equation \eqref{eq:AnnuityDecomposition}.
+Some additional things we may want to do:
+
+\begin{itemize}
+
+\item
+  Extend this to include an age decomposition as well.
+\item
+  Analyse further the behaviour of the covariance term to understand is
+  meaning.
+\end{itemize}
+
+
+\subsection{Step 2: Historical decomposition of changes in
+annuities}
+
+We should apply \eqref{eq:AnnuityDecomposition} to historical life table
+and interest rate data to do the decomposition of the time changes in
+annuity values. This would help understand the contribution of longevity
+and financial risk to annuities. This could be similar to Table 1 in
+Vaupel and Canudas-Romo (2003)
+
+
+\subsection{Step 3: Projection of the decomposition of changes in
+annuities}
+
+We can use mortality projection and interest rate projection models to
+project the possible future decomposition of changes in annuity rates to
+see the relative future importance of financial risk and longevity risk.
+
+A useful by-product of this would be deriving close-form expression for
+\(\overline{\rho(t)}\) for common mortality models. For this, the work
+in Haberman and Renshaw (2012) and Hunt and Villegas (2017) formulating
+mortality models in term of mortality improvement could be useful. This
+would also link our work with the work of Zhou and Li (2019).
+
+
+\subsection{Step 4: Extend the decomposition methods to a
+variability/heterogeneity
+measure}
+
+Steps 1 to 3 focus on the decomposition of life expectancy which is a
+central tendency measure. This is of interest for annuity and pension
+providers. However, for individuals, it could be the variability in
+their life spans which matters the most (see Milevsky (2019)). Thus, we
+could extend the decomposition methods to a variability measure along
+the lines of the work in Aburto et al. (2020). \textbf{{[}This could be
+a follow up paper{]}}
+
+
+
+
+
+\newpage
+
+\bibliographystyle{apalike}
+%\bibliography{/Users/Jesus/Documents/Papers/BibTex/Proposal}
+%\bibliography{C:/Users/jmartinez/OneDrive - Syddansk Universitet/Papers/BibTeX/Proposal.bib}
+
+\bibliography{library}
+
+\newpage
+
+\appendix
+\section{Appendix}
+
+
+
+\subsection{Entropy with constant changes in $\mu(x+s,t)$}
+
+To measure constant changes we make $\delta(s,t)+\gamma$, then
+
+\begin{equation}\label{eq:EntropyConst1}
+\begin{split}
+\bar{a}_{x}(t) &= \int_0^\infty{v}(s,t) e^{-\int_{0}^{s} [\mu(x+y,t)+\gamma]dy}ds \\
+&= \int_0^\infty {v}(s,t)e^{-\int_{0}^{s} \mu(x+y,t)dy} e^{-\gamma s}ds \\
+&= \int_0^\infty {v}(s,t){}_sp_x(t) e^{-\gamma s}ds \\
+\end{split}
+\end{equation}
+
+We expand $e^{-\gamma s}$ to $1-\gamma s+\frac{\gamma^2}{2} s^{2} +...$, so that
+
+
+\begin{equation}\label{eq:EntropyConst2}
+\begin{split}
+\bar{a}_{x}(t) &= \int_0^\infty {}_sp_x(t) {v}(s,t)[1-\gamma s+\frac{\gamma^2}{2} s^{2} +...]ds
+\end{split}
+\end{equation}
+
+We take the derivative $\bar{a}_{x}(t)$ with respect to $\gamma$ and evaluate $\gamma=0$
+
+
+\begin{equation}\label{eq:EntropyConst3}
+\begin{split}
+{H}^{c}_x(t)&=-\frac{1}{\bar{a}_x(t)}\frac{\partial \bar{a}_x(t)}{\partial \gamma} \bigg\rvert_{\gamma=0}\\
+&= \frac{\int_0^\infty s {}_sp_x(t) {v}(s,t)ds}{\bar{a}_x(t)} \\
+&= \frac{{h}^{c}_x(t)}{\bar{a}_x(t)},
+\end{split}
+\end{equation}
+
+where ${h}^{c}_x(t)=\int_0^\infty s {}_sp_x(t) {v}(s,t)ds$
+
+
+
+\subsection{Alternative expression for ${H}^{p}_{x}(t)$}
+
+\begin{equation} \label{eq:EntropyAnnuityA1}
+\begin{split}
+{H}^{p}_{x}(t) &= -\frac{ \int_{0}^{\infty}{}_sp_x(t)\ln[{}_sp_x(t)] e^{-\int_{0}^{s}\delta(y,t)dy} ds}{\int_0^\infty {}_sp_x(t) e^{-\int_{0}^{s}\delta(y,t)dy} ds}\\
+&= \frac{\int_0^\infty {}_sp_x(t) {v}(s,t) \int_0^s \mu(x+y,t) dy\,ds}{\bar{a}_x(t)}\\
+&= \frac{\int_0^\infty  \mu(x+s,t) \int_s^\infty {}_yp_x(t) {v}(y,t)  dy\,ds}{\bar{a}_x(t)}\\
+&= \frac{\int_0^\infty  \mu(x+s,t)  {}_sp_x(t) {v}(s,t) \int_s^\infty \frac{ {}_yp_x(t) {v}(y,t)}{ {}_sp_x(t) {v}(s,t)}  dy\,ds}{\bar{a}_x(t)}\\
+&=  \frac{\int_0^\infty \mu(x+s,t)   {}_sp_x(t) {v}(s,t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
+&=  \frac{\int_0^\infty \mu(x+s,t)   {}_sE_x(t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
+&=  \frac{\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)} \\
+&=  \frac{{h}^{p}_{x}(t)}{\bar{a}_x(t)}, \\
+\end{split}
+\end{equation}
+
+where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$.
+
+
+
+\subsection{Duration with constant changes in $\delta(s,t)$}
+
+To measure constant changes we make $\delta(s,t)+\gamma$, then
+
+\begin{equation}\label{eq:DurationConst1}
+\begin{split}
+\bar{a}_{x}(t) &= \int_0^\infty {}_sp_x(t) e^{- \int_{0}^{s} [\delta(y,t)+\gamma]dy}ds \\
+&= \int_0^\infty {}_sp_x(t) e^{- \int_{0}^{s}\delta(y,t)dy}e^{-\gamma s}ds \\
+&= \int_0^\infty {}_sp_x(t) {v}(s,t)e^{-\gamma s}ds
+\end{split}
+\end{equation}
+
+We expand $e^{-\gamma s}$ to $1-\gamma s+\frac{\gamma^2}{2} s^{2} +...$, so that
+
+
+\begin{equation}\label{eq:DurationConst1}
+\begin{split}
+\bar{a}_{x}(t) &= \int_0^\infty {}_sp_x(t) {v}(s,t)[1-\gamma s+\frac{\gamma^2}{2} s^{2} +...]ds
+\end{split}
+\end{equation}
+
+We take the derivative $\bar{a}_{x}(t)$ with respect to $\gamma$ and evaluate $\gamma=0$
+
+
+\begin{equation}\label{eq:DurationConst2}
+\begin{split}
+{D}^{c}_x(t)&=-\frac{1}{\bar{a}_x(t)}\frac{\partial \bar{a}_x(t)}{\partial \gamma} \bigg\rvert_{\gamma=0}\\
+              &= \frac{\int_0^\infty s {}_sp_x(t) {v}(s,t)ds}{\bar{a}_x(t)} \\
+              &= \frac{{d}^{c}_x(t)}{\bar{a}_x(t)},
+\end{split}
+\end{equation}
+
+where ${d}^{c}_x(t)=\int_0^\infty s {}_sp_x(t) {v}(s,t)ds$
+
+
+
+\subsection{Duration with proportional changes in $\delta(s,t)$}
+
+To calculate duration with proportional changes in $\delta(s,t)$, we assume that $\gamma$ is a small number such that $\delta(s,t)(1+\gamma)$ and  ${v}(s,t)=e^{-\int_0^{s}  \delta(y,t)(1+\gamma)dy}$.
+
+
+\begin{equation}\label{eq:DurationProp1}
+\begin{split}
+\bar{a} _x(t) &= \int_0^\infty {}_sp_x(t) e^{-\int_0^{s}\delta(y,t)(1+\gamma)dy}ds \\
+&= \int_0^\infty {}_sp_x(t) e^{-\int_0^{s}\delta(y,t)dy}e^{-\int_0^{s}\delta(y,t)\gamma dy}ds \\
+&= \int_0^\infty {}_sp_x(t) v(s,t)v(s,t)^{\gamma}ds \\
+\end{split}
+\end{equation}
+
+
+We expand $v(s,t)^{\gamma}$ to $1+\ln(v(s,t)) \gamma+{\ln(v(s,t))}^2 \frac{\gamma^2}{2}+...$, so that
+
+
+\begin{equation}\label{eq:DurationProp2}
+\begin{split}
+\bar{a}_x(t) &= \int_0^\infty {}_sp_x(t) s(y,t)[1+\ln(v(s,t)) \gamma+{\ln(v(s,t))}^2 \frac{\gamma^2}{2}+...]ds\\
+\end{split}
+\end{equation}
+
+
+To calculate the duration ${D}^{p}_{x}(t)$ we take the derivate of the expression above with respect to $\gamma$ and make $\gamma=0$
+
+\begin{equation}\label{eq:DurationProp3}
+\begin{split}
+{D}^{p}_{x}(t)&=-\frac{1}{\bar{a}_x(t)}\frac{\partial \bar{a}_x(t)}{\partial \gamma} \bigg\rvert_{\gamma=0} \\
+&= -\frac{\int_0^\infty {}_sp_x(t) v(s,t) \ln(v(s,t))ds}{\bar{a}_x(t)} \\
+\end{split}
+\end{equation}
+
+
+Equation \ref{eq:DurationProp3} can be re-expressed as 
+
+
+\begin{equation}\label{eq:DurationProp4}
+\begin{split}
+{D}^{p}_{x}(t) &= -\frac{\int_0^\infty {}_sp_x(t) v(s,t) \ln(v(s,t))ds}{\bar{a}_x(t)}\\
+&= \frac{\int_0^\infty {}_sp_x(t) v(s,t) \int_0^{s} \delta(y,t)dy ds }{\bar{a}_x(t)}\\
+&= \frac{\int_0^\infty \delta(s,t)  \int_{s}^{\infty} {}_{y}p_x(t) v(y,t)dy ds }{\bar{a}_x(t)}\\
+&= \frac{\int_0^\infty \delta(s,t) {}_sp_x(t) v(s,t) \bar{a}_{x+s}(t)  ds }{\bar{a}_x(t)}\\
+&= \frac{\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
+&= \frac{{d}^{p}_{x}(t)}{\bar{a}_x(t)}.
+\end{split}
+\end{equation}
+
+
+
+where ${d}^{p}_{x}(t)=\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t) ds$.
+
+
+\end{document}
