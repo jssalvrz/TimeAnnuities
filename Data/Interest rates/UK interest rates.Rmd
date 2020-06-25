@@ -1,0 +1,49 @@
+---
+title: "UK interest rate assumption"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lubridate)
+
+
+```
+
+
+This note presents the possible options for the interest rate assumptions for the project.
+
+
+We need long-term interest rate data for a long period of time so that we can calculate annuity values. In addition we need the term structure of interest rates to be able to illustra non-parallel changes in interst rates.
+
+# Long term interest rates
+
+For the long term interest rates we can follow Willis Tower UK long-term statistics. Watson^[https://www.willistowerswatson.com/-/media/WTW/Insights/2019/08/uk-long-term-statistics-2019.pdf]. According to this we can use the yields of UK Consols^[https://en.wikipedia.org/wiki/Consol_(bond)] which are available from 1753 till 2015. From 2015 onwards we can use the yield of 20 year UK gilt. These data are available from the Bank of England^[https://www.bankofengland.co.uk/statistics/research-datasets] in the so-called "A millennium of macroeconomic data".
+
+
+```{r readData}
+lngRate <- read_csv("UKlongtermrate.csv")
+lngRate <- lngRate %>%
+  mutate(date = dmy(paste("1", lngRate$Month, lngRate$Year, sep = "-")))
+```
+
+This data is ploted below
+
+```{r plotLongTerm}
+ggplot(lngRate) + geom_line(aes(x = date, y = rate)) + ylim(0,NA) + 
+  geom_line(aes(x = date, y = smooth.spline(lngRate$rate, spar = 0.4)$y), colour = "blue")
+
+```
+
+
+# Term structure
+
+The data on the term structure of the interes rate can be obtained from https://www.bankofengland.co.uk/statistics/yield-curves. and is available from 1985
+
+
+
+
+
+
+
