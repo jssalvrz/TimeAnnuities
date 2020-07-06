@@ -55,7 +55,7 @@ ggplot(subset(a, Age == x))+
   theme_minimal()+
   ylab("Life annuity and modified duration at age 65")
 
-ggsave("Fig/Annuity.pdf", width = 6, height = 4, device = cairo_pdf)
+#ggsave("Fig/Annuity.pdf", width = 6, height = 4, device = cairo_pdf)
 
 
 
@@ -68,7 +68,7 @@ ggplot(adotD)+
   ylab("Sensitivity of a65")
 
 
-ggsave("Fig/EntvsDur.pdf", width = 6, height = 4, device = cairo_pdf)
+#ggsave("Fig/EntvsDur.pdf", width = 6, height = 4, device = cairo_pdf)
 
 
 # Derivative of ax
@@ -80,7 +80,7 @@ ggplot(adotD)+
   # coord_cartesian( xlim = c(1900,2020))+
   ylab("Relative derivative of a65 over time")
 
-ggsave("Fig/adot.pdf", width = 6, height = 4, device = cairo_pdf)
+#ggsave("Fig/adot.pdf", width = 6, height = 4, device = cairo_pdf)
 
 # Rates of change over time
 
@@ -93,7 +93,7 @@ ggplot(adotD)+
   ylab("Average phi and rho (rhobar in red and phibar in black)")
 
 
-ggsave("Fig/RhobarPhibar.pdf", width = 6, height = 4, device = cairo_pdf)
+#ggsave("Fig/RhobarPhibar.pdf", width = 6, height = 4, device = cairo_pdf)
 
 
 # Decomposition
@@ -106,7 +106,7 @@ adotD[,c(1,2,3,8,9)] %>% filter() %>%
   scale_x_continuous(expand = c(0,0))+
   scale_fill_viridis_d()+
   facet_wrap(~Sex)+
-  coord_cartesian( xlim = c(1950,2020))+
+  #coord_cartesian( xlim = c(1950,2020))+
   theme_minimal()+
   ylab("Decomposition of changes in adot over time")
 
