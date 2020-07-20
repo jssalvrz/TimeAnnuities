@@ -173,7 +173,7 @@ iRate$delta <- iRate$delta/100
 # Annual rates
 aRate <- iRate %>% group_by(Year)  %>% summarize(delta = mean(delta))
 
-aRate$sdelta <- smooth.spline(aRate$delta, spar = 0.5)$y
+aRate$sdelta <- smooth.spline(aRate$delta, spar = 0.4)$y
 
 ggplot(aRate)+
   geom_line(aes(Year,delta))+

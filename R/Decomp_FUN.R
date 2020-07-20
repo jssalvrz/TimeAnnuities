@@ -98,13 +98,12 @@ get.ax <- function(Age, mu, delta){
   Dc[is.infinite(Dc)] <- 0 ## in case of Inf values
   
   
- 
  dat <- data.frame(Age, mu, delta, fx=dx, spx=lx, vs, sEx, ax, hp, hc, dp, dc, Hp, Hc, Dp, Dc)
  return(dat)}
 
 
 # Decomposition
-get.decomp <- function(Age, ax, sEx, mu, delta, rho, phi, H,D){
+get.decomp <- function(Age, ax, sEx, mu, delta, rho, phi, H,D,Dc){
 
 # Weights
 sMx <- mu * sEx * ax
@@ -124,5 +123,5 @@ mort <- rhobar * H[1]
 int <- phibar * D[1]
 adot <- mort+int
 
-out <- data.frame(rhobar, phibar, H=H[1],D=D[1], mort, int, adot)
+out <- data.frame(ax=ax[1],rhobar, phibar, H=H[1],D=D[1],Dc=Dc[1], mort, int, adot)
 return(out)}
