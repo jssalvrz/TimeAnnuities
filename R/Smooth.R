@@ -42,10 +42,10 @@ Mx$Mx.t <- Mx$Dx.t / Mx$Nx.t
 
 # Select the country and ages
 startYear <- 1841
-endYear   <- 2016
+endYear   <- 2018
 startAge <- 0
 endAge   <- 110
-sMx <- subset(Mx, Age >=startAge & Age<=endAge & Year >= startYear & Year < endYear)
+sMx <- subset(Mx, Age >=startAge & Age<=endAge & Year >= startYear & Year <= endYear)
 
 # Great Britain
 
@@ -178,5 +178,8 @@ aRate$sdelta <- smooth.spline(aRate$delta, spar = 0.4)$y
 ggplot(aRate)+
   geom_line(aes(Year,delta))+
   geom_line(aes(Year,sdelta), colour = "red")
-save(rawMx, smx, smx.cont, sdx.cont,aRate,iRate, file="SmoothedData.RData")
+
+hmx <- smx[,c("country","Sex","Year" ,"Age","Mx" )]
+
+save(rawMx,hmx, aRate, file="SmoothedData.RData") # Only Mx
 

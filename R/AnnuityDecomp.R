@@ -1,3 +1,10 @@
+########################################################################################
+# Code to calculate time decomposition of life annuity factors
+# Historical and projected data
+# England and Wales, Both sexes
+########################################################################################
+
+
 rm(list = ls())
 library(tidyverse)
 library(data.table)
@@ -9,29 +16,72 @@ library(splines)
 library(hrbrthemes)
 library(lemon)
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-
 source("Decomp_FUN.R")
+
+
+# Load data ---------------------------------------------------------------
+# Historical data
 load("SmoothedData.RData")
 
+aRate <- aRate[,c("Year", "sdelta")]
+names(aRate)[2] <- "delta" # Smoothed delta
+aRate <- subset(aRate, Year<2020)
+# Historical data
+hmxr <- data.table(merge(hmx,aRate, by = "Year"))
+hmxr <- hmxr[,c("country", "Sex", "Year","Age", "Mx", "delta")]
 
-# Subset mortality data and merge it with interest rates
+# Projected data
+pRt     <- read_csv("C:/Users/jmartinez/OneDrive - Syddansk Universitet/TimeAnnuities/Data/Interest rates/projectedInterestRates.csv")
+pMxf   <- as.data.frame(read_csv("C:/Users/jmartinez/OneDrive - Syddansk Universitet/TimeAnnuities/Data/Mortality/projectedMortalityFemales.csv"))
+pMxm   <- as.data.frame(read_csv("C:/Users/jmartinez/OneDrive - Syddansk Universitet/TimeAnnuities/Data/Mortality/projectedMortalityMales.csv"))
+
+pRt$rate <- pRt$rate/100
+pRt <- subset(pRt, Year>=2020) # Take just forecasted rates
+pRate <- pRt %>% group_by(Year)  %>% summarize(delta = mean(rate))
+pRate <- data.frame(rbind(aRate, pRate))
+
+# Transpose databases to long format 
+pMxf <- pMxf %>% gather(Year, Mx,-X1)
+pMxm <- pMxm %>% gather(Year, Mx,-X1)
+
+pMxf$Sex <- "Females"
+pMxm$Sex <- "Males"
+
+pmx <- data.frame(rbind(pMxf, pMxm))
+names(pmx)[1] <- "Age"
+pmx$Year <- as.integer(pmx$Year)
+
+# Projected mortality and interest rates
+pmxr <- data.table(merge(pmx,pRate, by = "Year"))
+
+pmxr$country <- "England and Wales"
+
+pmxr <- pmxr[,c("country", "Sex", "Year","Age", "Mx", "delta")]
+
+smxr <- rbind(hmxr, pmxr) # This is the full dataset
+smxr <- data.table(arrange(smxr, country, Sex, Year, Age))
+# Selection of years and ages to be decomposed ----------------------------
+
 x <- 65 # Age to calculate annuities
-smxr <- data.table(merge(subset(smx, Age>=x),subset(aRate, Year>=1841 & Year<=2015, by = "Year")))
+Syear <- 1860
+Fyear <- 2070# Final year to plot graphs
+smxr <- subset(smxr, Age>=x) # Selection of interval
+
 
 # Actuarial functions, entropy and durations ------------------------------
 
-a <- smxr[, get.ax(Age = Age, mu = Mx, delta = sdelta), by = list(Sex, country, Year)]
+a <- smxr[, get.ax(Age = Age, mu = Mx, delta = delta), by = list(country,Sex, Year)]
 
 # Rates of change, rho and phi --------------------------------------------
 
-rho <- a[, get.rho(mx = mu, Year= Year, Age= Age ), by = list(country, Sex)]
-phi <- get.phi(delta = aRate$sdelta, Year = aRate$Year)
+rho <- a[, get.rho(mx = mu, Year= Year, Age= Age), by = list(country, Sex)]
+phi <- get.phi(delta = pRate$delta, Year = pRate$Year)
 
 a <- merge(a, rho, by = c("country", "Sex", "Year", "Age"))
 a <- merge(a, phi, by = c("Year"))
 
 
-# Changes over time -------------------------------------------------------
+# Decomposition of changes over time --------------------------------------
 
 adot <- subset(a)[, get.adot(ax=ax,Year=Year), by = list(country, Sex, Age)]
 names(adot)[5] <- "adotc"
@@ -42,24 +92,20 @@ adotD <- a[,get.decomp(Age=Age, ax=ax, sEx=sEx, mu=mu,
 adotD <- as.data.frame(arrange(adotD, country, Sex, Year))
 
 
-adotD$mortp <- adotD$mort / adotD$adot
-adotD$intp <- adotD$int / adotD$adot
-
-
 # Check constant vs proportional changes in interest rates ----------------
 
 
-adotD <- merge(adotD, aRate, by = "Year")
+adotD <- merge(adotD, pRate, by = "Year")
 adotD <- merge(adotD, phi, by = "Year")
 
+adotD$intc <- adotD$phibar * adotD$delta *adotD$Dc
+adotD$Dp2 <- adotD$delta *adotD$Dc # Check Duration Prop changes
 
-adotD$intc <- adotD$phibar * adotD$sdelta *adotD$Dc
-adotD$Dp2 <- adotD$sdelta *adotD$Dc
+
+
 # Figures -----------------------------------------------------------------
-brks <- seq(1860,2020,by = 20)
-labs <- c("1860", "'80", "1900","'20","'40","'60","'80","2000", "'20")
-
-
+brks <- seq(1860,2060,by = 20)
+labs <- c("1860", "'80", "1900","'20","'40","'60","'80","2000", "'20", "'40", "'60")
 
 # Annuity
 ggplot(subset(a, Age %in% c(65,70,75)))+
@@ -73,7 +119,7 @@ ggplot(subset(a, Age %in% c(65,70,75)))+
   scale_y_continuous(breaks = seq(2,20,by = 4), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(2,16), xlim=c(1850,2020))+
+# coord_cartesian(ylim = c(2,16), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
         panel.background = element_rect(fill = "grey30"),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
@@ -84,7 +130,7 @@ ggplot(subset(a, Age %in% c(65,70,75)))+
         legend.position = "none",
         panel.spacing.x = unit(1,"lines"))
 
-#ggsave("Fig/Ann.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/Proyax.pdf", width = 4, height = 2, device = cairo_pdf)
 
 # Modified duration
 ggplot(subset(a, Age %in% c(65,70,75)))+
@@ -99,7 +145,7 @@ ggplot(subset(a, Age %in% c(65,70,75)))+
   scale_y_continuous(breaks = seq(2,20,by = 4), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(2,16), xlim=c(1850,2020))+
+  coord_cartesian(ylim = c(2,16), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
         panel.background = element_rect(fill = "grey30"),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
@@ -124,7 +170,7 @@ ggplot(subset(adot, Age %in% c(65,70,75)))+
   scale_y_continuous(breaks = seq(-6,6,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-6,6), xlim=c(1850,2020))+
+  coord_cartesian(ylim = c(-6,6), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
         panel.background = element_rect(fill = "grey30"),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
@@ -136,7 +182,7 @@ ggplot(subset(adot, Age %in% c(65,70,75)))+
         panel.spacing.x = unit(1,"lines"))
 
 
-ggsave("Fig/adot.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/Proyadot.pdf", width = 4, height = 2, device = cairo_pdf)
 
 # Entropy vs Duration
 ggplot(adotD)+
@@ -148,7 +194,7 @@ ggplot(adotD)+
   scale_y_continuous(breaks = seq(0,1,by = 0.2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(0,0.8), xlim=c(1850,2020))+
+  coord_cartesian(ylim = c(0,0.8), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
         panel.background = element_rect(fill = "grey30"),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
@@ -159,46 +205,27 @@ ggplot(adotD)+
         panel.spacing.x = unit(1,"lines"))
 
 
-#ggsave("Fig/Sens75.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/ProySens65.pdf", width = 4, height = 2, device = cairo_pdf)
 
-
-# Derivative of ax
-ggplot(subset(adot, Age %in% c(65,70,75)))+
-  #geom_line(aes(Year, adot), colour = "blue")+ # decomposition
-  geom_line(aes(Year, adotc*100, group = Age), colour = "white")+ # real one
-  facet_wrap(~Sex)+
-  ylab("Change over time in life annuity factors (%)")+
-  scale_y_continuous(breaks = seq(-6,6,by = 2), expand = c(0,0))+
-  scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
-  theme_minimal()+
-  coord_cartesian(ylim = c(-6,6), xlim=c(1850,2020))+
-  theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
-        axis.ticks = element_line(size = 0.1, colour = "gray30"),
-        text = element_text(size = 7,font_rc),
-        panel.border = element_blank(),
-        aspect.ratio = .5,
-        strip.text = element_text(size = 7),
-        panel.spacing.x = unit(1,"lines"))
 
 
 
 # Rates of change over time
 
-adotD <- merge(adotD, aRate, by = "Year")
+#adotD <- merge(adotD, aRate, by = "Year")
 
 
 ggplot(adotD)+
   geom_hline(yintercept = 0, colour = "white", alpha = 0.7, size = 0.1)+
   geom_line(aes(Year, rhobar*100), colour = "#8bf7ab", size = 0.3)+
-  geom_line(aes(Year, -phibar*sdelta*1000), colour = "#f5a6ff", size = 0.3)+
+  geom_line(aes(Year, -phibar*delta*1000), colour = "#f5a6ff", size = 0.3)+
   #geom_line(aes(Year, phibar), colour = "white")+
   facet_wrap(~Sex)+
   scale_color_viridis_c()+
   scale_y_continuous(breaks = seq(-10,10,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-6,10), xlim=c(1842,2020))+
+  coord_cartesian(ylim = c(-6,10), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
         panel.background = element_rect(fill = "grey30"),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
@@ -210,11 +237,11 @@ ggplot(adotD)+
   ylab("Average change (%)")
 
 
-ggsave("Fig/Fig3.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/ProyPhiRho.pdf", width = 4, height = 2, device = cairo_pdf)
 
 
 # Decomposition
-adotD[,c(1,2,3,8,9)] %>% filter() %>% 
+adotD[,c("Year","country","Sex","mort","int")] %>% filter() %>% 
   gather(Component, Percentage, -country, -Sex, -Year) %>% 
   ggplot()+
   geom_area( aes( Year, Percentage*100, fill = Component), position = "stack")+
@@ -225,7 +252,7 @@ adotD[,c(1,2,3,8,9)] %>% filter() %>%
   scale_y_continuous(breaks = seq(-10,10,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-4,4), xlim=c(1851,2020))+
+  coord_cartesian(ylim = c(-4,4), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
         panel.background = element_rect(fill = "grey30"),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
@@ -238,7 +265,5 @@ adotD[,c(1,2,3,8,9)] %>% filter() %>%
   ylab("Contribution (%)")
 
   
-ggsave("Fig/D70.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/ProyDescomposition.pdf", width = 4, height = 2, device = cairo_pdf)
   
-#ggsave("Fig/Decomposition.pdf", width = 6, height = 4, device = cairo_pdf)
-
