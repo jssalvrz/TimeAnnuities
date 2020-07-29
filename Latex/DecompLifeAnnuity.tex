@@ -93,33 +93,44 @@
 	
 	To illustrate our method, we look at the long-term development of life annuity prices using financial and mortality data from the United Kingdom since 1841. We found that there is clear interplay between longevity and financial risk, where the former one is at times masked by high financial risk. 
 \end{abstract}
-
+\newpage
 \section{Introduction}\label{introduction}
 
-I commented all the text in the introduction, we should work on it at the end, when we have the empirical results to see what is the route to take.
 
-%Demographers are interested in understanding how changes in mortality translate to changes in life expectancy. There is a long-standing tradition among actuaries and financial managers aim to measure and hedge the impact of changes in interest rates in the portfolio of financial instruments. These two, apparently disconnected, lines of research are centred around the same aim: the measurement of changes in the fundamental forces of change and its impact in populations measures.
-
-%We build on previous research and go one step further, we examine the stochastic change in the annuities. 
- 
- 
-%\citet{leser1955variations} first derived a closed-form expression to the the elasticity of life expectancy based on proportional changes in $\mu(x,t)$. \citet{demetrius1974demographic} and \citet{keyfitz1977difference} named this measure as the `Entropy of life expectancy' and denoted it by the letter $H$. They proposed several applications in evolutionary biology and demography. Since then, the entropy has been used in a wide range of studies ranging from mortality in humans to the comparison of senescence across species \citep{Keyfitz1985,,Vaupel1986,fernandez2015entropy,colchero2016emergence,Aburto2019,Aburto2020}.
-
-
-%\citet{Haberman2011} extend the concept of Entropy to the case of a life annuity assuming proportional changes in  $\mu(x,t)$. Along the same lines, \cite{Tsai2011,Tsai2013a,Lin2020} derive formulations for constant and proportional changes in $mu(x,t)$ in the context of longevity immunization.
+Mortality and interest rates are the driving forces behind fluctuations over time in life annuity prices (factors maybe?). Who contributes the most to such changes, mortality or interest rates? This question depends on many factors such as the onset age of calculation of life annuities, time frame of analysis and, of course, the population to be analysed. However, even by considering all those factors, there is not such a tool to disentangle the sources of stochastic change in life annuity factors. The main reason for this is that fluctuations in mortality and interest rates and their impact in life annuities have been widely studied separately but rarely together.
 
 
 
-%There is a long-standing tradition of financial and actuarial studies focusing on the sensitivity of life expectancy to changes in the force of interest.
+\subsection*{Demographic perspective on changes in mortality}
+
+
+The association between changes in mortality and changes in summary measures of longevity such as life expectancy ($e_x$) has hold attention of mathematical demographers and population biologists for many decades \citep{leser1955variations,keyfitz1968introduction,keyfitz1977difference,demetrius1974demographic,mitra1978short,goldman1986new,Vaupel1986,hakkert1987life,fernandez2015entropy}. In particular, \citet{leser1955variations,demetrius1974demographic,keyfitz1977difference} introduced an indicator known as the life table entropy (denoted by \textit{H}), that  “measures changes in life expectancy consequent on a proportional change in the force of mortality, $\mu$” \citep{Keyfitz1985}. The entropy is the elasticity of life expectancy to changes in mortality (the higher the entropy; the higher the sensitivity of ex to death rates), but it is also useful to measure lifespan variation across populations \citep{vaupel2011life,aburto2019threshold,aburto2020dynamics}. Given the dimensionless property of the entropy ($H$ does not depend on the absolute value of $e_x$), this indicator has proved to be adequate in the comparison of age at death distribution across species \citep{baudisch2011pace,wrycza2015quantifying,colchero2016emergence}.
+
+
+Along the same lines, several demographers have been interested in decomposing changes over time in life expectancy \citep{arriaga1984measuring,pollard1988decomposition,beltran2008integrated,beltran2011unifying}. Key among these contributions is the work done by \citet{Vaupel2003} who develop a neat method in continuous time to separate change life expectancy over time in terms of the general pace of mortality improvement, $\bar{\rho}$, and the entropy, $H$. The advantage of \citet{Vaupel2003} decomposition method relies on the fact that it allows further decomposition of age-specific and cause-specific contributions into the average pace of mortality improvement and entropy.
+
+
+\subsection*{Longevity and interest rates immunization}
+
+
+
+The concept of entropy \citep{leser1955variations,demetrius1974demographic,keyfitz1977difference} was first extended to the case of life annuity ($\bar{a}_x$) by \citet{Haberman2011}. In the context of longevity immunization (strategies to ensure that the value of a portfolio will be little affected in response to changes in death rates), \citet{,wang2010optimal,tsai2011actuarial,Tsai2013a,Li2011} derive discrete formulas for entropy (or what they call mortality durations) and convexities with respect to constant and proportional changes in the force of mortality, $\mu$. Longevity immunization (also called mortality immunization) has been recently extended to different types of life insurance and annuity products \citep{li2012key,Li2012,Wong2015,Luciano2015,levantesi2018natural}. The growing interest on longevity immunization is due to the current scenario that developed countries are facing: low interest rates and continuous mortality improvements. These two factors expose life annuities (and other life contingent products) to higher longevity risk, allowing the capital market of mortality-link securities to grow \citep{blake2019still}.
+
+
+Financial risk (unexpected changes in interest rates), on the other hand, has been extensively assessed in the context of interest rate immunization \citep{redington1951papers,fisher1971coping,shiu1990redington,santomero1997financial,courtois2007immunization}. This type of immunization is centred on duration (denoted by $D$), which measures the sensitivity of a life annuity (or any other financial product) to changes in the force of interest, $\delta$ \citep{milevsky2013life,charupat2016sluggish}. Modified ($\dfrac{\dfrac{\bar{a}_x}{\delta}}{\bar{a}_x}$) and dollar durations ($\dfrac{\bar{a}_x}{\delta}$) are the most used types of durations in finance. Both assume parallel shifts in the force of interest (WE SHOULD ELABORATE MORE HERE).
+
+
+
+\subsection*{Bringing both perspectives together}
+
+Literature on analysis of sensitivity in mortality (mostly developed by mathematical demographers) and literature on sensitivity to interest rates (mostly developed by actuaries and financial managers) have remained largely disconnected\footnote{with exception of \citet{Haberman2011} that made clear the links between both literatures}. Paradoxically, both strands of literature direct efforts at the same objective: better understanding of the inherent sources of risks in life contingent instruments. Recently, \citet{lin2020natural} made strides on this regard by deriving discrete formulas to calculate sensitivity of life annuities (and whole life insurances) to simultaneous changes mortality and interest rates. They introduced a synthetic variable called 'the force of mortality-interest`, which results from the addition of the force of mortality and interest ($\mu^*=\mu+\delta$). While the application of \citet{lin2020natural} is interesting since it combines sensitivity in mortality and interest rates, it is unlikely that $\mu$ and $\delta$ change at the same pace over time.
+
+In this study, we bring together the demographic and actuarial/financial perspectives. We develop a new decomposition method to quantify the contribution of stochastic changes in mortality and interest rates to stochastic changes in life annuity prices. We introduce neat and intuitive formulations that allow actuaries and risk managers to easily asses stochastic changes in financial and longevity risks embedded in their life annuities' portfolios. To illustrate our method, we first look at the long-term development of life annuity prices using financial and mortality data from the United Kingdom since 1841. Next, we forecast trends in mortality and interest rates under various scenarios to gain insights about how both components interplay in future life annuity prices. From the actuarial perspective, our formulations are useful in devising strategies for better risk management (longevity and financial) by levering on well-known results from mathematical demography and immunization.
 
 
 
 
-%Historically, there has been significant interest among demographers in understanding how changes in mortality rates translate into changes in life expectancy. Key among these contributions are Vaupel (1986) and Vaupel and Canudas-Romo (2003) who extend the seminal work of Keyfitz (1985) on the Entropy of the survival function.
 
-%At the same time, there has been an interest among actuaries in understanding the sensitivity of life annuities (and other life contingent products) to changes in mortality rates and interest rates. This is typically done in the context of so-called ``immunisation'' strategies for managing longevity risks (see Tsai and Jiang (2011), Lin and Tsai (2013),Tsai and Chung (2013), Lin and Tsai (2014), Zhou and Li (2019) and Lin and Tsai (2020)).
-
-%With the exemption of the work of Haberman, Khalaf-Allah, and Verrall (2011), who extend the demographic concept of Entropy to the context of life annuities, these two strands of literature have remained disconnected. This work aims to fill this gap by providing the connections between the immunisation literature and the related work carried out by mathematical demographers. From an actuarial perspective, this could be useful in devising better longevity risk management strategies by leveraging on well-known formal demography results.
 
 \section{Preliminaries}\label{preliminaries}
 
@@ -232,11 +243,11 @@ Alternatively, we show (see proof in Section \ref{sec:EntropyAlt} of the Appendi
 
 \begin{equation} \label{eq:EntropyP2}
 \begin{split}
-{H}^{p}_{x}(t) &=  \frac{\int_0^\infty \mu(x+s,t)   {}_sE_x(t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} =  \frac{{h}^{p}_{x}(t)}{\bar{a}_x(t)}, 
+{H}^{p}_{x}(t) &=  \frac{\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)} =  \frac{{h}^{p}_{x}(t)}{\bar{a}_x(t)}, 
 \end{split}
 \end{equation}
 
-where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_sE_x(t) \bar{a}_{x+s}(t) ds$. Analogous to the case where changes are assumed to be constant, quantities ${h}^{p}_{x}(t)$ and ${H}^{p}_{x}(t)$ are expressed in absolute and relative terms respectively. The formulations shown in this section are closely related to the ones developed in the mortality immunization literature \citep{Tsai2013a,Lin2020}. We extended them to the continuous case.
+where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$. Analogous to the case where changes are assumed to be constant, quantities ${h}^{p}_{x}(t)$ and ${H}^{p}_{x}(t)$ are expressed in absolute and relative terms respectively. The formulations shown in this section are closely related to the ones developed in the mortality immunization literature \citep{Tsai2013a,Lin2020}. We extended them to the continuous case.
 
  
  
@@ -282,13 +293,13 @@ Equation \ref{eq:DurationP} can also be re-expressed as:
 
 \begin{equation}\label{eq:DurationP2}
 \begin{split}
-{D}^{p}_{x}(t) &= \frac{\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t)ds} {\bar{a}_x(t)} \\
+{D}^{p}_{x}(t) &= \frac{\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t)ds} {\bar{a}_x(t)} \\
                  &= \frac{{d}^{p}_{x}(t)}{\bar{a}_x(t)}.
 \end{split}
 \end{equation}
 
 
-where ${d}^{p}_{x}(t)=\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t) ds$. 
+where ${d}^{p}_{x}(t)=\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t) ds$. 
 
 
 
@@ -313,7 +324,7 @@ To develop a closed-form solution for Equation \ref{eq:TimeDeriv} we consider th
 &= -\int_0^\infty   v(s,t) {}_sp_x(t)\int_0^{s}\dot{\mu}(x+y,t)dyds\\
 &= -\int_0^\infty  \dot{\mu}(x+s,t) \int_s^{\infty} v(y,t) {}_yp_x(t) dyds\\
 &= - \int_0^\infty \dot{\mu}(x+s,t)   {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
-&= \int_0^\infty \rho(x+s,t) \mu(x+s,t)   {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
+&= \int_0^\infty \rho(x+s,t) \mu(x+s,t)   {}_s|\bar{a}_x(t) ds\\
 \end{split}
 \end{equation}
 
@@ -325,7 +336,7 @@ The second part equals:
 \int_0^\infty {}_sp_x(t) \dot{v}(s,t)ds &= \int_0^\infty {}_sp_x(t)  e^{-\int_0^{s}\dot{\delta}(y,t)dy}ds\\
 &= -\int_0^\infty {}_sp_x(t) v(s,t) \int_0^{s}\dot{\delta}(y,t)dy ds\\
 &= -\int_0^\infty  \dot{\delta}(s,t)\int_s^{\infty} {}_yp_x(t) v(y,t) dy ds\\
-&= \int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
+&= \int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_s|\bar{a}_x(t) ds\\
 \end{split}
 \end{equation}
 
@@ -335,13 +346,13 @@ Thus, $\dot{\bar{a}} _x(t)$ can be expressed as
 
 \begin{equation}\label{eq:TimeDerivP3}
 \begin{split}
-\dot{\bar{a}}_{x}(t) &=  \int_0^\infty \rho(s,t) \mu(s,t){}_sE_x(t) \bar{a}_{x+s}(t) ds +\int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_sE_x(t) \bar{a}_{x+s}(t) ds\\
+\dot{\bar{a}}_{x}(t) &=  \int_0^\infty \rho(s,t) \mu(s,t){}_s|\bar{a}_x(t) ds +\int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_s|\bar{a}_x(t) ds\\
 &= \int_0^\infty \rho(s,t) {}_sM_x(t)  ds +\int_0^\infty  \upvarphi(s,t) {}_sW_x(t)  ds,
 \end{split}
 \end{equation}
 
 
-where ${}_sM_x(t)= \mu(s,t){}_sE_x(t) \bar{a}_{x+s}(t)$ and ${}_sW_x(t)=\delta(s,t)  {}_sE_x(t) \bar{a}_{x+s}(t)$. We can express Equation \ref{eq:TimeDerivP3} in terms of the duration and entropy
+where ${}_sM_x(t)= \mu(s,t){}_s|\bar{a}_x(t)$ and ${}_sW_x(t)=\delta(s,t)  {}_s|\bar{a}_x(t)$. We can express Equation \ref{eq:TimeDerivP3} in terms of the duration and entropy
 
 
 \begin{equation}\label{eq:TimeDerivP}
@@ -458,17 +469,11 @@ From Figure \ref{fig:Fig3}, the interplay between ${H}^{p}_x(t)$ and ${D}^{c}_x(
 
 
 
-Figure \ref{fig:Fig4} depicts the contribution of financial ($\dot{\delta}(t){D}^{c}_x(t)$) and longevity ($\bar{\rho}(t){H}^{p}_x(t)$) components (SHOULD WE CALL THEM RISKS??) to changes in $\bar{a}_x(t)$ calculated at ages 65, 70 and 75. Positive/negative values contribute to increase/decrease in $\bar{a}_x(t)$. Both, longevity and financial component have played an important role on long-term development of $\bar{a}_x(t)$. During some specific periods of time (1900-1920 and 1940-1980), the financial component has contributed to reductions the value of $\bar{a}_x(t)$. However, from the 1980s onwards, the financial component has increased $\bar{a}_x(t)$. The intensity of these positive contributions has fluctuated over time, with the highest contribution being observed during the decade of the 2000s. The longevity component, on the other hand, has most of the time contributed to increases in $\bar{a}_x(t)$. From the 1980s, we observe steadily contributions of the longevity component to positive changes in $\bar{a}_x(t)$. This trend has changed recently due to mortality deterioration. It is worth noting that longevity contributions to changes in $\bar{a}_x(t)$ are more pronounced in males than in females.
+Figure \ref{fig:Fig4} depicts the contribution of financial ($\dot{\delta}(t){D}^{c}_x(t)$) and longevity ($\bar{\rho}(t){H}^{p}_x(t)$) components (SHOULD WE CALL THEM RISKS??) to changes in $\bar{a}_x(t)$ calculated at ages 65, 70 and 75. Positive/negative values contribute to increase/decrease in $\bar{a}_x(t)$. Both, longevity and financial component have played an important role on long-term development of $\bar{a}_x(t)$. 
+
+From Figure \ref{fig:Fig4} we can distinguish among 5 important periods where life annuity prices fluctuated (\ref{fig:Fig1}) in response to specific changes in mortality and interest rates (\ref{fig:Fig2}). From 1841 to 1945 we observe stable annuity prices with year on year fluctuations. Decreasing annuity prices driven by increase in interest rates that masked mortality improvements are observed from 1945 to 1970. Next, annuity prices trended upwards from 1945 to 1970 driven by both interest rates increases and mortality improvements. From 2000 to 2015 we observe a peak contribution of longevity with most contributions to changes driven by mortality rates. From 2015 onwards, increase in prices driven by falling interest rates have masked the reduction in prices resulting from the deceleration of mortality improvement. It is worth noting that longevity contributions to changes in $\bar{a}_x(t)$ are more pronounced in males than in females throughout the whole period of observation.
 
 From Figure \ref{fig:Fig4} we observe When looking at $\bar{a}_x(t)$ calculated at different ages, we observe that the longevity component takes more relevance at older ages. For example, we observe that in recent years the longevity component is responsible for a greater contribution of changes in $\bar{a}_{75}(t)$ than for changes in $\bar{a}_{65}(t)$. This pattern is magnified for males. All in all, Figure \ref{fig:Fig4} provides evidence of the contribution of financial and longevity components to changes in the long-term development of life annuity factors.
-
-
-
-
-
-
-
-
 
 
 
@@ -549,12 +554,12 @@ where ${h}^{c}_x(t)=-\int_0^\infty s {}_sp_x(t) {v}(s,t)ds$
 &= \frac{\int_0^\infty  \mu(x+s,t) \int_s^\infty {}_yp_x(t) {v}(y,t)  dy\,ds}{\bar{a}_x(t)}\\
 &= \frac{\int_0^\infty  \mu(x+s,t)  {}_sp_x(t) {v}(s,t) \int_s^\infty \frac{ {}_yp_x(t) {v}(y,t)}{ {}_sp_x(t) {v}(s,t)}  dy\,ds}{\bar{a}_x(t)}\\
 &=  \frac{\int_0^\infty \mu(x+s,t)   {}_sp_x(t) {v}(s,t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
-&=  \frac{\int_0^\infty \mu(x+s,t)   {}_sE_x(t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
+&=  \frac{\int_0^\infty \mu(x+s,t)  {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)} \\
 &=  \frac{{h}^{p}_{x}(t)}{\bar{a}_x(t)}, \\
 \end{split}
 \end{equation}
 
-where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_sE_x(t) \bar{a}_{x+s}(t) ds$.
+where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$.
 
 
 
@@ -637,14 +642,14 @@ Equation \ref{eq:DurationProp3} can be re-expressed as
 &= \frac{\int_0^\infty {}_sp_x(t) v(s,t) \int_0^{s} \delta(y,t)dy ds }{\bar{a}_x(t)}\\
 &= \frac{\int_0^\infty \delta(s,t)  \int_{s}^{\infty} {}_{y}p_x(t) v(y,t)dy ds }{\bar{a}_x(t)}\\
 &= \frac{\int_0^\infty \delta(s,t) {}_sp_x(t) v(s,t) \bar{a}_{x+s}(t)  ds }{\bar{a}_x(t)}\\
-&= \frac{\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
+&= \frac{\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)} \\
 &= \frac{{d}^{p}_{x}(t)}{\bar{a}_x(t)}.
 \end{split}
 \end{equation}
 
 
 
-where ${d}^{p}_{x}(t)=\int_0^\infty \delta(s,t) {}_sE_x(t) \bar{a}_{x+s}(t) ds$.
+where ${d}^{p}_{x}(t)=\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t) ds$.
 
 
 \end{document}
