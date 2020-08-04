@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Duration}{5}{0}{1}
+\beamer@sectionintoc {2}{What about changes in mortality?}{12}{0}{2}
+\beamer@sectionintoc {3}{Results from Demography}{13}{0}{3}
+\beamer@sectionintoc {4}{Entropy of life annuity}{26}{0}{4}
+\beamer@sectionintoc {5}{Longevity immunization}{31}{0}{5}
+\beamer@sectionintoc {6}{Decomposition of changes \\ over time in $\mathaccentV {bar}016{a}_x(t)$}{43}{0}{6}
+\beamer@sectionintoc {7}{Historical contributions to changes in life annuities in the UK}{59}{0}{7}
+\beamer@sectionintoc {8}{To sum up}{69}{0}{8}
