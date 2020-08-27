@@ -97,35 +97,43 @@
 \section{Introduction}\label{introduction}
 
 
-Mortality and interest rates are the driving forces behind fluctuations over time in life annuity prices (factors maybe?). Who contributes the most to such changes, mortality or interest rates? This question depends on many factors such as the onset age of calculation of life annuities, time frame of analysis and, of course, the population to be analysed. However, even by considering all those factors, there is not such a tool to disentangle the sources of stochastic change in life annuity factors. The main reason for this is that fluctuations in mortality and interest rates and their impact in life annuities have been widely studied separately but rarely together.
+Mortality and interest rates are the driving forces behind fluctuations over time in life annuity factors. Who contributes the most to such changes? mortality or interest rates? This question depends on many factors such as the onset age of calculation of life annuities, time frame of analysis and, of course, the population to be analysed. However, even by considering all those factors, there is not such a tool to disentangle the sources of stochastic change in life annuity factors. The main reason for this is that fluctuations in mortality and interest rates and their impact in life annuities have been widely studied separately but rarely together.[HERE WE SHOULD EMPHASISE WHY IS IT IMPORTANT TO HAVE A METHOD TO ASSESS TOGETHER THESE TWO ISSUES? BESIDES KNOWING WHAT CONTRIBUTES THE MOST, WHAT ELSE CAN WE GAIN BY USING THIS METHOD AND NOT USING OTHER MORE SOPHISTICATED ONES ADDRESSING ONLY LONGEVITY (E.G. LONGEVITY GREEKS)]
+
+\subsection{Interest rate immunization}
+
+Interest-rate immunization \citep{redington1951papers,fisher1971coping,shiu1990redington,santomero1997financial,courtois2007immunization} is the starting point for any study dealing with unexpected changes in interest rates (commonly known as financial risk). Duration (denoted by $D$), is the central quantity used in interest-rate immunization and it is defined as “the sensitivity of a life annuity (or any other financial product) to changes in the force of interest, $\delta$” \citep{milevsky2013life,charupat2016sluggish}. Modified and dollar durations are the most used types of durations in finance. Both assume parallel shifts in the force of interest (WE SHOULD ELABORATE MORE ON THIS TOPIC).
+
 
 
 
 \subsection*{Demographic perspective on changes in mortality}
 
-
-The association between changes in mortality and changes in summary measures of longevity such as life expectancy ($e_x$) has hold attention of mathematical demographers and population biologists for many decades \citep{leser1955variations,keyfitz1968introduction,keyfitz1977difference,demetrius1974demographic,mitra1978short,goldman1986new,Vaupel1986,hakkert1987life,fernandez2015entropy}. In particular, \citet{leser1955variations,demetrius1974demographic,keyfitz1977difference} introduced an indicator known as the life table entropy (denoted by \textit{H}), that  “measures changes in life expectancy consequent on a proportional change in the force of mortality, $\mu$” \citep{Keyfitz1985}. The entropy is the elasticity of life expectancy to changes in mortality (the higher the entropy; the higher the sensitivity of ex to death rates), but it is also useful to measure lifespan variation across populations \citep{vaupel2011life,aburto2019threshold,aburto2020dynamics}. Given the dimensionless property of the entropy ($H$ does not depend on the absolute value of $e_x$), this indicator has proved to be adequate in the comparison of age at death distribution across species \citep{baudisch2011pace,wrycza2015quantifying,colchero2016emergence}.
-
-
-Along the same lines, several demographers have been interested in decomposing changes over time in life expectancy \citep{arriaga1984measuring,pollard1988decomposition,beltran2008integrated,beltran2011unifying}. Key among these contributions is the work done by \citet{Vaupel2003} who develop a neat method in continuous time to separate change life expectancy over time in terms of the general pace of mortality improvement, $\bar{\rho}$, and the entropy, $H$. The advantage of \citet{Vaupel2003} decomposition method relies on the fact that it allows further decomposition of age-specific and cause-specific contributions into the average pace of mortality improvement and entropy.
+Does it exist a similar measure to duration that captures the sensitivity to changes in mortality rates?
+Mathematical demographers and populations biologists \citep{leser1955variations,keyfitz1968introduction,keyfitz1977difference,demetrius1974demographic,mitra1978short,goldman1986new,Vaupel1986,hakkert1987life,fernandez2015entropy} have analysed this issue for many decades. In particular, \citet{leser1955variations,demetrius1974demographic,keyfitz1977difference} introduced an indicator known as the \textit{life table entropy} (denoted by $H$), that  “measures changes in life expectancy consequent on a proportional change in the force of mortality, $\mu$”. The higher the life table entropy; the higher the sensitivity of life expectancy to mortality rates \citep{vaupel2011life,aburto2019threshold,aburto2020dynamics}.
 
 
-\subsection*{Longevity and interest rates immunization}
+Several demographers have also been interested in understanding the sources of fluctuations over time in life expectancy \citep{arriaga1984measuring,pollard1988decomposition,beltran2008integrated,beltran2011unifying}. Key among these contributions is the work done by \citet{Vaupel2003} who develop a neat method in continuous time to separate changes in life expectancy over time in terms of the general pace of mortality improvement, $\bar{\rho}$, and the entropy, $H$. The advantage of \citet{Vaupel2003} decomposition method relies on the fact that it allows further decomposition of age-specific and cause-specific contributions into the average pace of mortality improvement and entropy.
+
+
+\subsection*{Longevity risk immunization}
 
 
 
-The concept of entropy \citep{leser1955variations,demetrius1974demographic,keyfitz1977difference} was first extended to the case of life annuity ($\bar{a}_x$) by \citet{Haberman2011}. In the context of longevity immunization (strategies to ensure that the value of a portfolio will be little affected in response to changes in death rates), \citet{,wang2010optimal,tsai2011actuarial,Tsai2013a,Li2011} derive discrete formulas for entropy (or what they call mortality durations) and convexities with respect to constant and proportional changes in the force of mortality, $\mu$. Longevity immunization (also called mortality immunization) has been recently extended to different types of life insurance and annuity products \citep{li2012key,Li2012,Wong2015,Luciano2015,levantesi2018natural}. The growing interest on longevity immunization is due to the current scenario that developed countries are facing: low interest rates and continuous mortality improvements. These two factors expose life annuities (and other life contingent products) to higher longevity risk, allowing the capital market of mortality-link securities to grow \citep{blake2019still}.
+The concept of entropy \citep{leser1955variations,demetrius1974demographic,keyfitz1977difference} was first extended to the case of life annuity factors by \citet{Haberman2011}. They define the entropy as the “sensitivity of a life annuity to proportional changes in the force of mortality”. The entropy is particularly useful in the measurement of longevity risk (unexpected changes of mortality).
 
 
-Financial risk (unexpected changes in interest rates), on the other hand, has been extensively assessed in the context of interest rate immunization \citep{redington1951papers,fisher1971coping,shiu1990redington,santomero1997financial,courtois2007immunization}. This type of immunization is centred on duration (denoted by $D$), which measures the sensitivity of a life annuity (or any other financial product) to changes in the force of interest, $\delta$ \citep{milevsky2013life,charupat2016sluggish}. Modified ($\dfrac{\dfrac{\bar{a}_x}{\delta}}{\bar{a}_x}$) and dollar durations ($\dfrac{\bar{a}_x}{\delta}$) are the most used types of durations in finance. Both assume parallel shifts in the force of interest (WE SHOULD ELABORATE MORE HERE).
+Indeed, there is an growing line of research dealing with longevity risk that have used the entropy\footnote{with the name of mortality durations but it is essentially the same formulation} in the context of mortality rate immunization\footnote{similar to interest-rate immunization, mortality-rate immunization is defined as a set of strategies to ensure that the value of a portfolio will be little affected in response to changes in mortality rates}. In particular, \citet{wang2010optimal,tsai2011actuarial,Tsai2013a,Li2011} derive discrete formulas for life annuity entropy and convexities assuming constant and proportional changes in the force of mortality, $\mu$. Mortality-rate immunization has been recently extended to different types of life insurance and annuity products \citep{li2012key,Li2012,Wong2015,Luciano2015,levantesi2018natural}. The growing interest on mortality-rate immunization is due to the current scenario that developed countries are facing: low interest rates and continuous mortality improvements. These two factors expose life annuities (and other life contingent products) to higher longevity risk, allowing the capital market of mortality-link securities to grow \citep{blake2019still}.
+
+
+
 
 
 
 \subsection*{Bringing both perspectives together}
 
-Literature on analysis of sensitivity in mortality (mostly developed by mathematical demographers) and literature on sensitivity to interest rates (mostly developed by actuaries and financial managers) have remained largely disconnected\footnote{with exception of \citet{Haberman2011} that made clear the links between both literatures}. Paradoxically, both strands of literature direct efforts at the same objective: better understanding of the inherent sources of risks in life contingent instruments. Recently, \citet{lin2020natural} made strides on this regard by deriving discrete formulas to calculate sensitivity of life annuities (and whole life insurances) to simultaneous changes mortality and interest rates. They introduced a synthetic variable called 'the force of mortality-interest`, which results from the addition of the force of mortality and interest ($\mu^*=\mu+\delta$). While the application of \citet{lin2020natural} is interesting since it combines sensitivity in mortality and interest rates, it is unlikely that $\mu$ and $\delta$ change at the same pace over time.
+Literature on analysis of sensitivity in mortality (mostly developed by mathematical demographers) and literature on sensitivity to interest rates (mostly developed by actuaries and financial managers) have remained largely disconnected\footnote{with exception of \citet{Haberman2011} that made clear the links between both literatures}. Paradoxically, both strands of literature direct efforts at the same objective: gain a better understanding of the inherent sources of risks in life contingent instruments. Recently, \citet{lin2020natural} made strides on this regard by deriving discrete formulas to calculate sensitivity of life annuities (and whole life insurances) to simultaneous changes mortality and interest rates. They introduced a synthetic variable called 'the force of mortality-interest`, which results from the addition of the force of mortality and interest ($\mu^*=\mu+\delta$). While the application of \citet{lin2020natural} is interesting since it combines sensitivity in mortality and interest rates, it is unlikely that $\mu$ and $\delta$ change at the same pace over time.
 
-In this study, we bring together the demographic and actuarial/financial perspectives. We develop a new decomposition method to quantify the contribution of stochastic changes in mortality and interest rates to stochastic changes in life annuity prices. We introduce neat and intuitive formulations that allow actuaries and risk managers to easily asses stochastic changes in financial and longevity risks embedded in their life annuities' portfolios. To illustrate our method, we first look at the long-term development of life annuity prices using financial and mortality data from the United Kingdom since 1841. Next, we forecast trends in mortality and interest rates under various scenarios to gain insights about how both components interplay in future life annuity prices. From the actuarial perspective, our formulations are useful in devising strategies for better risk management (longevity and financial) by levering on well-known results from mathematical demography and immunization.
+In this study, we bring together the demographic and actuarial perspectives to the analysis of changes in life annuities. We develop a new decomposition method to quantify the contribution of stochastic changes in mortality and interest rates to stochastic changes in life annuity prices. We introduce neat and intuitive formulations that allow actuaries and risk managers to easily asses stochastic changes in financial and longevity risks embedded in their life annuities' portfolios. To illustrate our method, we first look at the long-term development of life annuity prices using financial and mortality data from the United Kingdom since 1841. Next, we forecast trends in mortality and interest rates under various scenarios to gain insights about how both components interplay in future life annuity prices. From the actuarial perspective, our formulations are useful in devising strategies for better risk management (longevity and financial) by levering on well-known results from mathematical demography and immunization.
 
 
 
@@ -150,7 +158,7 @@ $_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$ is the probability of surviving from ag
 
 \item 
 
-${v}(s,t)=e^{-\int_{0}^{s}\delta(s,t)dy}$ is the discount factor, where $s$ is the length of the interval from issue of the life annuity to death.
+${v}(s,t)=e^{-\int_{0}^{s}\delta(y,t)dy}$ is the discount factor, where $s$ is the length of the interval from issue of the life annuity to death.
 
 \end{itemize}
 
@@ -406,74 +414,81 @@ Given that ${D}^{p}_{x}(t)=\delta(t){D}^{c}_{x}(t)$ (see Equation \ref{eq:Durati
 
 
 
-\textbf{[Here I am planning to add a table with all the formulas]}
+\textbf{[Here I am planning to add a table with all the formulas, I will do it at the end]}
 
 \section{Historical contribution of mortality and interest to changes in life annuities}
 
 
 
-In this section we illustrate the decomposition method developed in Section \ref{sec:timderiv} by examining the long-term development of life annuities in the UK. We use two centuries of data from 1841 to 2018. Age-specific death rates come from the \citep{HMD2020}. Long-term interest rates are represented by the yield on 2.5\% Consols up to 1977, then by the yield on FTSE Actuaries Government Securities Irredeemable stocks up to 2014 and thereafter by the yield on FTSE Actuaries Government Securities 45 years stock (INCLUDE REFERENCE). We calculated life annuity factors at ages 65, 70 and 75 to understand how the longevity and financial components react to different onset ages.
+In this section we illustrate the decomposition method developed in Section \ref{sec:timderiv} by examining the long-term development of life annuities in the UK. We use two centuries of data from 1841 to 2018. Age-specific mortality rates come from the \citep{HMD2020}. Long-term interest rates are represented by the yield on 2.5\% consols up to 2015, then by the yield of 20 year maturity bills (Bank of England, 2020). We smoothed mortality and interest rates using splines \citep{green1993nonparametric,camarda2012mortalitysmooth} to obtain continuous estimates of the forces of mortality and interest respectively (Figure \ref{fig:Fig1}). Using our estimates of $\mu$ and $\delta$, we construct time series for life annuities at different ages and for both sexes. In this section we first focus on life annuity factors calculated for males at age 65. Then, we extend the analysis to both sexes and older ages (i.e. 70 and 75) to understand how the longevity and financial components react to different onset ages.
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=1\textwidth]{Fig/Fig1}
-	\caption{\textit{Trends over time in life annuity factors and relative change in $\bar{a}_x(t)$ calculated at ages 65, 70 and 75. Both sexes, 1841-2018.}}
+	\includegraphics[width=0.7\textwidth]{Fig/Fig1}
+	\caption{\textit{Trends over time in interest and mortality rates calculated at ages 65, 70 and 75. Males, 1841-2018.}}
 	\label{fig:Fig1}
 \end{figure}
 
 
-How has the value of life annuities changed over time? Panels A and B of Figure \ref{fig:Fig1} depict values for $\bar{a}_x(t)$ from 1841 to 2018 calculated at ages 65, 70 and 75 for females and males respectively. We observe that during the second half of the 19th century and up to the decade of 1940s, $\bar{a}_x(t)$ remained at similar levels with small fluctuations. Thereafter, $\bar{a}_x(t)$ exhibited a sharp decline up to the decade of 1980s followed by an increasing pattern that has remained until recent years.
+How has the value of life annuities changed over time? Figure \ref{fig:Fig2} (upper panel) depict values for $\bar{a}_x(t)$ from 1841 to 2018 for males at age 65. We observe that during the second half of the 19th century and up to the decade of 1940s, $\bar{a}_{65}(t)$ remained at similar levels with small fluctuations. Thereafter, $\bar{a}_{65}(t)$ exhibited a sharp decline up to the decade of 1980s followed by an increasing pattern that has remained until recent years. The lower panel of Figure \ref{fig:Fi2} show the relative derivative of $\bar{a}_{65}(t)$ with respect to time ($\acute{\bar{a}}_{65}(t)$). It is clear that $\acute{\bar{a}}_{65}(t)$ captures well the changes over time in life annuity; positive values indicate that $\bar{a}_{65}(t)$ goes up and negative values indicate a decrease in $\bar{a}_{65}(t)$. In the following sections we analyse the sources of change in the time trend of $\acute{\bar{a}}_{65}(t)$ by making use of the decomposition method developed in Section \ref{sec:timderiv}.
+
+  \begin{figure}[!ht]
+  	\centering
+  	\includegraphics[width=0.7\textwidth]{Fig/Fig2}
+  	\caption{\textit{Trends over time in life annuity factors and relative change in $\bar{a}_x(t)$ calculated at age 65. Males, 1841-2018.}}
+  	\label{fig:Fig2}
+  \end{figure}
   
-Sex-specific trends appear to be very similar between sexes with the absolute level of $\bar{a}_x(t)$ for females being slightly higher than the one depicted for males. Similar trends over time also replicate at any onset age of calculation analysed here (e.g. age 65, 70 and 75). However, a closer look reveal that $\bar{a}_x(t)$ changes more abruptly at younger ages (age 65) than at older ages (age 75). This pattern is clear when analysing the time derivative of $\bar{a}_x(t)$ portrayed by $\acute{\bar{a}}_x(t)$  (see Panels C and D of Figure 1). In the following sections we analyse the sources of the time trend in  $\acute{\bar{a}}_x(t)$ by making use of the decomposition method developed in Section \ref{sec:timderiv}.
+  
 
 \subsection{Contribution of financial and longevity risks to changes in $\bar{a}_x(t)$}
 
-According to the decomposition formula developed (Equation \ref{eq:TimeDerivC2}), changes over time in $\bar{a}_x(t)$ can be explained in terms of longevity and financial components. Each component depends on the stochastic fluctuations of $\mu(x,t)$ and $\delta(s,t)$ (captured by $\bar{\rho}(t)$ and $\dot{\delta}(t)$ respectively) which are modulated by the sensitivity of $\bar{a}_x(t)$ to changes in the forces of mortality and interest (entropy, ${H}^{p}_x(t)$ and modified duration, ${D}^{c}_x(t)$). We first describe sex-specific trends in $\dot{\delta}(t)$ and $\bar{\rho}(t)$ (see Figure \ref{fig:Fig2}). 
+According to the decomposition formula developed (Equation \ref{eq:TimeDerivC2}), changes over time in $\bar{a}_x(t)$ can be explained in terms of longevity and financial components. Each component depends on the stochastic fluctuations of $\mu(x,t)$ and $\delta(s,t)$ (captured by $\bar{\rho}(t)$ and $\dot{\delta}(t)$ respectively) which are modulated by the sensitivity of $\bar{a}_x(t)$ to changes in the forces of mortality and interest (entropy, ${H}^{p}_x(t)$ and modified duration, ${D}^{c}_x(t)$). Figure \ref{fig:Fig3} depicts all the components responsible of fluctuations over time in $\bar{a}_x(t)$.
 
-
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=1\textwidth]{Fig/Fig2}
-	\caption{\textit{Average change in mortality ($\bar{\rho}(t)$) calculated for all ages above age 65 and rate of change in interest rates ($\dot{\delta}(t)$). Note that $\dot{\delta}(t)$ is expressed in basis points to ease readability. Both sexes, 1841-2018.}}
-	\label{fig:Fig2}
-\end{figure}
-
-
-Time trends for $\bar{\rho}(t)$ are very much alike at ages 65, 70 and 75. Hence, we only focus on $\bar{\rho}(t)$ at age 65 to illustrate the general change in mortality. Values for rho at ages 70 and 75 can be found in the Appendix (ADD THIS). During most of the observation period, $\bar{\rho}(t)$ fluctuated between 0\% and 2\%. As of 1980s, $\bar{\rho}(t)$ remained steady indicating an average mortality improvement above age 65 of 2\% and 3\% for the decade of 2000s. In recent years, $\bar{\rho}(t)$ trended downwards, which coincides with the mortality deterioration currently prevailing in the United Kingdom (REF). 
-
-Regarding changes over time in the force of interest, we observe that $\dot{\delta}(t)$ has also remained at similar levels for most of the observation period with some fluctuations between 1930 and 1950. Since the 1960s, $\dot{\delta}(t)$ went up rapidly reaching the highest increase (of around 8\% in the decade of 1970s). Thereafter, $\dot{\delta}(t)$ declined faster and moved towards negative values entailing a decline in interest rates, which is still ongoing until recent time. As mentioned above, $\bar{\rho}(t)$ and $\dot{\delta}(t)$ are responsible for the time trend we observe in $\bar{a}_x(t)$, which is modulated by the entropy, ${H}^{p}_x(t)$, and modifed duration, ${D}^{c}_x(t)$.
 
 
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=1\textwidth]{Fig/Fig3}
-	\caption{\textit{Entropy and modified duration assuming proportional changes calculated at ages 65, 70 and 75. Both sexes, 1841-2018.}}
+	\includegraphics[width=0.7\textwidth]{Fig/Fig3}
+	\caption{\textit{Upper panel shows the average change in mortality ($\bar{\rho}(t)$) and interest rates ($\dot{\delta}(t)$). Lower panel shows Entropy ($H$) and modified duration ($D$). Males at age 65, 1841-2018.}}
 	\label{fig:Fig3}
 \end{figure}
 
 
+From 1841 to 1940, there were no mortality improvements after age 65 since $\bar{\rho}(t)$ fluctuated around 0\% (upper panel of Figure 3). However, as of 1980s, $\bar{\rho}(t)$ increased steadily indicating an average mortality improvement above age 65 of 2\% and 3\% for the decade of 2000s. In recent years, $\bar{\rho}(t)$ trended downwards, which coincides with the mortality deterioration currently prevailing in the United Kingdom (REF). Regarding changes over time in the force of interest, we observe that $\dot{\delta}(t)$ has also remained at similar levels for most of the observation period with some fluctuations between 1930 and 1950. Since the 1960s, $\dot{\delta}(t)$ went up rapidly reaching the highest increase (of around 8\% in the decade of 1970s). Thereafter, $\dot{\delta}(t)$ declined faster and moved towards negative values entailing a decline in interest rates, which is still ongoing until recent time. Trends in $\bar{\rho}(t)$ and $\dot{\delta}(t)$ are responsible for the time trend we observe in $\bar{a}_x(t)$, which is modulated by the entropy, ${H}^{p}_x(t)$, and modifed duration, ${D}^{c}_x(t)$.
 
-From Figure \ref{fig:Fig3}, we observe that ${H}^{p}_x(t)$ and ${D}^{c}_x(t)$ have fluctuated over time. The entropy went down for most of the observation period and up to the 1980s where it started to rise. Modified duration, on the other hand, remained somewhat constant over time with a small peak in the 1920s. However, as of the 1950s ${D}^{c}_x(t)$ trended upwards reaching its maximum in the 1980s (of about 0.8) and then begin to drop. It is worth noting that there are some specific points in time where ${H}^{p}_x(t)$ and ${D}^{c}_x(t)$ are equal. This means that $\bar{a}_x(t)$ is equally sensitive to changes in mortality and interest rates.
 
-From Figure \ref{fig:Fig3}, the interplay between ${H}^{p}_x(t)$ and ${D}^{c}_x(t)$ is clear. We observe two regularities. First, ${H}^{p}_x(t)$ is lower for females than for males whereas ${D}^{c}_x(t)$ is higher for females than for males. This means that, in general, $\bar{a}_x(t)$ for females is less sensitive to $\mu$ and more sensitive to $\delta$ than for males. Second, $\bar{a}_x(t)$ becomes more sensitive to $\mu$ (higher ${H}^{p}_x(t)$) and less sensitive to $\delta$ (lower ${D}^{c}_x(t)$) when calculating $\bar{a}_x(t)$ at older ages. This finding is key to understand how the contributions of longevity and financial risks are moderated differently across ages.
+The lower panel of Figure \ref{fig:Fig3} shows that during most of the observation period, ${H}^{p}_x(t)$ was higher than ${D}^{c}_x(t)$. This indicates that $\bar{a}_x(t)$ has been more sensitive to changes in mortality than to changes in interest rates. However, this has changed over time. The entropy show a decreasing trend up to the 1980s where it started to rise. Modified duration, on the other hand, remained somewhat constant over time but as of the 1950s, it trended upwards reaching its maximum in the 1980s (of about 0.8). Thereafter, it decline again. It is worth noting that there are some specific years where ${H}^{p}_x(t)$ and ${D}^{c}_x(t)$ depict the same values. This means that during these years, $\bar{a}_x(t)$ was equally sensitive to changes in mortality and interest rates.
 
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=1\textwidth]{Fig/Fig4}
-	\caption{\textit{Decomposition of changes over time in life annuity factors calculated at ages 65, 70 and 75. Both sexes, 1841-2018.}}
+	\includegraphics[width=0.6\textwidth]{Fig/Fig4}
+	\caption{\textit{Decomposition of changes over time in life annuity factors calculated at ages 65. Males, 1841-2018.}}
 	\label{fig:Fig4}
 \end{figure}
 
+Using all the measures shown in Figure \ref{fig:Fig3}, we next calculate the contributions of financial ($\dot{\delta}(t){D}^{c}_x(t)$) and longevity risks ($\bar{\rho}(t){H}^{p}_x(t)$) to changes over time in $\bar{a}_{65}(t)$ using the decomposition method developed in Equation \ref{eq:TimeDerivP3}. The upper panel of Figure \ref{fig:Fig4} shows $\acute{\bar{a}}_{65}$\footnote{This is the same as Figure \ref{fig:Fig2}. We show it here so the reader can make sense of the decomposition method} and the lower panel shows the outcome of the decomposition method. Positive/negative values contribute to increase/decrease in $\bar{a}_x(t)$. From Figure \ref{fig:Fig4} it is clear that both, longevity and financial risks have played an important role in the long-term development of $\bar{a}_x(t)$. 
+
+We can distinguish among 4 periods where life annuity factors fluctuated in response to specific changes in financial and longevity risks. From 1841 to 1945, we observe stable annuity factors with contributions of longevity and financial risks to the time trend. In a second period, from 1945 to 1970, we observe decreasing annuity factors mainly driven by the financial component. Around 1970, interest rates reached the highest point, which translates into a negative contribution of the financial component. In the next period, from 1970 to 2015, the time trend changed. Annuity prices went up due to positive contributions of the financial and longevity components. Both, interest and mortality rates went down. In the last period, from 2015 onwards, $\bar{a}_x(t)$ continue to increase with the longevity component contributing less to the trend. This reflects the deceleration of mortality improvements occurring in the UK (REFERENCE).
+ 
+ 
+ \subsection{Analysis for both sexes and at older ages}
+ 
+ Hitherto, we focused our analysis in trends over time in $\bar{a}_x(t)$ for males calculated at age 65. In Section \ref{sec:olderages} in the Appendix, we extend the analysis to females and to ages 70 and 75 (see Figures \ref{fig:FigA1}, \ref{fig:FigA2}, \ref{fig:FigA3} and \ref{fig:FigA4}). [SHOULD WE INCLUDE THIS SECTION IN THE APPENDIX INSTEAD]
+ 
+  In Figure \ref{fig:FigA1} Sex-specific trends appear to be very similar between sexes with the absolute level of $\bar{a}_x(t)$ for females being slightly higher than the one depicted for males. Similar trends over time also replicate at any onset age of calculation analysed here (e.g. age 65, 70 and 75). However, a closer look reveal that $\bar{a}_x(t)$ changes more abruptly at younger ages (age 65) than at older ages (age 75). This pattern is clear when analysing the time derivative of $\bar{a}_x(t)$ portrayed by $\acute{\bar{a}}_x(t)$  (see Panels C and D of Figure \ref{fig:FigA1}).
+  
+  
+  We observe two regularities from Figure \ref{fig:FigA3}. First, ${H}^{p}_x(t)$ is lower for females than for males whereas ${D}^{c}_x(t)$ is higher for females than for males. This means that, in general, $\bar{a}_x(t)$ for females is less sensitive to $\mu$ and more sensitive to $\delta$ than for males. Second, $\bar{a}_x(t)$ becomes more sensitive to $\mu$ (higher ${H}^{p}_x(t)$) and less sensitive to $\delta$ (lower ${D}^{c}_x(t)$) when calculating $\bar{a}_x(t)$ at older ages. This finding is key to understand how the contributions of longevity and financial risks are moderated differently across ages.
+ 
+ 
+We observe that longevity contributions to changes in $\bar{a}_x(t)$ are more pronounced in males than in females throughout the whole period of observation. From Figure \ref{fig:FigA4} we observe that the longevity component takes more relevance at older ages. For example, in recent years the longevity component is responsible for a greater contribution of changes in $\bar{a}_{75}(t)$ than for changes in $\bar{a}_{65}(t)$. This pattern is magnified for males. All in all, the analysis performed here provides evidence of the contribution of financial and longevity components to changes in the long-term development of life annuity factors.
 
 
-Figure \ref{fig:Fig4} depicts the contribution of financial ($\dot{\delta}(t){D}^{c}_x(t)$) and longevity ($\bar{\rho}(t){H}^{p}_x(t)$) components (SHOULD WE CALL THEM RISKS??) to changes in $\bar{a}_x(t)$ calculated at ages 65, 70 and 75. Positive/negative values contribute to increase/decrease in $\bar{a}_x(t)$. Both, longevity and financial component have played an important role on long-term development of $\bar{a}_x(t)$. 
 
-From Figure \ref{fig:Fig4} we can distinguish among 5 important periods where life annuity prices fluctuated (\ref{fig:Fig1}) in response to specific changes in mortality and interest rates (\ref{fig:Fig2}). From 1841 to 1945 we observe stable annuity prices with year on year fluctuations. Decreasing annuity prices driven by increase in interest rates that masked mortality improvements are observed from 1945 to 1970. Next, annuity prices trended upwards from 1945 to 1970 driven by both interest rates increases and mortality improvements. From 2000 to 2015 we observe a peak contribution of longevity with most contributions to changes driven by mortality rates. From 2015 onwards, increase in prices driven by falling interest rates have masked the reduction in prices resulting from the deceleration of mortality improvement. It is worth noting that longevity contributions to changes in $\bar{a}_x(t)$ are more pronounced in males than in females throughout the whole period of observation.
 
-From Figure \ref{fig:Fig4} we observe When looking at $\bar{a}_x(t)$ calculated at different ages, we observe that the longevity component takes more relevance at older ages. For example, we observe that in recent years the longevity component is responsible for a greater contribution of changes in $\bar{a}_{75}(t)$ than for changes in $\bar{a}_{65}(t)$. This pattern is magnified for males. All in all, Figure \ref{fig:Fig4} provides evidence of the contribution of financial and longevity components to changes in the long-term development of life annuity factors.
 
 
 
@@ -650,6 +665,58 @@ Equation \ref{eq:DurationProp3} can be re-expressed as
 
 
 where ${d}^{p}_{x}(t)=\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t) ds$.
+
+
+\subsection{Historical decomposition of life annuities: both sexes at ages 65, 70 and 75} \label{sec:olderages}
+
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/FigA1}
+	\caption{\textit{Trends over time in life annuity factors and relative change in $\bar{a}_x(t)$ calculated at ages 65, 70 and 75. Both sexes, 1841-2018.}}
+	\label{fig:FigA1}
+\end{figure}
+
+
+
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/FigA2}
+	\caption{\textit{Average change in mortality ($\bar{\rho}(t)$) calculated for all ages above age 65 and rate of change in interest rates ($\dot{\delta}(t)$). Note that $\dot{\delta}(t)$ is expressed in basis points to ease readability. Both sexes, 1841-2018.}}
+	\label{fig:FigA2}
+\end{figure}
+
+
+
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/FigA3}
+	\caption{\textit{Entropy and modified duration assuming proportional changes calculated at ages 65, 70 and 75. Both sexes, 1841-2018.}}
+	\label{fig:FigA3}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=1\textwidth]{Fig/FigA4}
+	\caption{\textit{Decomposition of changes over time in life annuity factors calculated at ages 65, 70 and 75. Both sexes, 1841-2018.}}
+	\label{fig:FigA4}
+\end{figure}
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
