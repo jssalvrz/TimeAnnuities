@@ -108,7 +108,7 @@ Interest-rate immunization \citep{redington1951papers,fisher1971coping,shiu1990r
 
 \subsection*{Demographic perspective on changes in mortality}
 
-Does it exist a similar measure to duration that captures the sensitivity to changes in mortality rates?
+Does there exist a similar measure to duration that captures the sensitivity to changes in mortality rates?
 Mathematical demographers and populations biologists \citep{leser1955variations,keyfitz1968introduction,keyfitz1977difference,demetrius1974demographic,mitra1978short,goldman1986new,Vaupel1986,hakkert1987life,fernandez2015entropy} have analysed this issue for many decades. In particular, \citet{leser1955variations,demetrius1974demographic,keyfitz1977difference} introduced an indicator known as the \textit{life table entropy} (denoted by $H$), that  “measures changes in life expectancy consequent on a proportional change in the force of mortality, $\mu$”. The higher the life table entropy; the higher the sensitivity of life expectancy to mortality rates \citep{vaupel2011life,aburto2019threshold,aburto2020dynamics}.
 
 
@@ -122,7 +122,7 @@ Several demographers have also been interested in understanding the sources of f
 The concept of entropy \citep{leser1955variations,demetrius1974demographic,keyfitz1977difference} was first extended to the case of life annuity factors by \citet{Haberman2011}. They define the entropy as the “sensitivity of a life annuity to proportional changes in the force of mortality”. The entropy is particularly useful in the measurement of longevity risk (unexpected changes of mortality).
 
 
-Indeed, there is an growing line of research dealing with longevity risk that have used the entropy\footnote{with the name of mortality durations but it is essentially the same formulation} in the context of mortality rate immunization\footnote{similar to interest-rate immunization, mortality-rate immunization is defined as a set of strategies to ensure that the value of a portfolio will be little affected in response to changes in mortality rates}. In particular, \citet{wang2010optimal,tsai2011actuarial,Tsai2013a,Li2011} derive discrete formulas for life annuity entropy and convexities assuming constant and proportional changes in the force of mortality, $\mu$. Mortality-rate immunization has been recently extended to different types of life insurance and annuity products \citep{li2012key,Li2012,Wong2015,Luciano2015,levantesi2018natural}. The growing interest on mortality-rate immunization is due to the current scenario that developed countries are facing: low interest rates and continuous mortality improvements. These two factors expose life annuities (and other life contingent products) to higher longevity risk, allowing the capital market of mortality-link securities to grow \citep{blake2019still}.
+Indeed, there is an growing line of research dealing with longevity risk that has used the entropy\footnote{with the name of mortality durations but it is essentially the same formulation} in the context of mortality rate immunization\footnote{similar to interest-rate immunization, mortality-rate immunization is defined as a set of strategies to ensure that the value of a portfolio will be little affected in response to changes in mortality rates}. In particular, \citet{wang2010optimal,tsai2011actuarial,Tsai2013a,Li2011} derive discrete formulas for life annuity entropy and convexities assuming constant and proportional changes in the force of mortality, $\mu$. Mortality-rate immunization has been recently extended to different types of life insurance and annuity products \citep{li2012key,Li2012,Wong2015,Luciano2015,levantesi2018natural}. The growing interest on mortality-rate immunization is due to the current scenario that developed countries are facing: low interest rates and continuous mortality improvements. These two factors expose life annuities (and other life contingent products) to higher longevity risk, allowing the capital market of mortality-link securities to grow \citep{blake2019still}.
 
 
 
@@ -131,7 +131,7 @@ Indeed, there is an growing line of research dealing with longevity risk that ha
 
 \subsection*{Bringing both perspectives together}
 
-Literature on analysis of sensitivity in mortality (mostly developed by mathematical demographers) and literature on sensitivity to interest rates (mostly developed by actuaries and financial managers) have remained largely disconnected\footnote{with exception of \citet{Haberman2011} that made clear the links between both literatures}. Paradoxically, both strands of literature direct efforts at the same objective: gain a better understanding of the inherent sources of risks in life contingent instruments. Recently, \citet{lin2020natural} made strides on this regard by deriving discrete formulas to calculate sensitivity of life annuities (and whole life insurances) to simultaneous changes mortality and interest rates. They introduced a synthetic variable called 'the force of mortality-interest`, which results from the addition of the force of mortality and interest ($\mu^*=\mu+\delta$). While the application of \citet{lin2020natural} is interesting since it combines sensitivity in mortality and interest rates, it is unlikely that $\mu$ and $\delta$ change at the same pace over time.
+Literature on analysis of sensitivity in mortality (mostly developed by mathematical demographers) and literature on sensitivity to interest rates (mostly developed by actuaries and financial managers) have remained largely disconnected\footnote{with exception of \citet{Haberman2011} that made clear the links between both literatures}. Paradoxically, both strands of literature direct efforts at the same objective: gain a better understanding of the inherent sources of change in life contingent quantities. Recently, \citet{lin2020natural} made strides on this regard by deriving discrete formulas to calculate sensitivity of life annuities (and whole life insurances) to simultaneous changes mortality and interest rates. They introduced a synthetic variable called 'the force of mortality-interest`, which results from the addition of the force of mortality and interest ($\mu^*=\mu+\delta$). While the application of \citet{lin2020natural} is interesting since it combines sensitivity in mortality and interest rates, it is unlikely that $\mu$ and $\delta$ change at the same pace over time.
 
 In this study, we bring together the demographic and actuarial perspectives to the analysis of changes in life annuities. We develop a new decomposition method to quantify the contribution of stochastic changes in mortality and interest rates to stochastic changes in life annuity prices. We introduce neat and intuitive formulations that allow actuaries and risk managers to easily asses stochastic changes in financial and longevity risks embedded in their life annuities' portfolios. To illustrate our method, we first look at the long-term development of life annuity prices using financial and mortality data from the United Kingdom since 1841. Next, we forecast trends in mortality and interest rates under various scenarios to gain insights about how both components interplay in future life annuity prices. From the actuarial perspective, our formulations are useful in devising strategies for better risk management (longevity and financial) by levering on well-known results from mathematical demography and immunization.
 
@@ -142,23 +142,23 @@ In this study, we bring together the demographic and actuarial perspectives to t
 
 \section{Preliminaries}\label{preliminaries}
 
-All of the quantities expressed here vary over time $t$. According to standard actuarial notation, we define the following quantities:
+All of the quantities expressed here vary over time period $t$. According to standard actuarial notation, we define the following quantities:
 
 \begin{itemize}
 
 \item
-\(\mu(x,t)\) is the force of mortality at age \(x\).
+\(\mu(x,t)\) is the force of mortality at age \(x\) in time $t$.
 
 \item
-$_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$ is the probability of surviving from age \(x\) to age \(x+s\).
+$_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$ is the time $t$ period survival probability from age \(x\) to age \(x+s\). 
 
 
 \item
-\(\delta(s,t)\) is the force of interest at time $s$. This measure is a general form to express the term-structure of interest rates.
+\(\delta(s,t)\) is the time $t$ forward force of interest at maturity $s$. This measure is a general form to express the term-structure of interest rates.
 
 \item 
 
-${v}(s,t)=e^{-\int_{0}^{s}\delta(y,t)dy}$ is the discount factor, where $s$ is the length of the interval from issue of the life annuity to death.
+${v}(s,t)=e^{-\int_{0}^{s}\delta(y,t)dy}$ is the time $t$ discount factor, for a cash-flow payable at maturity $s$.
 
 \end{itemize}
 
@@ -191,7 +191,7 @@ Similarly, the relative change in interest rates over time is captured by
 \end{equation}
 
 
-The actuarial present value of a life annuity at age $x$ evaluated at time $t$ is given by
+The actuarial present value of a continuous life annuity at age $x$ evaluated at time $t$ is given by
 
 \begin{equation}\label{eq:Annuity}
 \bar{a}_x(t) = \int_0^\infty {}_sp_x(t) {v}(s,t)ds = \int_0^\infty {}_sE_x(t) ds,
@@ -205,7 +205,7 @@ A life annuity deferred $s$ years starting to be paid at age $x+s$ is expressed 
 
 
 \begin{equation}\label{eq:DefAnnuity}
-{}_s|\bar{a}_x(t) = {}_sE_x(t) \bar{a}_{x+s}(t)
+{}_s|\bar{a}_x(t) = {}_sE_x(t) \bar{a}_{x+s}(t).
 \end{equation}
 
 
@@ -218,7 +218,7 @@ We are interested on measuring changes in $\bar{a}_x(t)$ with respect to the tim
 {H}_{x}(t) = \frac{ \frac{\partial \bar{a}_x(t) }{\partial \mu(x,t)}}{\bar{a}_x(t)}.
 \end{equation}
 
-The measure that captures the sensitivity of $\bar{a}_x(t)$ to changes in interest rates is commonly known as \textit{duration} and it is the foundation of interest rates' immunization. For a life annuity, it is defined as the relative derivative of the annuity factor with respect to changes in the force of interest \citep{Milevsky2012}:
+The measure that captures the sensitivity of $\bar{a}_x(t)$ to changes in interest rates is commonly known as \textit{duration} and it is the foundation of interest rates' immunization. For a life annuity, it is defined as the relative derivative of the annuity factor with respect to changes in the force of interest \citep{Milevsky2012,Milevsky2012a}:
 
 
 \begin{equation}\label{eq:DurationGeneral}
@@ -354,25 +354,68 @@ Thus, $\dot{\bar{a}} _x(t)$ can be expressed as
 
 \begin{equation}\label{eq:TimeDerivP3}
 \begin{split}
-\dot{\bar{a}}_{x}(t) &=  \int_0^\infty \rho(s,t) \mu(s,t){}_s|\bar{a}_x(t) ds +\int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_s|\bar{a}_x(t) ds\\
-&= \int_0^\infty \rho(s,t) {}_sM_x(t)  ds +\int_0^\infty  \upvarphi(s,t) {}_sW_x(t)  ds,
+\dot{\bar{a}}_{x}(t) &=  \int_0^\infty \rho(x+s,t) \mu(x+s,t){}_s|\bar{a}_x(t) ds +\int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_s|\bar{a}_x(t) ds\\
+&= \int_0^\infty \rho(x+s,t) {}_sM_x(t)  ds +\int_0^\infty  \upvarphi(s,t) {}_sW_x(t)  ds,
 \end{split}
 \end{equation}
 
 
-where ${}_sM_x(t)= \mu(s,t){}_s|\bar{a}_x(t)$ and ${}_sW_x(t)=\delta(s,t)  {}_s|\bar{a}_x(t)$. We can express Equation \ref{eq:TimeDerivP3} in terms of the duration and entropy
+where ${}_sM_x(t)= \mu(x+s,t){}_s|\bar{a}_x(t)$ and ${}_sW_x(t)=\delta(s,t)  {}_s|\bar{a}_x(t)$. We can express Equation \ref{eq:TimeDerivP3} in terms of the duration and entropy
 
 
 \begin{equation}\label{eq:TimeDerivP}
 \begin{split}
  \acute{\bar{a}}_x(t) = \frac{\dot{\bar{a}}_x(t)}{\bar{a}_x(t)}  = 
- \underbrace{\bar{\rho}(t){H}^{p}_x(t)}_\text{longevity component}
+ \underbrace{\bar{\rho}_x(t){H}^{p}_x(t)}_\text{longevity component}
  +\underbrace{\bar{\upvarphi}(t){D}^{p}_x(t),}_\text{financial component}
 \end{split}
 \end{equation}
 
-where $\bar{\rho}(t)= \frac{\int_0^\infty \rho(s,t) {}_sM_x(t)  ds}{\int_0^\infty  {}_sM_x(t)ds}$ and 
-$\bar{\upvarphi}(t)= \frac{\int_0^\infty \upvarphi(s,t) {}_sW_x(t)  ds}{\int_0^\infty {}_sW_x(t) ds}$ are the average paces of change in mortality and interest rates respectively. Functions $\bar{\rho}(t)$ and $\bar{\upvarphi}(t)$ capture the stochastic change in the forces of mortality and interest whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ capture the sensitivity due to changes in $\mu$ and $\delta$. In other words, Equation \ref{eq:TimeDerivP} entails that changes over time in $\bar{a}_x(t)$ are driven by $\bar{\rho}(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ respectively. Equation \ref{eq:TimeDerivP} is an extension of the decomposition formula to changes over time in life expectancy developed by \citet{Vaupel2003}. Here we extended it to life annuities.
+where $\bar{\rho}_x(t)= \frac{\int_0^\infty \rho(x+s,t) {}_sM_x(t)  ds}{\int_0^\infty  {}_sM_x(t)ds}$ and 
+$\bar{\upvarphi}(t)= \frac{\int_0^\infty \upvarphi(s,t) {}_sW_x(t)  ds}{\int_0^\infty {}_sW_x(t) ds}$ are the weighted average paces of change in mortality and interest rates respectively. Functions $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$ capture the stochastic change in the forces of mortality and interest whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ capture the sensitivity due to changes in $\mu$ and $\delta$. In other words, Equation \ref{eq:TimeDerivP} entails that changes over time in $\bar{a}_x(t)$ are driven by $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ respectively. Equation \ref{eq:TimeDerivP} is an extension of the decomposition formula to changes over time in life expectancy developed by \citet{Vaupel2003}. Here we extended it to life annuities.
+
+
+\subsection{Age and term decomposition}
+
+Equation \ref{eq:TimeDerivP} gives a way of understanding the sensitivity of the value of an annuity to overall changes in mortality and in the the term structure of interest rates. However, we may also be interested in understanding the contribution of particular age groups or specific interest rate terms to the change in life annuities. Let us define $n$ age groups $[x_{i-1}, x_i)$, $i=1,\ldots,n$, with $x_0=x$ and $x_n=\infty$, and $m$ term groups $[t_{j-1}, t_j)$, $j=1,\ldots,m$, with $t_0=0$ and $t_m=\infty$. Equation \ref{eq:TimeDerivP3} can be decomposed by age and term groups as follows:
+
+\begin{equation}\label{eq:TimeDerivAge}
+\begin{split}
+ \acute{\bar{a}}_x(t) = \sum_{i=1}^n\int_{x_{i-1}-x}^{x_i-x}  \rho(x+s,t) {}_sM_x(t)  ds +\sum_{j=1}^m\int_{t_{j-1}}^{t_j}   \upvarphi(s,t) {}_sW_x(t)  ds.  
+\end{split}
+\end{equation}
+We can also decompose the duration $h_x^p(t)$ into age groups as follows:
+
+\begin{equation} \label{eq:EntropyAge}
+\begin{split}
+{h}^{p}_{x}(t) &=  \sum_{i=1}^n\int_{x_{i-1}-x}^{x_i-x} \mu(x+s,t)   {}_s|\bar{a}_x(t) ds \\
+&=  \sum_{i=1}^n {h}^{p}_{x}(t;x_{i_1},x_{i}),
+\end{split}
+\end{equation}
+with ${h}^{p}_{x}(t;x_{i-1},x_{i})=\int_{x_{i-1}-x}^{x_i-x} \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$, denoting the dollar entropy associated to proportional changes in the force of mortality between ages $x_{i-1}$ and $x_{i}$ and ${H}^{p}_{x}(t;x_{i-1},x_{i}) = \frac{{h}^{p}_{x}(t;x_{i-1},x_{i})}{\bar{a}_x(t)}$, the corresponding dimensionless entropy. 
+
+Similarly, we can decompose the dollar duration $d^p(t)$ into term groups as follows:
+
+\begin{equation}\label{eq:DurationAge}
+\begin{split}
+{d}^{p}_{x}(t) &= \sum_{j=1}^m\int_{t_{j-1}}^{t_j} \delta(s,t) {}_s|\bar{a}_x(t)ds \\
+&= \sum_{j=1}^m {d}^{p}_{x}(t;t_{j-1},t_{j}),
+\end{split}
+\end{equation}
+
+with ${d}^{p}_{x}(t;t_{j-1},t_{j}) = \int_{t_{j-1}}^{t_j} \delta(s,t) {}_s|\bar{a}_x(t)ds$, denoting the dollar duration associated to proportional changes in term structure between terms $t_{j-1}$ and $t_{j}$ and ${D}^{p}_{x}(t;t_{j-1},t_{j}) = \frac{{d}^{p}_{x}(t;t_{j-1},t_{j})}{\bar{a}_x(t)}$, the corresponding dimensionless duration. 
+
+These age-group specific entropies and term specific durations are akin to the key q-durations and key rate durations introduced by \citep{li2012key} and \citep{Ho1992}, respectively, to measure the sensitivity of financial instruments to changes in specific portions of the life table and term structure of interest rates.\\
+
+Combining Equations \ref{eq:TimeDerivAge}, \ref{eq:EntropyAge}, \ref{eq:DurationAge} we can write  
+
+\begin{equation}\label{eq:TimeDerivAge2}
+\begin{split}
+ \acute{\bar{a}}_x(t) = \sum_{i=1}^n\bar{\rho}_x(t;x_{i-1}, x_i){H}^{p}_x(t;x_{i-1}, x_i) +\sum_{j=1}^m\bar{\upvarphi}(t;t_{j-1},t_{j}){D}^{p}_x(t;t_{j-1},t_{j}),  
+\end{split}
+\end{equation}
+where $$\bar{\rho}_x(t;x_{i-1}, x_i)= \frac{\int_{x_{i-1}-x}^{x_i-x} \rho(x+s,t) {}_sM_x(t)  ds}{\int_{x_{i-1}-x}^{x_i-x}  {}_sM_x(t)ds}$$ and 
+$$\bar{\upvarphi}(t;t_{j-1},t_{j})= \frac{\int_{t_{j-1}}^{t_{j}} \upvarphi(s,t) {}_sW_x(t)  ds}{\int_{t_{j-1}}^{t_{j}} {}_sW_x(t) ds}$$ are, respectively, the weighted average improvement rates in the age group $[x_{i-1},x_{i})$ and the weighted average pace of change in the force of interest for the term group $[t_{j-1},t_{j})$. 
 
 
 
@@ -496,6 +539,29 @@ We observe that longevity contributions to changes in $\bar{a}_x(t)$ are more pr
 
 
 
+\FloatBarrier
+\section{Attribution of changes in annuity values across age-groups and terms}
+
+In this section we illustrate how Equation \ref{eq:TimeDerivAge2} can be used to decompose the the one year change in annuity values across the contributions of mortality improvements for different age groups and the change in the term structure of the interest rates. This is in the spirit of the perfomance attribution exercises common in fixed income (see, e.g., \citep{Daul2012}). 
+
+\begin{itemize}
+\item Take mortality rates and the term structure for two years (e.g. 1999 and 2000)     
+\item  Calculate annuity values for the two years
+\item  Calculate the entropy and duration for the different age groups
+\item  Plot the profile of duration and entropies (see Exhibit 6-13) of \citep{Ho1992}
+
+\end{itemize}
+
+From Equation \ref{eq:TimeDerivAge2} we can approximate the change in the one year annuity value as 
+
+\begin{equation}\label{eq:ChangeApprox2}
+\begin{split}
+ \frac{\bar{a}_x(t+1) - \bar{a}_x(t)}{\bar{a}_x(t)} \approx \sum_{i=1}^n\tilde{\rho}_x(t;x_{i-1}, x_i){H}^{p}_x(t;x_{i-1}, x_i) +\sum_{j=1}^m\tilde{\upvarphi}(t;t_{j-1},t_{j}){D}^{p}_x(t;t_{j-1},t_{j}),  
+\end{split}
+\end{equation} 
+ where $\tilde{\rho}_x(t;x_{i-1}, x_i)$ and $\tilde{\upvarphi}(t;t_{j-1},t_{j})$ are the realised mortality improvements and force of interest changes between $t$ and $t+1$.
+
+We can then do a table like Table 3.1 in \citep{Daul2012}
 
 
 \FloatBarrier
