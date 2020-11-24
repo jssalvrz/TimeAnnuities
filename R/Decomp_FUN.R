@@ -2,15 +2,15 @@
 get.rho <- function(mx, Year, Age){ 
   MX<- data.frame(mx, Year, Age)
   MX <- MX %>% spread(Year, mx)
-  mx.2   <- MX[ ,-c(1)]
-  mx.1   <- MX[ ,-c(ncol(MX))]
+  mx.2   <- MX[ ,-c(1,2)]
+  mx.1   <- MX[ ,-c(1,ncol(MX))]
   rho <- cbind(Age=MX$Age,-log(mx.2/mx.1)) # rho populaton by age
   rho <- rho %>% gather(Year, rho, -Age )
   rho$Year <- as.integer(rho$Year)
   return(data.frame(rho))
 } 
 
-# Rate of relative change in interest
+# Change in a single interest rate
 get.phi <- function(delta, Year){ 
   rx<- data.frame(delta, Year)
   rx <- rx %>% spread(Year, delta)
@@ -23,6 +23,21 @@ get.phi <- function(delta, Year){
 }
 
 
+# Phi using the terms structure
+get.phi.str <- function(delta, Year, Age){ 
+    Delta<- data.frame(delta, Year, Age)
+    Delta <- Delta %>% spread(Year, delta)
+    delta.2   <- Delta[ ,-c(1,2)]
+    delta.1   <- Delta[ ,-c(1,ncol(Delta))]
+    
+    phi <- cbind(Age=Delta$Age,-log(delta.2/delta.1)) # phi by age
+    phi <- phi %>% gather(Year, phi, -Age )
+    phi$Year <- as.integer(phi$Year)
+    return(data.frame(phi))
+} 
+
+
+
 
 get.adot <- function(ax, Year){ 
   a <- data.frame(ax, Year)
@@ -30,7 +45,7 @@ get.adot <- function(ax, Year){
   ax.2   <- a[ ,-c(1)]
   ax.1   <- a[ ,-c(ncol(a))]
   adot <- (ax.2 - ax.1)/ax.1
-  #adot <- -log(ax.2/ax.1) * ax[-1]
+  #adot <- -log(ax.2/ax.1) #* ax[-1]
   adot <-adot %>% gather(Year,adot)
   adot$Year <- as.integer(adot$Year)
   return(data.frame(adot))
@@ -102,7 +117,7 @@ get.ax <- function(Age, mu, delta){
  return(dat)}
 
 
-# Decomposition
+# Full decomposition
 get.decomp <- function(Age, ax, sEx, mu, delta, rho, phi, H,D,Dc){
 
 # Weights
@@ -125,3 +140,52 @@ adot <- mort+int
 
 out <- data.frame(ax=ax[1],rhobar, phibar, H=H[1],D=D[1],Dc=Dc[1], mort, int, adot)
 return(out)}
+
+
+
+# Full decomposition
+get.age.decomp <- function(Age, ax, sEx, mu, delta, rho, phi){
+  
+  # Weights
+  sMx <- mu * sEx * ax
+  sWx <- delta * sEx * ax
+  
+  # Average change over time 
+  rhobar.num   <- sum( rho * sMx )
+  rhobar.denom <- sum( sMx )
+  rhobar <- rhobar.num / rhobar.denom
+  
+  phibar.num   <- sum( phi * sWx )
+  phibar.denom <- sum( sWx )
+  phibar <- phibar.num / phibar.denom
+  
+  
+  # Entropy
+  hp <- rev(cumsum(rev( sMx )))
+  Hp <- hp / ax
+
+  Hp[is.na(Hp)] <- 0 ## in case of NA values
+  Hp[is.infinite(Hp)] <- 0 ## in case of Inf values
+  
+ 
+  # Duration
+  dp <-   rev(cumsum(rev( sWx )))
+  Dp <- dp / ax
+
+  Dp[is.na(Dp)] <- 0 ## in case of NA values
+  Dp[is.infinite(Dp)] <- 0 ## in case of Inf values
+  
+  H<-Hp[1]
+  D<-Dp[1]
+ 
+  # Decomposition
+  mort <- rhobar * H
+  int  <- phibar * D
+  adot <- mort+int
+  
+  out <- data.frame(ax=ax[1],rhobar, phibar, H, D, mort, int, adot)
+  return(out)}
+
+
+
+
