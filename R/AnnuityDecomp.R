@@ -58,7 +58,7 @@ pmxr$country <- "England and Wales"
 
 pmxr <- pmxr[,c("country", "Sex", "Year","Age", "Mx", "delta")]
 
-smxr <- rbind(hmxr, pmxr) # This is the full dataset
+smxr <- rbind(hmxr) # This is the full dataset
 smxr <- data.table(arrange(smxr, country, Sex, Year, Age))
 # Selection of years and ages to be decomposed ----------------------------
 
@@ -107,14 +107,17 @@ adotD$Dp2 <- adotD$delta *adotD$Dc # Check Duration Prop changes
 brks <- seq(1860,2060,by = 20)
 labs <- c("1860", "'80", "1900","'20","'40","'60","'80","2000", "'20", "'40", "'60")
 
+intr <- "#2cb889"
+long <- "#bf6524"
+ann <- "#768F57"
 
 # Interest rates
 ggplot(rawRates)+
   geom_line( aes( Year,delta),size = 0.3,  alpha = 0.4)+
-  geom_line( aes( Year,sdelta),size = 0.3, colour = "#8600f2")+##f5a6ff
+  geom_line( aes( Year,sdelta),size = 0.4, colour = intr)+##f5a6ff
   theme_minimal()+
   ylab("Long-term interest rates (%)")+
-  scale_y_continuous(breaks = seq(0,1,by = 0.02), expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,1,by = 0.04), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
    coord_cartesian(ylim = c(0,0.16), xlim=c(Syear,2020))+
@@ -128,16 +131,18 @@ ggplot(rawRates)+
         legend.position = "none",
         panel.spacing.x = unit(1,"lines"))
 
-#ggsave("Fig/delta.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/delta.pdf", width = 2.5, height = 2, device = cairo_pdf)
 
 # Raw death rates
 
 ggplot(subset(rawMx, Age %in% c(65, 70,  75)))+
-  geom_line( aes( Year,Mx.f, group = as.factor(Age)),size = 0.3,  alpha = 0.3)+
-  geom_line(data= subset(smxr, Age %in% c(65,70, 75) & Sex == "Females"),
+  geom_line( aes( Year,Mx.m, group = as.factor(Age)),size = 0.3,  alpha = 0.3)+
+  
+  
+  geom_line(data= subset(smxr, Age %in% c(65,70, 75) & Sex == "Males"),
                          aes( Year,Mx, group = as.factor(Age),
                               colour = as.factor(Age)),
-                         size = 0.3)+
+                         size = 0.4)+
   
   
   # geom_line( aes( Year,Mx.m, group = as.factor(Age)),size = 0.3,  alpha = 0.3)+
@@ -147,13 +152,13 @@ ggplot(subset(rawMx, Age %in% c(65, 70,  75)))+
   #           size = 0.3)+
   
   #geom_line( aes( Year,sdelta),size = 0.3, colour = "#8600f2")+##f5a6ff
-  scale_color_manual(values = c("#05cc02","#00c2f7", "#ccae02"))+
+  scale_color_manual(values = c("#fcc69f",  "#eb975b","#c27640" ))+
   theme_minimal()+
   ylab("Death rates (log)")+
-  scale_y_continuous(breaks = c(0.02,seq(0,.1,by = 0.02)), trans = "log", expand = c(0,0))+
+  scale_y_continuous(breaks = c(0.01,seq(0,.09,by = 0.03)), trans = "log", expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(0.005,0.12), xlim=c(Syear,2020))+
+  coord_cartesian(ylim = c(0.01,0.12), xlim=c(Syear,2020))+
   theme(panel.grid = element_blank(),
         panel.background = element_blank(),#  element_rect(fill = "grey30"),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
@@ -164,24 +169,24 @@ ggplot(subset(rawMx, Age %in% c(65, 70,  75)))+
         legend.position = "none",
         panel.spacing.x = unit(1,"lines"))
 
-#ggsave("Fig/muf.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/mum.pdf", width = 2.5, height = 2, device = cairo_pdf)
 
 
 # Annuity
 ggplot(subset(a, Age %in% c(65) & Sex == "Males" & Year <= 2018))+
-  geom_line( aes( Year,ax, colour = as.factor(Age), group = as.factor(Age)),size = 0.7)+
+  geom_line( aes( Year,ax, colour = as.factor(Age), group = as.factor(Age)),size = 0.4, colour = "black")+
   # geom_line( aes( Year,Hc, colour = as.factor(Age), group = as.factor(Age)),
   #            size = 0.3, linetype = 1, alpha = 0.7)+
-  scale_color_manual(values = c("#a1fffc", "#b1ff8a"))+
+  #scale_color_manual(values = c("#a1fffc", "#b1ff8a"))+
   facet_grid(~Sex, scales="free")+
   theme_minimal()+
   ylab("Life annuity factors")+
   scale_y_continuous(breaks = seq(2,20,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
- coord_cartesian(ylim = c(6,16), xlim=c(Syear,2020))+
+ coord_cartesian(ylim = c(5,16), xlim=c(Syear,2020))+
   theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
+        panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
         text = element_text(size = 7,font_rc),
         panel.border = element_blank(),
@@ -190,49 +195,23 @@ ggplot(subset(a, Age %in% c(65) & Sex == "Males" & Year <= 2018))+
         legend.position = "none",
         panel.spacing.x = unit(1,"lines"))
 
-#ggsave("Fig/axm.pdf", width = 4, height = 2, device = cairo_pdf)
-
-# Modified duration
-ggplot(subset(a, Age %in% c(65,70,75)))+
-  geom_line( aes( Year,Hc, colour = as.factor(Age), group = as.factor(Age)),size = 0.3)+
-  #geom_line( aes( Year,Hc, colour = as.factor(Age), group = as.factor(Age)),
-  #           size = 0.3, linetype = 3, alpha = 0.7)+
-  #geom_line( aes( Year,Hc), colour = "#f5a57f",size = 0.3)+
-  scale_color_manual(values = c("#e4ff8a","#a1fffc", "#b1ff8a"))+
-  facet_grid(~Sex, scales="free")+
-  theme_minimal()+
-  ylab("Modified duration")+
-  scale_y_continuous(breaks = seq(2,20,by = 4), expand = c(0,0))+
-  scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
-  theme_minimal()+
-  coord_cartesian(ylim = c(2,16), xlim=c(Syear,Fyear))+
-  theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
-        axis.ticks = element_line(size = 0.1, colour = "gray30"),
-        text = element_text(size = 7,font_rc),
-        panel.border = element_blank(),
-        aspect.ratio = .5,
-        strip.text = element_text(size = 7),
-        legend.position = "none",
-        panel.spacing.x = unit(1,"lines"))
-
-#ggsave("Fig/Dur.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/axm.pdf", width = 2.5, height = 2, device = cairo_pdf)
 
 
 # Derivative of ax
-ggplot(subset(adot, Age %in% c(65) & Sex == "Males" & Year <= 2018))+
-  geom_hline(yintercept = 0, colour = "white", alpha = 0.7, size = 0.4)+
+ggplot(subset(adot, Age %in% c(65) & Sex == "Males" & Year <= 2019))+
+  geom_hline(yintercept = 0, colour = "black", size = 0.1, alpha = 0.5)+
   #geom_line(aes(Year, adot), colour = "blue")+ # decomposition
-  geom_line(aes(Year, adotc*100, color = as.factor(Age)),size = 0.7)+ 
-  scale_color_manual(values = c("#e4ff8a","#a1fffc", "#b1ff8a"))+
+  geom_line(aes(Year, adotc*100), color = ann,size = 0.4)+ 
+  #scale_color_manual(values = c("#e4ff8a","#a1fffc", "#b1ff8a"))+
   facet_wrap(~Sex)+
   ylab("Change over time (%)")+
   scale_y_continuous(breaks = seq(-6,6,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-4,5), xlim=c(Syear,2020))+
+  coord_cartesian(ylim = c(-5,5), xlim=c(Syear,2020))+
   theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
+        panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
         text = element_text(size = 7,font_rc),
         panel.border = element_blank(),
@@ -242,21 +221,21 @@ ggplot(subset(adot, Age %in% c(65) & Sex == "Males" & Year <= 2018))+
         panel.spacing.x = unit(1,"lines"))
 
 
-#ggsave("Fig/adotm.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/adotm.pdf", width = 2.5, height = 2, device = cairo_pdf)
 
 # Entropy vs Duration
 ggplot(subset(adotD, Sex == "Males" & Year <= 2018) )+
-  geom_line(aes(Year, D), colour = "#f57f9e")+
-  geom_line(aes(Year, H), colour = "#8bf7ab")+
+  geom_line(aes(Year, D), colour = intr, size = 0.4)+
+  geom_line(aes(Year, H), colour = long, size = 0.4)+
   facet_wrap(~Sex)+
   theme_minimal()+
-  ylab("Sensitivity of life annuity factors")+
+  ylab("Sensitivity")+
   scale_y_continuous(breaks = seq(0,1,by = 0.2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
   coord_cartesian(ylim = c(0,0.8), xlim=c(Syear,2020))+
   theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
+        panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
         text = element_text(size = 7,font_rc),
         panel.border = element_blank(),
@@ -265,7 +244,7 @@ ggplot(subset(adotD, Sex == "Males" & Year <= 2018) )+
         panel.spacing.x = unit(1,"lines"))
 
 
-#ggsave("Fig/Sens65.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/Sens65.pdf", width = 2.5, height = 2, device = cairo_pdf)
 
 
 
@@ -276,18 +255,18 @@ ggplot(subset(adotD, Sex == "Males" & Year <= 2018) )+
 
 
 ggplot(subset(adotD, Sex == "Males" & Year <= 2018))+
-  geom_hline(yintercept = 0, colour = "white", alpha = 0.7, size = 0.1)+
-  geom_line(aes(Year, rhobar*100), colour = "#8bf7ab", size = 0.7)+
-  geom_line(aes(Year, -phibar*delta*1000), colour = "#f5a6ff", size = 0.7)+
+  geom_hline(yintercept = 0, colour = "black", size = 0.1, alpha = 0.5)+
+  geom_line(aes(Year, rhobar*100), colour = long, size = 0.4)+
+  geom_line(aes(Year, -phibar*delta*1000), colour = intr, size = 0.4)+
   #geom_line(aes(Year, phibar), colour = "white")+
   facet_wrap(~Sex)+
   scale_color_viridis_c()+
-  scale_y_continuous(breaks = seq(-10,10,by = 2), expand = c(0,0))+
+  scale_y_continuous(breaks = seq(-9,9,by = 3), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-6,10), xlim=c(Syear,2020))+
+  coord_cartesian(ylim = c(-6,9), xlim=c(Syear,2020))+
   theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
+        panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
         text = element_text(size = 7,font_rc),
         panel.border = element_blank(),
@@ -297,24 +276,24 @@ ggplot(subset(adotD, Sex == "Males" & Year <= 2018))+
   ylab("Average change (%)")
 
 
-#ggsave("Fig/PhiRho.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/PhiRho.pdf", width = 2.5, height = 2, device = cairo_pdf)
 
 
 # Decomposition
-adotD[,c("Year","country","Sex","mort","int")] %>% filter() %>% 
+adotD[,c("Year","country","Sex","mort","int")] %>% filter(Sex == "Males") %>% 
   gather(Component, Percentage, -country, -Sex, -Year) %>% 
   ggplot()+
   geom_area( aes( Year, Percentage*100, fill = Component), position = "stack")+
   # geom_bar(aes(x= Year, y = Percentage, fill = Component),
   #          position = "stack", stat = "identity")+
-  scale_fill_manual(values = c("#fc6579", "#defc65"))+
+  scale_fill_manual(values = c(intr, long))+
   facet_wrap(~Sex)+
   scale_y_continuous(breaks = seq(-10,10,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-4,4), xlim=c(Syear,Fyear))+
+  coord_cartesian(ylim = c(-5,5), xlim=c(Syear,2020))+
   theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
+        panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
         text = element_text(size = 7,font_rc),
         panel.border = element_blank(),
@@ -322,8 +301,8 @@ adotD[,c("Year","country","Sex","mort","int")] %>% filter() %>%
         aspect.ratio = .5,
         strip.text = element_text(size = 7),
         panel.spacing.x = unit(1,"lines"))+
-  ylab("Contribution (%)")
+  ylab("Change over time (%)")
 
   
-ggsave("Fig/ProyDescomposition.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/DescSingle.pdf", width = 2.5, height = 2, device = cairo_pdf)
   

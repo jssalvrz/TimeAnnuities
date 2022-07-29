@@ -1,0 +1,16 @@
+\beamer@sectionintoc {1}{Duration}{5}{0}{1}
+\beamer@sectionintoc {2}{What about changes in mortality?}{12}{0}{2}
+\beamer@sectionintoc {3}{Entropy}{13}{0}{3}
+\beamer@sectionintoc {4}{Changes over time in $\mathaccentV {bar}016{a}_x(t)$}{18}{0}{4}
+\beamer@sectionintoc {5}{Decomposing $\mathaccentV {acute}013{\mathaccentV {bar}016{a}}_x(t)$}{21}{0}{5}
+\beamer@sectionintoc {6}{Age and term attribution}{28}{0}{6}
+\beamer@sectionintoc {7}{Cause of death decomposition}{33}{0}{7}
+\beamer@sectionintoc {8}{Assuming a single interest rate $\delta (t)$}{37}{0}{8}
+\beamer@sectionintoc {9}{Changes in life annuities in the UK}{46}{0}{9}
+\beamer@sectionintoc {10}{Life annuity factors}{54}{0}{10}
+\beamer@sectionintoc {11}{Changes over time and sensitivities}{57}{0}{11}
+\beamer@sectionintoc {12}{Assuming a single $\delta (t)$}{59}{0}{12}
+\beamer@sectionintoc {13}{Age and term attribution}{62}{0}{13}
+\beamer@sectionintoc {14}{Causes of death}{64}{0}{14}
+\beamer@sectionintoc {15}{To sum up}{66}{0}{15}
+\beamer@sectionintoc {16}{Next steps}{78}{0}{16}

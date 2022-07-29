@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Preliminaries}{2}
+\contentsline {section}{\numberline {3}Dynamics of a life annuity}{3}
+\contentsline {subsection}{\numberline {3.1}Changes in $\mathaccentV {bar}016{a}_x(t)$ with respect to $\mu (x,t)$}{3}
+\contentsline {subsection}{\numberline {3.2}Changes in $\mathaccentV {bar}016{a}_x(t)$ with respect to $\delta (s,t)$}{4}
+\contentsline {section}{\numberline {4}Time derivative of $\mathaccentV {bar}016{a}_x(t)$}{5}
+\contentsline {subsection}{\numberline {4.1}Case 1: Assuming ${}_sp_x(t)=e^{-\mu (t)s}$ and $v(s,t)e^{-\delta (t)s}$}{5}
+\contentsline {subsection}{\numberline {4.2}Case 2: Assuming that $_sp_x(t)=e^{-\DOTSI \intop \ilimits@ _{0}^{s}\mu (x+y,t)dy}$ and ${v}(s,t)=e^{-\DOTSI \intop \ilimits@ _{0}^{s}\delta (s,t)dy}$}{6}
+\contentsline {subsection}{\numberline {4.3}Recap of formulations}{7}
+\contentsline {section}{\numberline {5}Historical contribution of changes in life annuity factors}{7}
+\contentsline {subsection}{\numberline {5.1}Step 3: Projection of the decomposition of changes in annuities}{7}
+\contentsline {subsection}{\numberline {5.2}Step 4: Extend the decomposition methods to a variability/heterogeneity measure}{7}
+\contentsline {section}{\numberline {A}Appendix}{12}
+\contentsline {subsection}{\numberline {A.1}Entropy with constant changes in $\mu (x+s,t)$}{12}
+\contentsline {subsection}{\numberline {A.2}Alternative expression for ${H}^{p}_{x}(t)$}{13}
+\contentsline {subsection}{\numberline {A.3}Duration with constant changes in $\delta (s,t)$}{13}
+\contentsline {subsection}{\numberline {A.4}Duration with proportional changes in $\delta (s,t)$}{14}

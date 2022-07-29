@@ -1,0 +1,402 @@
+---
+title: "Decomposition of changes over time in a life annuity"
+date: 12 June, 2020
+output:
+  pdf_document: 
+    keep_tex: yes
+    number_sections: yes
+    toc: yes
+bibliography: C:/Users/jmartinez/OneDrive - Syddansk Universitet/Annuities/Latex/library.bib
+---
+
+# Introduction 
+
+
+Historically, there has been significant interest among demographers in understanding how changes in mortality rates translate into changes in life expectancy. Key among these contributions are @Vaupel1986 and @Vaupel2003 who extend the seminal work of @Keyfitz1985 on the Entropy of the survival function.
+
+At the same time, there has been an interest among actuaries in understanding the sensitivity of life annuities (and other life contingent products) to changes in mortality rates and interest rates. This is typically done in the context of so-called "immunisation" strategies for managing longevity risks (see @Tsai2011b, @Lin2013a,@Tsai2013a, @Lin2014a, @Zhou2019a and @Lin2020).
+
+With the exemption of the work of @Haberman2011, who extend the demographic concept of Entropy to the context of life annuities, these two strands of literature have remained disconnected. This work aims to fill this gap by providing the connections between the immunisation literature and the related work carried out by mathematical demographers. From an actuarial perspective, this could be useful in devising better longevity risk management strategies by leveraging on well-known formal demography results.
+
+# Preliminaries
+
+Let $l(x,t)$ be the number of survivors at age $x$ and at time $t$. All of the quantities expressed here vary over time. Thus, the value of $l(x,t)$ vary according to calendar time $t$. We also note that for the time being we define all quantities on a period basis **[We should look if we want to modify this later to be cohort basis quantities as these are the more correct in practice]**. Following standard actuarial notation, let us define the following quantities:
+
+- $S(x,t)= \frac{l(x,t)}{l(0,t)}$ is the period survival probability from age 0 to age x in year $t$.
+
+- $_sp_x(t) = \frac{S(x+s,t)}{S(x,t)}=\frac{l(x+s,t)}{l(x,t)}$ is the period $t$ survival probability from age $x$ to age $x+s$.
+- $\mu(x,t)$ is the force of mortality at age $x$ in year $t$.
+- $\delta(t)$ is the force of interest in year $t$. **[We could extend this to be $\delta(s,t)$ to reflect the term structure of interest rates]**
+
+
+As in @Vaupel2003, the derivative with respect to time of a function is denoted by adding a point on top of it. For example, the time derivative of the force of mortality is expressed as:
+
+\begin{equation} \label{eq:mudot}
+\dot{\mu}(x,t)\equiv\frac{\partial\mu(x,t)}{\partial t}
+\end{equation}
+
+## Rate of mortality improvement
+
+The rate of mortality improvement (or progress in reducing mortality) is defined as^[Bar the minus sign, this definition is consistent with the definition in @Haberman2012 [Equation 4]]
+
+\begin{equation} \label{eq:rho}
+\rho(x,t)=-\frac{1}{\mu(x,t)}\frac{\mu(x,t)}{\partial t} = - \frac{\dot{\mu}(x,t)}{\mu(x,t)}.
+\end{equation}
+
+## Period life expectancy in year $t$
+
+The (period $t$) expectation of life at age $x$ is given by
+
+$$\mathring{e}_x(t) = \int_0^\infty {}_ap_x(t)da$$
+
+## Period life annuity in year $t$
+
+The (period $t$) life annuity at age $x$ is given by
+
+\begin{equation}\label{eq:Annuity}
+\bar{a}_x(t) = \int_0^\infty {}_ap_x(t) e^{-\delta(t) a}da
+\end{equation}
+
+## Period life annuity-due in year $t$
+
+The (period $t$) life annuity-due at age $x$ is given by
+
+$$\ddot{a}_x(t) = \sum_{k=0}^\infty {}_kp_x(t) e^{-\delta(t) k}$$
+
+
+
+ 
+# Some results from mathematical demography
+
+## Entropy of life expectancy at birth
+
+
+Following @Keyfitz1985, we define the Entropy of the survival function as 
+
+\begin{equation} \label{eq:Entropy1}
+H(t) = -\frac{\int_0^\infty {}_ap_0(t) \ln[{}_ap_0(t)] da}{\int_0^\infty {}_ap_0(t) da}.
+\end{equation} 
+
+
+
+@Vaupel1986 showed that this can be re-expressed as
+
+\begin{equation} \label{eq:Entropy2}
+\begin{split}
+H(t) &= \frac{\int_0^\infty {}_ap_0(t) \int_0^a \mu(s,t) ds\,da}{\int_0^\infty {}_ap_0(t) da}\\
+&= \frac{\int_0^\infty  \int_0^a {}_ap_0(t) \mu(s,t) ds\,da}{\int_0^\infty {}_ap_0(t) da} \\ 
+&= \frac{\int_0^\infty  \int_s^\infty {}_ap_0(t) \mu(s,t) da\,ds}{\int_0^\infty {}_ap_0(t) da}\\
+&= \frac{\int_0^\infty \mu(s,t)  \int_s^\infty {}_ap_0(t)  da \,ds}{\mathring{e}_0} \\
+&=  \frac{\int_0^\infty \mu(s,t)  {}_sp_0(t) \int_s^\infty \frac{{}_ap_0(t)}{{}_sp_0(t)}  da\,ds}{\mathring{e}_0(t)} \\
+&=  \frac{\int_0^\infty \mu(s,t)  {}_sp_0(t) \int_0^\infty {}_ap_s(t)  da\,ds}{\mathring{e}_0(t)} \\
+&=  \frac{\int_0^\infty \mu(s,t)  {}_sp_0(t) \mathring{e}_s(t) ds}{\mathring{e}_0(t)} \\
+\end{split}
+\end{equation} 
+
+The Entropy can be used to quantify the sensitivity of life expectancy to improvement rates. Specifically, if we assume that mortality improvement are constant across ages, that is $\rho(x,t) \equiv \rho(t)$, then we have that:
+
+
+\begin{equation}\label{eq:Keyfitz}
+\frac{\partial\mathring{e}_0(t)}{\partial t}=\rho(t)H(t)\mathring{e}_0(t).
+\end{equation}
+
+This means that we can interpret the entropy as the negative of the duration of life expectancy with respect to proportional changes in the force of mortality (see Equation \eqref{eq:DurationPEntropy}). In fact,  @Haberman2011 [Equation 4] note that, using a Taylor expansion, we have that 
+
+$$\frac{\Delta \mathring{e}_0(t)}{\mathring{e}_0(t)}\approx H(t) \rho(t).$$
+
+## Entropy of life annuities
+
+@Haberman2011 extend the concept of Entropy to the case of a life annuity. Following @Haberman2011 we define the entropy of a life annuity at age $x$ as calculated with interest rate $\delta(t)$ as:
+
+\begin{equation} \label{eq:EntropyAnnuity1}
+H_x(t) = -\frac{\int_0^\infty {}_ap_x(t) \ln[{}_ap_x(t)] e^{-\delta(t) a} da}{\int_0^\infty {}_ap_x(t) e^{-\delta(t) a} da}.
+\end{equation} 
+
+Similarly to the case of the entropy of a life expectancy at birth, @Haberman2011 show that we can re-write $H_x(t)$ as follows:
+
+\begin{equation} \label{eq:EntropyAnnuity2}
+\begin{split}
+H_x(t) &= \frac{\int_0^\infty {}_ap_x(t) e^{-\delta(t) a} \int_0^a \mu(x+s,t) ds\,da}{\int_0^\infty {}_ap_x(t) e^{-\delta(t) a} da}\\
+&= \frac{\int_0^\infty  \int_0^a {}_ap_x(t) e^{-\delta(t) a} \mu(x+s,t) ds\,da}{\int_0^\infty {}_ap_x(t) e^{-\delta(t) a} da}\\
+&= \frac{\int_0^\infty  \int_s^\infty {}_ap_x(t) e^{-\delta(t) a} \mu(x+s,t) da\,ds}{\int_0^\infty {}_ap_x(t) e^{-\delta(t) a} da}\\
+&= \frac{\int_0^\infty  \mu(x+s,t) \int_s^\infty {}_ap_x(t) e^{-\delta(t) a}  da\,ds}{\bar{a}_x(t)}\\
+&= \frac{\int_0^\infty  \mu(x+s,t) {}_sp_x(t) e^{-\delta(t) s} \int_s^\infty \frac{{}_ap_x(t) e^{-\delta(t) a}}{{}_sp_x(t) e^{-\delta(t) s}}  da\,ds}{\bar{a}_x(t)}\\
+&=  \frac{\int_0^\infty \mu(x+s,t)  {}_sp_x(t) e^{-\delta(t) s} \int_0^\infty {}_ap_{x+s}(t) e^{-\delta(t) a}  da\,ds}{\bar{a}_x(t)} \\
+&=  \frac{\int_0^\infty \mu(x+s,t)  {}_sp_x(t)  e^{-\delta(t) s} \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
+\end{split}
+\end{equation} 
+
+Similarly, $H_x(t)$ can be used to quantify the sensitivity of life annuities to improvement rates. If we assume that mortality improvements are constant across ages and than interest rates are held constant, then we have that:
+
+\begin{equation}\label{eq:EntropyChange}
+\frac{\partial \bar{a}_x(t)}{\partial t}=\rho(t)H_x(t)\bar{a}_x(t).
+\end{equation}
+
+@Haberman2011 note that, using a Taylor expansion, we have
+
+$$\frac{\Delta \bar{a}_x(t)}{\bar{a}_x(t)}\approx H_x(t) \rho(t),$$
+
+so we can also interpret the Entropy of life annuity as minus the duration of the life annuity with respect to proportional changes in the force of mortality (see Equation \eqref{eq:DurationPEntropy}). 
+
+
+## Decomposing changes in life expectancy [@Vaupel2003]
+
+@Vaupel2003 have extended the decomposition in \eqref{eq:Keyfitz} to the more general case where mortality improvement rates might differ across ages.  They show that the change in (period) life expectancy at birth can be decomposed as follows:
+
+
+\begin{equation}\label{eq:Keyfitz2}
+\frac{\partial\mathring{e}_0(t)}{\partial t}=\overline{\rho(t)}H(t)\mathring{e}_0(t) + Cov_f(\rho,\mathring{e}),
+\end{equation}
+
+where 
+
+$$\overline{\rho(t)} = \int_0^\infty \rho(a,t){}_ap_0(t)\mu(a,t)da=\int_0^\infty \rho(a,t){}f(a,t)da$$
+with $f(a,t)$ denoting the probability density function describing the distribution of deaths (i.e., life spans) in the life table population at age $a$ and time $t$. Thus  $\overline{\rho(t)}$ is the weighted average of improvement rates. The second term in \eqref{eq:Keyfitz2} is given by:
+
+$$Cov_f(\rho,\mathring{e}) = \int_0^\infty [\rho(a,t)- \overline{\rho(t)}][\mathring{e}_a(t)- \overline{\mathring{e}(t)}]f(a,t)da,$$
+where 
+
+$$\overline{\mathring{e}(t)} = \int_0^\infty \mathring{e}_a(t){}f(a,t)da.$$
+Thus, Equation \eqref{eq:Keyfitz2} decomposes time changes in life expectancy into a first term that captures the general effect of mortality improvements at all ages and a second term that captures the effect of the heterogeneity in mortality improvement at different ages. Typically, the first term dominates and the second term is negligible. 
+
+
+
+# Some results from longevity immunisation
+
+In this section we present some key results in longevity immunisation and try to reconcile them with the standard tools in mathematical demography.
+
+## Modified duration
+
+Following @Milevsky2012, we define the modified duration of a life annuity as the the derivative of the annuity factor with respect to changes in the interest rate, scaled by the (negative) annuity factor itself. Formally:
+
+\begin{equation}\label{eq:DurationDef}
+MD_{x}(t) = - \frac{1}{\bar{a}_x(t)}\frac{\partial\bar{a}_x(t)}{\partial \delta(t)}.
+\end{equation}
+
+We can show then that 
+
+
+\begin{equation}\label{eq:DurationInt}
+\begin{split}
+MD_{x}(t) &= - \frac{1}{\bar{a}_x(t)}\frac{\partial\bar{a}_x(t)}{\partial \delta(t)} \\
+&= - \frac{1}{\bar{a}_x(t)}\frac{\partial\int_0^\infty {}_ap_x(t) e^{-\delta(t) a}da}{\partial \delta(t)} \\
+&= \frac{\int_0^\infty a {}_ap_x(t) e^{-\delta(t) a}da}{\bar{a}_x(t)} 
+\end{split}
+\end{equation}
+
+If we assume that mortality rates are held constant, then we have that:
+
+\begin{equation}\label{eq:MDChange}
+\frac{\partial \bar{a}_x(t)}{\partial t}=-\dot\delta(t)MD_{x}(t)\bar{a}_x(t).
+\end{equation}
+
+Using a Taylor expansion, we have
+
+$$\frac{\Delta \bar{a}_x(t)}{\bar{a}_x(t)}\approx  - MD_x(t) \Delta\delta(t).$$
+
+## Mortality and longevity duration
+
+@Tsai2011b, @Tsai2013a and @Lin2020 define the duration of a life annuity-due with respect to proportional and constant changes in $\mu(x,t)$ as:
+
+$$D^P_x(t) = -\sum_{k=0}^\infty \ln[_kp_x(t)] {}_kp_x(t) e^{-\delta(t) k}$$
+
+and 
+
+$$D^C_x(t) = \sum_{k=0}^\infty k {}_kp_x(t) e^{-\delta(t) k},$$
+respectively.
+
+We can show **[Need to type up the proofs]** that for the case of a continuous life annuity the equivalent expressions are:
+
+\begin{equation}\label{eq:DurationP}
+D^P_x(t) = -\int_{0}^\infty \ln[_ap_x(t)] {}_ap_x(t) e^{-\delta(t) a} da
+\end{equation}
+
+and 
+
+\begin{equation}\label{eq:DurationC}
+D^C_x(t) = \int_{0}^\infty a {}_ap_x(t) e^{-\delta(t) a} da.
+\end{equation}
+
+From \eqref{eq:EntropyAnnuity1} and \eqref{eq:DurationP} we see that the following equality holds:
+
+\begin{equation}\label{eq:DurationPEntropy}
+D^P_x(t) = H_x(t)\bar{a}_x(t)
+\end{equation}
+
+which shows that the proportional duration concept as defined  in the mortality immunisation literature is closely related to the Entropy concept of demography.
+
+Similarly, from \eqref{eq:DurationInt} and \eqref{eq:DurationC} we see that the following equality holds:
+
+\begin{equation}\label{eq:DurationCDurationInt}
+D^C_x(t) = MD_x(t)\bar{a}_x(t)
+\end{equation}
+
+which means that constant (parallel) changes in the force of mortality have essentially the same effect as parallel changes in the force of interest.
+
+# Key conclusions so far
+
+- Equations \eqref{eq:DurationPEntropy} and \eqref{eq:DurationCDurationInt} suggest that to understand financial and longevity risk (at least to the first order) it suffices to use the Entropy and the Modified duration.
+
+- This means that we can leverage the demographic results regarding the Entropy of a life table to better understand the impact of longevity risk
+
+
+# A new decomposition of the time change of a life annuity 
+
+## Decomposition formula
+
+We develop a new decomposition of the changes in life annuities similar to equation \eqref{eq:Keyfitz2} developed by @Vaupel2003. The new results is as follows
+
+\begin{equation}\label{eq:AnnuityDecomposition}
+\frac{\partial \bar{a}_x(t)}{\partial t} = \overline{\rho_x(t)}H_x(t)\bar{a}_x(t) -\dot\delta(t)MD_{x}(t)\bar{a}_x(t) + Cov_{f_x}(\rho_x,e^{-\delta}\bar{a}_x),
+\end{equation}
+
+where the first captures the impact of general mortality improvements, the second term the impact of interest rate changes and the third term the impact of heterogeneity in mortality improvement and its interaction with interest rates.
+
+The term $\overline{\rho_x(t)}$ represents the average mortality improvements after age $x$ and is given by:
+
+$$\overline{\rho_x(t)} = \int_0^\infty \rho(x+s,t){}f_x(s,t)ds,$$
+with $f_x(s,t) = \frac{f(s,t)}{S(x,t)}$. 
+
+The interaction term is given by:
+
+$$Cov_{f_x}(\rho_x,e^{-\delta}\bar{a}_x) = \int_0^\infty [\rho(x+s,t)- \overline{\rho_x(t)}][e^{-\delta(t)s}\bar{a}_{x+s}(t)-H_x(t)\bar{a}_{x}(t)]f_x(s,t)ds.$$
+
+## Proof
+
+From Equation \eqref{eq:Annuity} we have that
+
+$$\frac{\partial \bar{a}_x(t)}{\partial t} = \frac{\partial \left[\int_0^\infty {}_ap_x(t) e^{-\delta(t) a}da\right]}{\partial t} = \int_0^\infty \frac{\partial \left[ {}_ap_x(t) e^{-\delta(t) a}\right]}{\partial t}da.$$
+Using the product rule of differentiation we get
+
+
+\begin{equation}\label{eq:AnnuityDecompositionProductRule}\int_0^\infty \frac{\partial \left[ {}_ap_x(t) e^{-\delta(t) a}\right]}{\partial t}da = \int_0^\infty \frac{\partial \left[ {}_ap_x(t)\right]}{\partial t}e^{-\delta(t) a}da + \int_0^\infty {}_ap_x(t)\frac{\partial \left[e^{-\delta(t) a}\right]}{\partial t}da
+\end{equation}
+
+Let us know concentrate on the calculation of each of the two terms in the above equation. For the second term we have:
+
+$$\int_0^\infty {}_ap_x(t)\frac{\partial \left[e^{-\delta(t) a}\right]}{\partial t}da = -\int_0^\infty a{}_ap_x(t)e^{\delta(t) a}\dot\delta(t)da = -\dot\delta(t)\int_0^\infty a{}_ap_x(t)e^{\delta(t) a}da$$
+Using Equation \eqref{eq:DurationInt} we then get:
+
+
+\begin{equation}\label{eq:AnnuityDecompositionTerm2}\int_0^\infty {}_ap_x(t)\frac{\partial \left[e^{-\delta(t) a}\right]}{\partial t}da =-\dot\delta(t)MD_{x}(t)\bar{a}_x(t).
+\end{equation}
+
+Let us focus now on the first term of Equation \eqref{eq:AnnuityDecompositionProductRule}. Using a similar approach to that of @Vaupel2003 we have
+
+\begin{equation*}
+\begin{split}
+\int_0^\infty \frac{\partial \left[ {}_ap_x(t)\right]}{\partial t}e^{-\delta(t) a}da &=\int_0^\infty \frac{\partial \left[ e^{-\int_0^a\mu(x+s,t)ds} \right]}{\partial t}e^{-\delta(t) a}da \\
+&= -\int_0^\infty e^{-\int_0^a\mu(x+s,t)}\frac{\partial \left[ \int_0^a\mu(x+s,t)ds \right]}{\partial t}e^{-\delta(t) a}da \\
+&= -\int_0^\infty {}_ap_x(t) e^{-\delta(t) a}\int_0^a\frac{\partial \left[ \mu(x+s,t) \right]}{\partial t}ds \, da \\
+&= -\int_0^\infty {}_ap_x(t) e^{-\delta(t) a}\int_0^a\dot\mu(x+s,t)ds \, da \\
+&= -\int_0^\infty \int_0^a {}_ap_x(t) e^{-\delta(t) a}\dot\mu(x+s,t)ds \, da
+\end{split}
+\end{equation*}
+
+Changing the order of integration we have
+
+\begin{equation}\label{eq:Proof1}
+\begin{split}
+\int_0^\infty \frac{\partial \left[ {}_ap_x(t)\right]}{\partial t}e^{-\delta(t) a}da &= -\int_0^\infty \int_0^a {}_ap_x(t) e^{-\delta(t) a}\dot\mu(x+s,t)ds \, da \\
+&= -\int_0^\infty \int_s^\infty {}_ap_x(t) e^{-\delta(t) a}\dot\mu(x+s,t)da \, ds \\
+&= -\int_0^\infty \dot\mu(x+s,t) \int_s^\infty {}_ap_x(t) e^{-\delta(t) a}da \, ds 
+\end{split}
+\end{equation}
+
+We note that
+
+\begin{equation}\label{eq:Proof2}
+\begin{split}
+\int_s^\infty {}_ap_x(t) e^{-\delta(t) a}da &= e^{-\delta(t)s} {}_sp_x(t)\int_s^\infty {}_{a-s}p_{x+s}(t) e^{-\delta(t) (a-s)}da \\
+&= e^{-\delta(t)s} {}_sp_x(t)\int_0^\infty {}_{a}p_{x+s}(t) e^{-\delta(t) a}da \\
+&= e^{-\delta(t)s} {}_sp_x(t) \bar{a}_{x+s}(t)
+\end{split}
+\end{equation}
+Substituting \eqref{eq:Proof2} in \eqref{eq:Proof1} we get
+
+
+\begin{equation}\label{eq:Proof3}
+\begin{split}
+\int_0^\infty \frac{\partial \left[ {}_ap_x(t)\right]}{\partial t}e^{-\delta(t) a}da 
+&= -\int_0^\infty \dot\mu(x+s,t) e^{-\delta(t)s} {}_sp_x(t) \bar{a}_{x+s}(t) ds \\
+&= \int_0^\infty \rho(x+s,t)\mu(x+s,t) {}_sp_x(t) e^{-\delta(t)s} \bar{a}_{x+s}(t) ds\\ &= \int_0^\infty \rho(x+s,t)f_x(s,t)e^{-\delta(t)s} \bar{a}_{x+s}(t) ds\\
+&= \int_0^\infty \rho(x+s,t)e^{-\delta(t)s} \bar{a}_{x+s}(t) f_x(s,t)ds.
+\end{split}
+\end{equation}
+
+Let us define $u(s,t) = \rho(x+s,t)$ and $v(s,t) = e^{-\delta(t)s} \bar{a}_{x+s}(t)$. Using  Equation (10) in @Vaupel2003, the formula for the expectation of a product, we have:
+
+\begin{equation}\label{eq:Proof4}
+\overline{uv} = \overline{u}\,\overline{v} + Cov_{f_x}(u,v),
+\end{equation}
+with 
+
+\begin{equation}\label{eq:Proof5}
+\overline{uv} = \int_0^\infty u(s,t)v(s,t)f_x(s,t)ds =\int_0^\infty \rho(x+s,t)e^{-\delta(t)s} \bar{a}_{x+s}(t) f_x(s,t)ds,
+\end{equation}
+
+\begin{equation}\label{eq:Proof6}
+\overline{u} = \int_0^\infty u(s,t)f_x(s,t)ds=\int_0^\infty \rho(x+s,t) f_x(s,t)ds = \overline{\rho_x(t)},
+\end{equation}
+
+\begin{equation}\label{eq:Proof7}
+\begin{split}
+\overline{v} &= \int_0^\infty v(s,t)f_x(s,t)ds = \int_0^\infty e^{-\delta(t)s} \bar{a}_{x+s}(t) f_x(s,t)ds\\
+& = \int_0^\infty e^{-\delta(t)s} \bar{a}_{x+s}(t) {}_sp_x(t) \mu(x+s,t)ds = H_x(t)\bar{a}_x(t),
+\end{split}
+\end{equation}
+and
+
+\begin{equation}\label{eq:Proof8}
+\begin{split}
+Cov_{f_x}(u,v) &= \int_0^\infty [u(s,t)-\overline{u}][v(s,t)-\overline{v}]f_x(s,t)ds\\
+&= \int_0^\infty [\rho(x+s,t)-\overline{\rho_x(t)}][e^{-\delta(t)s} \bar{a}_{x+s}(t)-H_x(t)\bar{a}_x(t)]f_x(s,t)ds\\
+&=  Cov_{f_x}(\rho_x,e^{-\delta}\bar{a}_x).
+\end{split}
+\end{equation}
+
+Noting that the last term in \eqref{eq:Proof3} coincides with the right-hand side of \eqref{eq:Proof5} and substituting \eqref{eq:Proof6}, \eqref{eq:Proof7} and \eqref{eq:Proof8} into \eqref{eq:Proof4} we get:
+
+
+\begin{equation}\label{eq:AnnuityDecompositionTerm1}
+\int_0^\infty \frac{\partial \left[ {}_ap_x(t)\right]}{\partial t}e^{-\delta(t) a}da = \overline{\rho_x(t)}H_x(t)\bar{a}_x(t) + Cov_{f_x}(\rho_x,e^{-\delta}\bar{a}_x),
+\end{equation}
+
+Finally, substituting \eqref{eq:AnnuityDecompositionTerm2} and \eqref{eq:AnnuityDecompositionTerm1} into \eqref{eq:AnnuityDecompositionProductRule} we get
+
+\begin{equation*}
+\frac{\partial \bar{a}_x(t)}{\partial t} = \overline{\rho_x(t)}H_x(t)\bar{a}_x(t) -\dot\delta(t)MD_{x}(t)\bar{a}_x(t) + Cov_{f_x}(\rho_x,e^{-\delta}\bar{a}_x),
+\end{equation*}
+
+which completes the proof.
+
+
+# Work to be done
+
+A plan for the rest of project could look as follows:
+
+## Step 1 (Mostly done): Develop a decomposition of the time change of a life annuity 
+
+This has been developed in Equation \eqref{eq:AnnuityDecomposition}. Some additional things we may want to do:
+
+- Extend this to include an age decomposition as well.
+- Analyse further the behaviour of the covariance term to understand is meaning.
+
+## Step 2: Historical decomposition of changes in annuities
+
+We should apply \eqref{eq:AnnuityDecomposition} to historical life table and interest rate data to do the decomposition of the time changes in annuity values. This would help understand the contribution of longevity and financial risk to annuities. This could be similar to Table 1 in @Vaupel2003
+
+
+## Step 3: Projection of the decomposition of changes in annuities
+
+We can use mortality projection and interest rate projection models to project the possible future decomposition of changes in annuity rates to see the relative future importance of financial risk and longevity risk. 
+
+A useful by-product of this would be deriving close-form expression for $\overline{\rho(t)}$ for common mortality models. For this, the work in @Haberman2012 and @Hunt2017a formulating mortality models in term of mortality improvement could be useful. This would also link our work with the work of @Zhou2019a.
+
+
+## Step 4: Extend the decomposition methods to a variability/heterogeneity measure
+
+Steps 1 to 3 focus on the decomposition of life expectancy which is a central tendency measure. This is of interest for annuity and pension providers. However, for individuals, it could be the variability in their life spans which matters the most (see @Milevsky2019). Thus, we could extend the decomposition methods to a variability measure along the lines of the work in @Aburto2020a. **[This could be a follow up paper]**
+
+# References
+ 

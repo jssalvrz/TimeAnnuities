@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: DecompLifeAnnuity.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apalike.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Database file #1: library.bib
+Repeated entry---line 789 of file library.bib
+ : @article{fernandez2015entropy
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--there's a number but no volume in Daul2012
+Warning--there's a number but no volume in Li2012
+You've used 45 entries,
+            1935 wiz_defined-function locations,
+            746 strings with 11514 characters,
+and the built_in function-call counts, 18450 in all, are:
+= -- 1857
+> -- 710
+< -- 36
++ -- 250
+- -- 234
+* -- 1584
+:= -- 3159
+add.period$ -- 136
+call.type$ -- 45
+change.case$ -- 336
+chr.to.int$ -- 43
+cite$ -- 47
+duplicate$ -- 684
+empty$ -- 1285
+format.name$ -- 314
+if$ -- 3613
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 47
+newline$ -- 228
+num.names$ -- 135
+pop$ -- 260
+preamble$ -- 1
+purify$ -- 339
+quote$ -- 0
+skip$ -- 547
+stack$ -- 0
+substring$ -- 1428
+swap$ -- 102
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 264
+warning$ -- 2
+while$ -- 170
+width$ -- 0
+write$ -- 583
+(There was 1 error message)

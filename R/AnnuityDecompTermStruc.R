@@ -43,7 +43,7 @@ rsm <- data.table(rstr)
 rsm <- rsm[,smooth.spline(rawdelta, spar = 0.6)$y,by = Year ]
 rsm$term <- rstr$term
 rsm <- as.data.frame(rsm[,smooth.spline(V1, spar = 0.6)$y,by = term ])
-years <- 1970:2020 # I HAVE TO FIND THE WAY TO DO IT AUTOMATICALLY
+years <- 1970:2020 
 rsm$Year <- years
 
 rstr <- merge(rstr, rsm, by = c("Year", "term"))
@@ -126,97 +126,74 @@ Syear <- 1970
 Fyear <- 2020# Final year to plot graphs
 
 
-# Colour pallette
-ii <- viridis::magma(4,alpha = 1,begin = 0.2, end =0.7,direction = -1)
-kk <- viridis::viridis(4, alpha = 1, begin = 0.6, end = 1, direction = -1)
+# Colour palette
+#ii <- viridis::magma(4,alpha = 1,begin = 0.2, end =0.7,direction = -1)
+#kk <- viridis::viridis(4, alpha = 1, begin = 0.6, end = 1, direction = -1)
+
+ii <- c( "#006140", "#00bd7d","#92f7ae", "#bdffeb" )
+kk <- c( "#ba3c06", "#d4742f", "#ffa463", "#ffdec7")
 jj<- c(ii,kk)
 
 
 
 # Age decomposition
 
-  ggplot(adotD.age)+
- #geom_area( aes( Year, Percentage*100, fill = Component), position = "stack")+
-   geom_bar(aes(x= Year, y = Percentage*100, fill = Component),
-            position = "stack", stat = "identity",width = 1)+
+  ggplot(subset(adotD.age, Sex == "Males"))+
+ #geom_area( aes( Year, Percentage*100, fill = Component),position = "stack", alpha =1)+
+  geom_bar(aes(x= Year, y = Percentage*100, fill = Component),
+            position = "stack", stat = "identity",width = 1, alpha = 1)+
   scale_fill_manual(values = jj)+
   facet_wrap(~Sex)+
   scale_y_continuous(breaks = seq(-10,10,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-4,4), xlim=c(Syear,Fyear))+
+  coord_cartesian(ylim = c(-5,5), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "gray30"),
+        panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
         text = element_text(size = 7,font_rc),
         panel.border = element_blank(),
-        legend.position = "none",
-        aspect.ratio = .5,
+        legend.position = "right",
+        aspect.ratio = 1,
         strip.text = element_text(size = 7),
         panel.spacing.x = unit(1,"lines"))+
-  ylab("Contribution (%)")
+  ylab("Change over time (%)")
 
-ggsave("Fig/AgeDescomposition.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/AgeDescompositionlabel.pdf", width = 2.5, height = 2, device = cairo_pdf)
 
   
  
   
-  
-#Decomposition
-adotD[,c("Year","country","Sex","mort","int")] %>% filter() %>% 
-  gather(Component, Percentage, -country, -Sex, -Year) %>% 
-  ggplot()+
- # geom_area( aes( Year, Percentage*100, fill = Component), position = "stack")+
-   geom_bar(aes(x= Year, y = Percentage*100, fill = Component),
-            position = "stack", stat = "identity", width = 1)+
-  scale_fill_manual(values = c("#fc6579", "#defc65"))+
-  facet_wrap(~Sex)+
-  scale_y_continuous(breaks = seq(-10,10,by = 2), expand = c(0,0))+
-  scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
-  theme_minimal()+
-  coord_cartesian(ylim = c(-4,4), xlim=c(Syear,Fyear))+
-  theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
-        axis.ticks = element_line(size = 0.1, colour = "gray30"),
-        text = element_text(size = 7,font_rc),
-        panel.border = element_blank(),
-        legend.position = "none",
-        aspect.ratio = .5,
-        strip.text = element_text(size = 7),
-        panel.spacing.x = unit(1,"lines"))+
-  ylab("Contribution (%)")
-
-
-#ggsave("Fig/StrucDescomposition.pdf", width = 4, height = 2, device = cairo_pdf)
-
 # Attribution of Durations and entropies 
 
-adotD.a[,c("Year","country","Sex","H","D", "xt")] %>% filter(Sex == "Males" & Year %in% c(1975, 2005)) %>% 
+adotD.a[,c("Year","country","Sex","H","D", "xt")] %>% filter(Sex == "Males" & Year %in% c(1975, 2015)) %>% 
   gather(Component, Percentage, -country, -Sex, -Year, -xt) %>% 
   ggplot()+
   # geom_area( aes( Year, Percentage*100, fill = Component), position = "stack")+
   geom_bar(aes(x= xt, y = Percentage, fill = Component),
            position = "dodge", stat = "identity", width = 0.5)+
-  scale_fill_manual(values = c("#fc6579", "#defc65"))+
-  facet_wrap(~Year)+
+  scale_fill_manual(values = c("#2cb889", "#bf6524"))+
+  facet_wrap(~Year, ncol = 2,scales = "free")+
   scale_y_continuous(breaks = seq(0,0.6,by = 0.1), expand = c(0,0))+
   scale_x_continuous(labels = c("65-74", "75-84", "85-94", "95-104"), expand = c(0,0))+
   theme_minimal()+
   coord_cartesian(ylim = c(0,0.6))+
   theme(panel.grid = element_blank(),
-        panel.background = element_rect(fill = "grey30"),
+        panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),
         text = element_text(size = 7,font_rc),
         panel.border = element_blank(),
         legend.position = "none",
-        aspect.ratio = .5,
+        aspect.ratio = 1,
         strip.text = element_text(size = 7),
-        panel.spacing.x = unit(1,"lines"))+
+        panel.spacing.x = unit(2,"lines"))+
   ylab("Sensitivity")+
   xlab("Ages")
 
 
-#ggsave("Fig/AttributionDH.pdf", width = 4, height = 2, device = cairo_pdf)
+ggsave("Fig/AttributionDH.pdf", width = 3, height = 2, device = cairo_pdf)
+
+# Extra plots -------------------------------------------------------------
 
 
 # Interest rates
@@ -240,6 +217,9 @@ ggplot(subset(rstr , term ==0))+
         panel.spacing.x = unit(1,"lines"))
 
 #ggsave("Fig/delta.pdf", width = 4, height = 2, device = cairo_pdf)
+
+
+
 
 # Raw death rates
 
