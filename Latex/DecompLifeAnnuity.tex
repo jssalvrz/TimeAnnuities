@@ -9,6 +9,8 @@
 \usepackage{extsizes}
 \usepackage{wrapfig}
 \usepackage{leftidx}
+\usepackage{amsmath}
+\usepackage{dsfont}
 % change margins
 \usepackage{geometry}
 \geometry{left=20mm,right=20mm,top=15mm,bottom=15mm}
@@ -27,7 +29,6 @@
 
 \usepackage{authblk}
 \usepackage{graphicx}
-\usepackage{mathptmx} 
 % My packages
 \usepackage{parskip}
 \usepackage{relsize, threeparttable}
@@ -56,7 +57,7 @@
 \usepackage{upgreek}
 %\date{}
 \usepackage{color,soul}
-\usepackage{amsmath}
+
 
 \setlength{\parindent}{0pt}
 \definecolor{lightgrey}{rgb}{0.925, 0.925, 0.925}
@@ -91,10 +92,15 @@
 
 \begin{abstract}
 	
-	POLISH THE ABSTRACT
-	Actuaries and risk managers are interested in developing strategies to ensure that changes in interest rates do not affect the value of a portfolio. Similarly, there is a long-standing tradition among demographers to measure how changes over time in mortality affect summary measures of longevity such as life expectancy. In this paper, we bring these two perspectives together. We develop a new decomposition method to quantify the contribution of changes in mortality and interest rates to the change in life annuity factors. We introduce neat and intuitive formulations that allow actuaries and risk managers to easily asses stochastic changes in financial and longevity risks embedded in their life annuities' portfolios. \\
+	Actuaries and risk managers aim to mitigate the impact of interest rate fluctuations on portfolio values. Similarly, demographers have long measured the effects of mortality changes on longevity metrics like life expectancy. This paper integrates these perspectives by developing a new decomposition method to quantify the contributions of mortality and interest rate changes to life annuity factors. Our intuitive formulations enable actuaries and risk managers to assess stochastic changes in financial and longevity risks within their life annuity portfolios.
 	
-	To illustrate our method, we look at the long-term development of life annuity prices using financial and mortality data from the United Kingdom since 1841. We found that there is clear interplay between longevity and financial risk, where the former one is at times masked by high financial risk. 
+	To demonstrate our method, we analyze the historical development of life annuity prices using financial and mortality data from the United Kingdom since 1841. Our findings reveal a significant interplay between longevity and financial risk, with high financial risk sometimes obscuring the impact of longevity.
+	
+	We develop differential equations to determine the sources of change in reserves. Such equations clearly show that contributions of mortality improvements and changes in the term structure of interest.
+	
+	The differential equations developed in this paper are complementary to the traditional Thiele equation to identify the sources of change in life annuities.
+	
+	
 \end{abstract}
 \newpage
 \section{Introduction}\label{sec:1_introduction}
@@ -149,25 +155,17 @@ In this article we bring together the aforementioned results from the actuarial 
 \section{Time dynamics of life annuities}\label{sec:3_timedynamics}
 \subsection{Preliminaries}\label{preliminaries}
 
-All of the quantities introduced in this section vary over time $t$. Following the standard actuarial notation, we define the following quantities:
+Let us introduce some notation about time variables used to portray the dynamics of life annuities. Let $(x)$ denote an insured life aged $x$, where $x>0$. The future lifetime of $(x)$ is denoted by random variable $S_x$. Therefore, $x+S_x$ is the random variable representing the lifetime of $(x)$. Time $S=s$ is the time variable associated to the \textit{development of the policy}.
 
-\begin{itemize}
+The actuarial value of the policy associated to life $(x)$ is determined using information about the corresponding economic-demographic environment where the life annuity is written and provided. Let $T$ be the random variable representing the time when such information of \textit{the economic-demographic environment} is generated. We assume that this information is generated continuously, such that $T$ is continuous.
 
-\item
-\(\mu(x,t)\) is the force of mortality at age \(x\) in time $t$.
+Time $t$ and $s$ are both time variables, however, they are not necessary the same and it is important to highlight their differences.
 
-\item
-$_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$ is the time $t$ period survival probability from age \(x\) to age \(x+s\). 
+Information about eonomic-demographic enviroment used to evaluate life annuities are collected at time $t$. However, it could be that there is a lag between the time where the actuarial assumptions are set (at time $t$) and the time of development of the policy (denoted by time $s$)\footnote{In with-profits contracts, time $t$ can refer to the first-order assumptions, that differs from the information of the development of the policy (second-order basis)}. In some cases it could be $t=s$, however, we decide to make a clear distinction between these two time variables with the purpose of unraveling the sources of change in life annuities\footnote{In Section \ref{sec:ThieleEquations} the link between $t$ and $s$ is analyzed explicitly in terms of the Thiele differential equation for a life annuity policy}. For this reason, all of the quantities in this paper are indexed by $t$. 
 
+Let $I_{s,t}=\mathds{1}_{\{S_x>s,t\}}$ be the indicator of survival of life $(x)$ to time $s$ with information generated at time $t$. Its expected value is $\mathbb{E}[I_{s,t}]={}_sp_x(t)$ is the time $t$ period survival probability from age \(x\) to age \(x+s\). Probability ${}_sp_x(t)$ can be expressed as ${}_sp_x(t)=e^{-\int_{0}^{s}\mu(x+y,t)dy}$, where \(\mu(x,t)\) is the force of mortality at age \(x\) in time $t$.
 
-\item
-\(\delta(s,t)\) is the time $t$ forward force of interest at maturity $s$. This measure is a general form to express the term-structure of interest rates.
-
-\item 
-
-${v}(s,t)=e^{-\int_{0}^{s}\delta(y,t)dy}$ is the time $t$ discount factor, for a cash-flow payable at maturity $s$.
-
-\end{itemize}
+Let \(\delta(s,t)\) be the time $t$ forward force of interest at maturity $s$. This measure is a general form to express the term-structure of interest rates. Quantity ${v}(s,t)=e^{-\int_{0}^{s}\delta(y,t)dy}$ is the time $t$ discount factor, for a cash-flow payable at maturity $s$.
 
 The derivative with respect to time $t$ is denoted by adding a point on top of the function of interest. For example, time derivatives for the forces of mortality and interest are expressed as:
 
@@ -181,16 +179,16 @@ and
 \dot{\delta}(s,t)\equiv\frac{\partial\delta(s,t)}{\partial t}.
 \end{equation}
 
-The rate of mortality improvement (or progress in reducing mortality) at age \(x\) is defined as
+The rate of mortality improvement at age \(x\) (or progress in reducing mortality over $t$)  is defined as
 
 \begin{equation} \label{eq:rho}
-\rho(x,t)=-\frac{\frac{\mu(x,t)}{\partial t}}{\mu(x,t)} = - \frac{\dot{\mu}(x,t)}{\mu(x,t)}.
+\rho(x,t)=-\frac{\frac{\partial \mu(x,t)}{\partial t}}{\mu(x,t)} = - \frac{\dot{\mu}(x,t)}{\mu(x,t)}.
 \end{equation}
 
-Similarly, the relative change over time in the force of interest at maturity $s$ is captured by 
+Similarly, the relative change over time in the forward force of interest at maturity $s$ is captured by 
 
 \begin{equation} \label{eq:phi}
-\upvarphi(s,t)=-\frac{\frac{\delta(s,t)}{\partial t}}{\delta(s,t)} = -\frac{\dot{\delta}(s,t)}{\delta(s,t)}.
+\upvarphi(s,t)=-\frac{\frac{\partial \delta(s,t)}{\partial t}}{\delta(s,t)} = -\frac{\dot{\delta}(s,t)}{\delta(s,t)}.
 \end{equation}
 
 The actuarial present value of a continuous life annuity at age $x$ evaluated at time $t$ is given by
@@ -211,26 +209,24 @@ A life annuity deferred $s$ years starting to be paid at age $x+s$ is expressed 
 \subsection{Two types of changes: constant and proportional to $\mu$ and $\delta$}
 
 
-We are interested in measuring changes in $\bar{a}_x(t)$ with respect to the time variable $t$. To achieve this aim, we first need to describe how $\bar{a}_x(t)$ reacts to changes in the forces of mortality and interest. As mentioned in Section \ref{sec:2_Sensitivity}, the entropy of a life annuity as the measure that captures changes in $\bar{a}_x(t)$ with respect to $\mu(x,t)$. Formally, it is defined as 
+We are interested in measuring changes in $\bar{a}_x(t)$ with respect to the time variable $t$. To achieve this aim, we first describe how $\bar{a}_x(t)$ reacts to changes in the forces of mortality and interest. As mentioned in Section \ref{sec:2_Sensitivity}, the entropy of a life annuity is a sensitive measure that captures changes in $\bar{a}_x(t)$ with respect to $\mu(x,t)$. The entropy of a life annuity issued for a life $(x)$ and evaluated at time $t$ is represented by ${H}_{x}(t)$. This quantity is denoted in general terms as:
 
 \begin{equation}\label{eq:EntropyGeneral}
-{H}_{x}(t) = \frac{ \frac{\partial \bar{a}_x(t) }{\partial \mu(x,t)}}{\bar{a}_x(t)}.
+{H}_{x}(t) = \frac{ 1}{\bar{a}_x(t)}\cdot \frac{\partial \bar{a}_x(t) }{\partial \mu(x,t)}.
 \end{equation}
 
 Analogously, duration captures the sensitivity of $\bar{a}_x(t)$ to changes in interest rates. It is defined as the relative derivative of the annuity factor with respect to changes in the force of interest \citep{Milevsky2012,Milevsky2012a}:
 
 
 \begin{equation}\label{eq:DurationGeneral}
-{D}_{x}(t) = \frac{ \frac{\partial \bar{a}_x(t) }{\partial \delta(s,t)}}{\bar{a}_x(t)}.
+{D}_{x}(t) = \frac{1}{\bar{a}_x(t)}\cdot  \frac{\partial \bar{a}_x(t) }{\partial \delta(s,t)}.
 \end{equation}
 
-Greater values for ${H}_{x}(t)$ and ${D}_{x}(t)$ indicate that $\bar{a}_x(t)$ is highly sensitive to changes in $\mu(x,t)$ and $\delta(s,t)$ respectively. The entropy and the duration of a life annuity can be measured either by assuming constant or proportional changes in $\mu(x,t)$ and $\delta(s,t)$. All formulations in the following sections are developed for both cases. 
-
-
+Greater values for ${H}_{x}(t)$ and ${D}_{x}(t)$ indicate that $\bar{a}_x(t)$ is highly sensitive to changes in $\mu(x,t)$ and $\delta(s,t)$ respectively. The entropy and the duration can be determined by assuming the relationship between changes in in $\mu(x,t)$ and $\delta(s,t)$ relate to $\bar{a}_x(t)$. All formulations in the following sections are developing assuming constant (or parallel) and proportional movements in these quantities.
 
 \textit{\textbf{{Changes in $\bar{a}_x(t)$ with respect to $\mu(x,t)$}}}
 
-The entropy of a life annuity is denoted by ${H}^{c}_{x}(t)$ when changes in $\mu(x,t)$ are held constant at all ages and by ${H}^{p}_{x}(t)$ when changes are performed proportional. Based on the results developed by \citet{Tsai2013a} and \citet{Lin2020}, when $\mu(x,t)$ is changed constantly to $\mu(x,t)+\gamma$ such that $\gamma$ is a small number (see proof in the Appendix), the entropy of $\bar{a}_x(t)$ becomes
+The entropy of a life annuity is denoted by ${H}^{c}_{x}(t)$ when changes in $\mu(x,t)$ are held constant at all ages and by ${H}^{p}_{x}(t)$ when changes are performed proportional. Based on the results developed by \citet{Tsai2013a} and \citet{Lin2020}, when $\mu(x,t)$ is changed constantly to $\mu(x,t)+\gamma$ such that $\gamma$ is a small number (see proof in Appendix), the entropy of $\bar{a}_x(t)$ becomes
 
 \begin{equation}\label{eq:EntropyC}
 {H}^{c}_{x}(t) = -\frac{\int_{0}^\infty s {}_sp_x(t) {v}(s,t) ds}{\bar{a}_x(t)}=\frac{{h}^{c}_{x}(t)}{\bar{a}_x(t)},
@@ -254,16 +250,12 @@ Alternatively, we show (see proof in Section \ref{sec:EntropyAlt} of the Appendi
 \end{split}
 \end{equation}
 
-where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$. Analogous to the case where changes are assumed to be constant, quantities ${h}^{p}_{x}(t)$ and ${H}^{p}_{x}(t)$ are expressed in absolute and relative terms respectively. The formulations shown in this section are closely related to the ones developed in the mortality-immunization literature \citep{Tsai2013a,Lin2020}. We extended them to the continuous case.
-
- 
+where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$. Analogous to the case where changes are assumed to be constant, quantities ${h}^{p}_{x}(t)$ and ${H}^{p}_{x}(t)$ are expressed in absolute and relative terms respectively. The formulations shown in this section are closely related to the ones developed in the mortality-immunization literature \citep{Tsai2013a,Lin2020}. We extended them to the continuous case. 
  
 
 \textbf{\textit{{Changes in $\bar{a}_x(t)$ with respect to $\delta(s,t)$}}}
 
- Similar to the entropy, changes in $\bar{a}_x(t)$ with respect to $\delta(s,t)$ can be assumed to be either constant or proportional. Duration assuming constant changes in $\delta(s,t)$ is denoted by ${D}^{c}_{x}(t)$, whereas ${D}^{p}_{x}(t)$ refers to the duration assuming proportional changes. For the former case we have that:
-
-
+ Similar to the entropy, changes in $\bar{a}_x(t)$ with respect to $\delta(s,t)$ can be assumed to be either constant or proportional. For the former case where changes are constant (or parallel), duration is expressed as:
 
 \begin{equation}\label{eq:DurationC}
 \begin{split}
@@ -272,7 +264,7 @@ where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$. Analogou
 \end{split}
 \end{equation}
 
-where ${d}^{c}_x(t)=-\int_0^\infty s {}_sp_x(t) {v}(s,t)ds$. Thus, assuming constant changes in $\delta(s,t)$ results into common types of duration known in finance as \textit{dollar duration}, ${d}^{c}_x(t)$, and \textit{modified duration}, ${D}^{c}_x(t)$ (see \citet{Milevsky2012} and \citet{Tsai2013a} for further details). It is worth noting that Equations (\ref{eq:EntropyC}) and (\ref{eq:DurationC}) are identical such that ${d}^{c}_x(t)={h}^{c}_{x}(t)$. Interestingly, this indicates that constant (i.e. parallel) changes in the force of mortality have essentially the same effect as parallel changes in the force of interest.
+where ${d}^{c}_x(t)=-\int_0^\infty s {}_sp_x(t) {v}(s,t)ds$. Thus, assuming constant changes in $\delta(s,t)$ results into common types of duration known in finance as \textit{monetary duration}, ${d}^{c}_x(t)$, and \textit{modified duration}, ${D}^{c}_x(t)$ (see \citet{Milevsky2012} and \citet{Tsai2013a} for further details). It is worth noting that Equations (\ref{eq:EntropyC}) and (\ref{eq:DurationC}) are identical such that ${d}^{c}_x(t)={h}^{c}_{x}(t)$. Interestingly, this indicates that constant (i.e. parallel) changes in the force of mortality have essentially the same effect as parallel changes in the force of interest.
 
 
 Assuming proportional changes in $\delta(s,t)$ (see proof in the Appendix) results in: 
@@ -371,7 +363,7 @@ where ${}_sM_x(t)= \mu(x+s,t){}_s|\bar{a}_x(t)$ and ${}_sW_x(t)=\delta(s,t)  {}_
 \end{equation}
 
 where $\bar{\rho}_x(t)= \frac{\int_0^\infty \rho(x+s,t) {}_sM_x(t)  ds}{\int_0^\infty  {}_sM_x(t)ds}$ and 
-$\bar{\upvarphi}(t)= \frac{\int_0^\infty \upvarphi(s,t) {}_sW_x(t)  ds}{\int_0^\infty {}_sW_x(t) ds}$ are the weighted average paces of change in mortality and interest rates respectively. Functions $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$ capture the stochastic change in the forces of mortality and interest whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ capture the sensitivity due to changes in $\mu$ and $\delta$. In other words, Equation (\ref{eq:TimeDerivP}) entails that changes over time in annuity factors are driven by $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ respectively\footnote{Equation (\ref{eq:TimeDerivP}) can be seen as an extension of the Equation (\ref{eq:lifeexpdecomp}) developed by \citet{Vaupel2003} to measure changes over time in life expectancy}.
+$\bar{\upvarphi}(t)= \frac{\int_0^\infty \upvarphi(s,t) {}_sW_x(t)  ds}{\int_0^\infty {}_sW_x(t) ds}$ are the weighted-average changes in mortality and interest rates respectively. Functions $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$ capture the stochastic change in the forces of mortality and interest whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ capture the sensitivity due to changes in $\mu$ and $\delta$. In other words, Equation (\ref{eq:TimeDerivP}) entails that changes over time in annuity factors are driven by $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ respectively\footnote{Equation (\ref{eq:TimeDerivP}) can be seen as an extension of the Equation (\ref{eq:lifeexpdecomp}) developed by \citet{Vaupel2003} to measure changes over time in life expectancy}.
 
 
 \subsection{Age and term contributions to changes in $\bar{a}_x(t)$}
@@ -596,83 +588,129 @@ Figure \ref{fig:Fig7} depicts the cause-specific contributions to the longevity 
 
 
 \FloatBarrier
-\section{Applications to reserving and risk management}\label{sec:5_Reserves}
-
-An important application of the equations developed in this article relies on the understanding of changes in reserves in a market consistent framework. In this section we provide a simple example of how our equations can be applied by pension funds and annuity providers to better understand the sources of change in their reserves. 
+\section{Time dynamics of reserves}\label{sec:5_Reserves}
 
 
-Let us assume that a pension plan pays a guaranteed benefit $b(R)$ to each of their members when they reach retirement age $R$ and until their death\footnote{Actual retirement age $R$ vary across pension fund members and it can be modelled as a random process. For illustration purposes, we assume that all members retire at the same age $R$. Furthermore, guaranteed benefit $b(R)$ can be set in many different ways depending on the goal of the pension plan, see \citet{jarner2017long} as an example.}. The pension fund must hold, at all time, the market value of the reserve, which equals to the financial value of guaranteed benefit. We also assume that the reserve is based on the current best estimate of future mortality improvements. Therefore, the value of the reserve of the pension fund is the expected value of all the guaranteed benefits for all polices in force at time $t$:
+Let a probability space $\{\Omega, \mathcal{F}, \mathbb{P}\}$
+Let \textbf{F}=$\{\mathcal{F}_t\}$ a family of sub-sigmaalbegras. $\mathcal{F}_t$ represents the information of economic-demographic environment available at time $t$.
 
-\begin{equation}\label{eq:reserve}
-	V_t= \mathbb{E}[\bar{B}_R(t) \cdot \bar{a}_R(t)],
+Recalling that $I_{s,t}=\mathds{1}_{\{S_x>s,t\}}$ and  $\mathbb{E}[I_{s,t}]={}_sp_x(t)$.
+
+We define a payment process $dB_t(s)=b(s)I_{s,t}ds$ where $b(s)$ is the continuous rate of benefit payments over the development of the policy. 
+
+
+
+The policy value ${}_s\mathcal{V}_x(t)=\dfrac{1}{v(s,t)}\int_s^\infty v(y,t)dB_t(y)$
+
+Mortality and interest rates are not known at time zero, hence they are stochastic. With this in mind, and stating that the pension fund must hold, at all time, the financial value of the benefit, the prospective reserve is expressed as:
+
+\begin{equation}\label{eq:Reserve1}
+	{}_sV_x(t)=\mathbb{E}[{}_s\mathcal{V}_x(t)\cdot v(s,t)|\mathcal{F}_t]=\mathbb{E}[\int_s^\infty v(y,t)dB_t(y)|\mathcal{F}_t]
 \end{equation}
 
-such that $\bar{B}_R(t)=K_c(t)b(R)$ is the total amount of guaranteed benefits, where $K_c(t)$ is the number of surviving members of the pension plan from cohort $c$ at time $t$. Note that equation (\ref{eq:reserve}) implies that $\bar{a}_R(t)$ is estimated using the cohort force of mortality $\mu_c(x,t)$ and that there is uncertainty as future mortality patters are unknown.
 
-In reality, actuarial estimates of future mortality highly depend on the forecasting model used in calculation of the reserve \citep{bergeron2020alternative}. However, in this section, we are solely interested in developing mathematical formulations to examining changes over time in the reserve $V_t$. Furthermore, the comparison of empirical results using various mortality forecasting models is out of the scope this article. For these reasons, and to ease the interpretation of the equations developed here, we now assume the case where cohort mortality is certain and that the actuarial assumptions match reality, so that the operator  $\mathbb{E}(\cdot)$ is suppressed in the following derivations. Thus, the change over time in the market value of the reserve can be expressed as follows:
 
-\begin{equation}\label{eq:derivReserve1}
+\begin{equation}\label{eq:Reserve2}
+{}_sV_x(t)=\int_s^\infty v(y,t){}_yp_x(t)b(y)dy
+\end{equation}
+
+Same as XXX we differentiate XX with respect to $t$
+\begin{equation}\label{eq:DifferentiateReserveT}
+{}_s\dot{V}_x(t)=\int_s^\infty  \dot{v}(y,t){}_yp_x(t)b(y)dy+\int_s^\infty v(y,t){}_y\dot{p}_x(t)b(y)dy
+\end{equation}
+
+\begin{equation}\label{eq:DifferentiateReserveT2}
 	\begin{split}
-	\frac{\partial V_t}{\partial t}&=\frac{\partial \bar{B}_R(t)}{\partial t}\bar{a}_R(t)+\bar{B}_R(t)\frac{\partial\bar{a}_R(t)}{\partial t}.
+			{}_s\dot{V}_x(t)&=\int_s^\infty  \upvarphi(y,t) \delta(y,t){}_yV_x(t)dy+\int_s^\infty \rho(x+y,t) \mu(x+y,t){}_yV_x(t)dy \\
+		&=\int_s^\infty  \upvarphi(y,t) {}_yW^V_x(t)dy+\int_s^\infty \rho(x+y,t) {}_yM^V_x(t)dy
 	\end{split}
 \end{equation}
 
-Diving Equation (\ref{eq:derivReserve1})  by $V_t= \bar{B}_R(t) \bar{a}_R(t)$, we obtain
+where ${}_yM^V_x(t)=\mu(x+y,t){}_yV_x(t)$ is the change in provision due to mortality and ${}_yW^V_x(t)=\delta(y,t){}_yV_x(t)$ is the interest accrued. Quantities ${}_yM^V_x(t)$ and ${}_yW^V_x(t)$ denote the changes in the reserve over the time frame of the policy, that is $[s,\infty)$, whereas $\rho(x+y,t)$ and $\upvarphi(y,t)$ denote the changes at time $t$ in the demographic-economic environment where the reserve is evaluated. The differences between changes in $s$ and $t$ are highlighted in the next section.
+
+Similar to the case of the single annuity factor section \ref{sec:3_timedynamics}, we are interested on finding an expression for the relative change of the provision ${}_s\acute{V}_x(t)$. Dividing Equation (\ref{eq:DifferentiateReserveT2}) by ${}_sV_x(t)$ yields to
+
+\begin{equation}\label{eq:AccuteDifferential}
+	{}_s\acute{V}_x(t)= \underbrace{{}_s\bar{\rho}_x(t) \cdot {}_sH_x^V(t)}_\text{longevity component} + \underbrace{{}_s\bar{\upvarphi}(t)\cdot {}_sD_x^V(t)}_\text{financial component},
+\end{equation}
+
+
+where ${}_s\bar{\rho}_x(t)= \frac{\int_s^\infty \rho(x+y,t) {}_yM^V_x(t)  dy}{\int_s^\infty {}_yM^V_x(t)dy}$ is the average change in mortality, and 
+${}_s\bar{\upvarphi}(t)= \frac{\int_s^\infty \upvarphi(y,t) {}_yW^V_x(t)  dy}{\int_s^\infty {}_yW_x(t) dy}$ is the average change term-structure of interest rates. Sensitivities of the reserve to changes in mortality and interest are respectively ${}_sH_x^V(t)= \dfrac{\int_{s}^{\infty}{}_yM^V_x(t)dy}{{}_sV_x(t)}$ and ${}_sD_x^V(t)= \dfrac{\int_{s}^{\infty}{}_yW^V_y(t)dy}{{}_sV_x(t)}$.
+
+
+Equation (\ref{eq:AccuteDifferential}) decomposes the changes over time in reserve, where the effect of mortality improvements is modulated by the entropy and changes in the term structure of interest rates is modulated by duration. Each of the terms in Equation (\ref{eq:AccuteDifferential}) can be further decomposed in age-term attributions and cause-specific contributions using the expressions from Table \ref{table:Table1}. 
+
+
+\subsection{Time dynamics over $s$ and over $t$}\label{sec:ThieleEquations}
+
+
+Quantities $\mu$ and $\delta$ are not known at time zero, therefore, the actuarial valuation of the reserve ${}_sV_x(t)$ is often done by the incorporation of assumptions (and models) that provide a reasonable depiction of the \textit{economic-demographic environment} where the policies operate. Equations (\ref{eq:DifferentiateReserveT2}) and (\ref{eq:AccuteDifferential}) capture the time dynamics of the reserve with respect to changes over time in the assumptions used for the actuarial valuation. These changes are indexed by time variable $t$.
+
+On the other hand, changes in the reserve ${}_sV_x(t)$ over the \textit{time horizon where the policy is in force} are described by the well-known Thiele's differential equation. Such changes are indexed by time variable $s$.
  
- \begin{equation}\label{eq:relDerivReserve2}
- 	\begin{split}
-\acute{V_t}=\acute{\bar{B}}_R(t)+\acute{\bar{a}}_R(t),
- 	\end{split}
- \end{equation}
+Equation (\ref{eq:DifferentiateReserveT2}) and the Thiele's differential are complementary as they depict the dynamics of the reserve at times $t$ and $s$. At the same time, there is a close relationship between these two differential equations, which will be explored next.
 
-where $\acute{V_t}=\frac{\frac{\partial V_t}{\partial t}}{V_t}$ and $\acute{\bar{B}}_R(t)=\frac{\frac{\partial \bar{B}_R(t)}{\partial t}}{\bar{B}_R(t)}$. By Equation (\ref{eq:TimeDerivP}), we can express $\acute{V_t}$ as
+The Thiele's differential equation for the reserve ${}_sV_x(t)$ is found by differentiating Equation (\ref{eq:Reserve2}) with respect to $s$:
 
- \begin{equation}\label{eq:relDerivReserve3}
+\begin{equation}\label{eq:Thiele}
 	\begin{split}
-		\acute{V_t}	&=\underbrace{\acute{\bar{B}}_R(t)}_\text{changes in benefit}+
-		\underbrace{\bar{\rho}_R(t){H}_R(t)}_\text{longevity component}
-		+\underbrace{\bar{\upvarphi}(t){D}_R(t)}_\text{financial component}		
+		\dfrac{\partial {}_sV_x(t)}{\partial s}&= \mu(x+s,t){}_sV_x(t) + \delta(s,t){}_sV_x(t) - b(s) \\
+		&= {}_sM^V_x(t) + {}_sW^V_x(t) - b(s)
 	\end{split}
 \end{equation}
 
+ 
+Then, ${}_sM^V_x(t)=\mu(x+s,t){}_sV(t)$ is the attribution to mortality of the policy holder due to reaching age $(x+s)$,  ${}_sW^V_x(t)=\delta(s,t){}_sV(t)$ is the interest earned on the amount of the reserve ${}_sV(t)$, and $b(s)$ is the rate of benefit payments. All these quantities are evaluated at time $t$.
+  
+ In ${}_s\dot{V}_x(t)$, the attributions ${}_sM^V_x(t)$ and ${}_sW^V_x(t)$ are modulated by the changes in mortality and interest at $t$, and integrated over the remaining time-in-force of the policy $[s, \infty)$. This means that ${}_s\dot{V}_x(t)$ solely quantifies the time-$t$ development in the actuarial assumptions when the reserve is evaluated at time $s$. This relationship is more clear by differentiating ${}_s\dot{V}_x(t)$ with respect to $s$: 
 
-Equation \ref{eq:relDerivReserve3} clearly identifies the sources of change over time in reserve. In addition, the longevity and financial components can be further decomposed in age-term attributions and cause-specific contributions using the expressions from Table \ref{table:Table1}. Equation (\ref{eq:relDerivReserve3}) shows how our equations can be applied in real contexts. They can be extended to different types of reserves with sofisticated guaranteed benefits (e.g. \citep{jarner2017long}).
+\begin{equation}\label{eq:DifferentiateVdotWithRespectS}
+\dfrac{\partial	{}_s\dot{V}_x(t)}{\partial s}= \rho(x+s,t) {}_sM^V_x(t)+ \upvarphi(s,t) {}_sW^V_x(t)
+\end{equation}
 
-[MAYBE THIS IS TOO BRAVE TO SAY, GIVEN THAT EVERYONE USE THIELE EQUATIONS. WHAT DO YOU THINK?]
-Equation \ref{eq:relDerivReserve3} has a clear connection with the so-called Thiele differential equation, widely used to determine changes in the reserve. Indeed both equations are equivalent [ACTUALLY I HAVEN'T SHOWED IT BUT MY GUESS IS THAT THEY SHOULD BE EQUIVALENT JUST WITH A DIFFERENT ARRANGEMENT...]. However, there are clear advantages of our Equation (\ref{eq:relDerivReserve3})  over the classic Thiele differential equation. First, our Equation (\ref{eq:relDerivReserve3}) clearly separates changes in reserves into the the actual sources of change: mortality improvement, changes in interest rates and sensitivities to these factors. Second, our equation is helpful in understanding the source of stochastic variation in longevity and financial risk measures, something that it is not possible with the classic Thiele equation. We develop the intuition for these applications in the following section.
-
-
-
-\subsection{Risk management}
+Equation (\ref{eq:DifferentiateVdotWithRespectS}) captures the change in the provision in two time dimensions: changes in the assumptions at time $t$, and at the development of the reserve at time $s$. Equation (\ref{eq:DifferentiateVdotWithRespectS}) expands the traditional Thiele's differential equation by disentangling the sources of variation in financial and longevity components via $\rho(x+s,t)$ and $\upvarphi(s,t)$. This equation together with Equation (\ref{eq:DifferentiateReserveT2}) has imporant applications in accounting, reserving, project development and risk management. Some of this applications and further developments are described in the following section.  
 
 
+It is worth noting that the rate of payment $b(s)$ does not appear in Equation (\ref{eq:DifferentiateVdotWithRespectS}) as in the payment processes assumed in this section, the benefits change solely over the development of the contract i.e. $[s,\infty)$, but do not depend on changes assumptions about the economic-demographic environment, i.e. changing at time $t$. This is reasonable as the benefit payments are adjusted over the length of the contract. However, this assumption can be relaxed and the case for using $b(s,t)$ can be done. 
 
-Equation (\ref{eq:relDerivReserve3}) allows the analysis of risk drivers in a market consistent framework and under modern risk management approaches. For instance, the standard formula of Solvency II entail that the company should hold capital requirements corresponding to a longevity shock of an immediate reduction of 20\% in mortality rates at all ages. The effect of this shock can be easily translated in factor $\bar{\rho}=0.2$ and used to determine the impact in the reserve $\acute{V_t}$.
+Furthermore, it could be that time $t$ and $s$ are the same. However in most  cases this is not necessary true. In practice, a life insurance or a pension fund could perform continuous evaluations of the actuarial provision based on market-based yield curves where financial information is continuously updated, so then $t=s$ holds. The demographic statistics on the other hand are usually published with some lags and estimates of $\mu$ are done in broader time intervals, so the experience the development of the contract at time $s$ hardly matched the same pace of update in demographic assumptions at time $t$. In addition, one can think about the usefulness of separating time $t$ and $s$ in  scandinavian-type of life insurance products where it is common to distinguish between deterministic \textit{first-order} actuarial basis, which are prudently set by the appointed actuary, the and \textit{second-order} actuarial basis, which is usually based on models.
+
+\subsubsection{Risk management applications}
+
+The equations developed in Section \ref{sec:5_Reserves} allow for the scrutiny of risk drivers in the development of reserves, which is in line with modern risk management approaches.
+
+For instance, the current version of Solvency II regulations entail that the company should hold capital requirements for longevity risk corresponding to a shock of an immediate reduction of 20\% in mortality rates at all ages. The effect of this shock can be easily translated in factor $\bar{\rho}=0.2$ and used to determine the impact in the reserve $\acute{V_t}$. Further scenario-based shocks of mortality and interest rates can be done to ${}_s\acute{V}_x(t)= {}_s\bar{\rho}_x(t) {}_sH_x^V(t) + {}_s\bar{\upvarphi}(t) {}_sD_x^V(t)$, where ${}_s\bar{\rho}_x(t)$ and $\bar{\upvarphi}$ are stressed. By knowing the duration and entropy, the practitioner can make use of this tool to assess the impact of insurance and financial risks in their life annuity portfolio.
+
 	
-Along the same lines, percentiles of stochastic distributions as well as common risk metrics (i.e. Value-at-Risk, Expected Shortfall) can be translated into equivalent mortality improvements $\bar{\rho}$ and average changes in the yield curve $\bar{\upvarphi}$ to determine capital charges.
+Along the same lines, ${}_s\bar{\rho}_x(t)$ and ${}_s\bar{\upvarphi}(t)$ can be modeled as stochastic processes adapted to some filtration \textbf{G}=$\{\mathcal{G}_t\}_{t\ge0}$ such that ${}_s{\rho}^{\bf{G}}_x(t)=\mathbb{E}[{}_s\bar{\rho}_x(t)|\mathcal{G}_t]$ and 
+${}_s{\upvarphi}^{\bf{G}}(t)=\mathbb{E}[{}_s\bar{\upvarphi}(t)|\mathcal{G}_t]$. Thus, the source of randomness in these stochastic processes can be explicitly modeled using forecasting models to produce stochastic simulations allowing for the calculation of common risk metrics (e.g. VaR, Expected Shortfall, etc.). Allowing for stochastic simulations of ${}_s{\rho}^{\bf{G}}_x(t)$ and ${}_s{\upvarphi}^{\bf{G}}(t)$ is particularly useful in Asset-Liability modeling where the impact of stochastic shocks in the reserves is translated into corresponding management actions that mitigate associated risks.
 
-Furtheremore, stochastic changes in policy values can be examined with $\acute{V_t}=\acute{\bar{B}}_R(t)+ \bar{\rho}_R(t){H}_x(t) +\bar{\upvarphi}(t){D}_R(t)$, where $\bar{\rho}_R(t)$ and $\bar{\upvarphi}$ are modeled as stochastic processes using available forecasting models (CITE). This provides whole new perspectives of the evolution of stochastic reserves and opens the door to in-depth analyses of the sources of change and simultaneous development of strategies to cope with unexpected changes in the solvency of the company. [DOES IT MAKE SENSE?]
+
+The risk scrutiny can go further by analyzing the age-specific and term-specific stochastic variation in ${}_s{\rho}^{\bf{G}}_x(t)$ and ${}_s{\upvarphi}^{\bf{G}}(t)$ by adapting the formulas in Table \ref{table:Table1}. Such formulas allow for further segregation by sub-population, risk factors or any other cause of death.
 
 
 
 \section{Concluding remarks}\label{sec:6_Conclusion}
 
 
-[{ WE STILL NEED TO WRITE THIS SECTION. SOME POINTS TO MENTION: 
-	
-	 THE AGE-TERM DECOMPOSITION IS VERY USEFUL BECAUSE IT ALLOW US TO HEDGE SOME PARTS OF THE VARIATION, WHERE THE MAIN CHANGES ARE TAKING PLACE
-	
-	LONGEVITY AND FINANCIAL COMPONENTS CAN BE MODELLED AS STOCHASTIC PROCESSES.
-	
-	 WE CAN ALSO DERIVE FORMULATIONS FOR OTHER LIFE CONTINGENT PRODUCTS AND THEIR RESERVES.
-	 
-	  IT CAN ALSO BE APPLIED TO MULTISTATE MODELS AND OTHER SOURCES OF RISK, FOR EXAMPLE LAPSE RISK, DISABILITY RISK, WHERE CHANGES OVER TIME IN THE INTENSITIES ARE MODELLED AS RHO}]
+In this article we developed differential equations to unravel the sources of change in life annuities and associated reserves. Such equations are neat, intuitive and easy to implement with real data. They represent an expansion of the mathematical toolkit used in pension and life insurance. 
 
 
-We focus on life annuities, but the equations here can be developed to any life contingent product.
+ The main advantage of our differential equations is that they account for the simultaneous variation in mortality and interest rates. Indeed our main differential equation shows that changes over time in life annuities equal changes in mortality and interest rates modulated by their sensitivities to each of them (i.e. entropies and durations).
+
+Actuaries and risk managers often monitor duration and entropies separately neglecting the effect that one indicator has on the other one. In reality, mortality and interest rates change simultaneously over time and durations-entropies vary accordingly as they are adapted to the new mortality-interest environment. While there is no concluding evidence about the correlation between mortality and interest rates, it is true they both affect the value of life annuity products and reserves. This simultaneous behaviour and change in sensitivities to mortality-interest is explicitly accounted in the differential equations developed here.
+ 
+ Another key advantage of the differential equations developed here is that they are model-free, and can be used as a general expressions of the time dynamics of life annuities. This entails a lack of assumptions about the development of demographic-economic environment where life annuities are evaluated. Instead, one key application of these equations is to monitor the development of sources of change in life annuity portfolios using real data. To show this, we use more than 100 years of data from the UK, where our equations are applied to obtain data-driven insights of the development of life annuity portfolios at different granular levels (e.g. age-term specific contributions and causes-of-death).
+  
+  
+The main focus of this article is unraveling the time dynamics of life annuities and associated reserves. However, similar formulations to the ones introduced here can be developed for other life contingent products, where lump sumps, expenses and more sophisticated payment processes are considered. The general framework introduced here easily allow for future developments. 
+
+Another possible development is in the expansion of our equations to a multi-state Markov framework where intensities other than mortality are modeled. This will naturally result in expression to state-specific sensitivities (i.e. entropies) where age-term variations in the state-space intensities can also accounted for.
+
+We do forsee futher applications of the differential equations developed in this paper, both for the actuarial practice and for academic purposes. Whatever the applications of upcoming developments, they will establish their utility in the future.
 
 
-The duration and the entropy are both useful indicators of the sensitivity of a life annuity at one single point in time. However, the main drawback of analysing them separately is that information about fluctuations in other component is neglected. For example, duration assumes that the change is only done in terms of interest rates. Similarly, the entropy assumes that the change in life annuities is only due to changes in mortality rates. In reality, mortality and interest rates change simultaneously. While there is no concluding evidence about the short-term correlation between these two components, they both affect the value of life-contingent products.
 
 
 \newpage
@@ -889,7 +927,6 @@ Equation \ref{eq:DurationProp3} can be re-expressed as
 
 
 where ${d}^{p}_{x}(t)=\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t) ds$.
-
 
 
 
