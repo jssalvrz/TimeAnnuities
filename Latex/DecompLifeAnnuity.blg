@@ -11,45 +11,45 @@ Repeated entry---line 789 of file library.bib
 I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in Daul2012
 Warning--there's a number but no volume in Li2012
-You've used 45 entries,
+You've used 43 entries,
             1935 wiz_defined-function locations,
-            746 strings with 11514 characters,
-and the built_in function-call counts, 18450 in all, are:
-= -- 1857
-> -- 710
-< -- 36
-+ -- 250
-- -- 234
-* -- 1584
-:= -- 3159
-add.period$ -- 136
-call.type$ -- 45
-change.case$ -- 336
-chr.to.int$ -- 43
-cite$ -- 47
-duplicate$ -- 684
-empty$ -- 1285
-format.name$ -- 314
-if$ -- 3613
+            734 strings with 11044 characters,
+and the built_in function-call counts, 17332 in all, are:
+= -- 1745
+> -- 654
+< -- 34
++ -- 230
+- -- 214
+* -- 1488
+:= -- 2977
+add.period$ -- 129
+call.type$ -- 43
+change.case$ -- 317
+chr.to.int$ -- 41
+cite$ -- 45
+duplicate$ -- 643
+empty$ -- 1211
+format.name$ -- 290
+if$ -- 3384
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 47
-newline$ -- 228
-num.names$ -- 135
-pop$ -- 260
+missing$ -- 45
+newline$ -- 218
+num.names$ -- 129
+pop$ -- 241
 preamble$ -- 1
-purify$ -- 339
+purify$ -- 320
 quote$ -- 0
-skip$ -- 547
+skip$ -- 514
 stack$ -- 0
-substring$ -- 1428
-swap$ -- 102
-text.length$ -- 8
+substring$ -- 1347
+swap$ -- 91
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 264
+type$ -- 252
 warning$ -- 2
-while$ -- 170
+while$ -- 161
 width$ -- 0
-write$ -- 583
+write$ -- 556
 (There was 1 error message)
