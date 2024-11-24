@@ -5,51 +5,53 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: library.bib
-Repeated entry---line 789 of file library.bib
- : @article{fernandez2015entropy
- :                              ,
+I was expecting a `,' or a `}'---line 2873 of file library.bib
+ : 
+ : @Misc{HMD2020,
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "."
 Warning--there's a number but no volume in Daul2012
 Warning--there's a number but no volume in Li2012
-You've used 43 entries,
+You've used 38 entries,
             1935 wiz_defined-function locations,
-            734 strings with 11044 characters,
-and the built_in function-call counts, 17332 in all, are:
-= -- 1745
-> -- 654
-< -- 34
-+ -- 230
-- -- 214
-* -- 1488
-:= -- 2977
-add.period$ -- 129
-call.type$ -- 43
-change.case$ -- 317
-chr.to.int$ -- 41
-cite$ -- 45
-duplicate$ -- 643
-empty$ -- 1211
-format.name$ -- 290
-if$ -- 3384
+            707 strings with 10032 characters,
+and the built_in function-call counts, 14960 in all, are:
+= -- 1521
+> -- 524
+< -- 31
++ -- 182
+- -- 168
+* -- 1269
+:= -- 2564
+add.period$ -- 114
+call.type$ -- 38
+change.case$ -- 269
+chr.to.int$ -- 36
+cite$ -- 40
+duplicate$ -- 562
+empty$ -- 1066
+format.name$ -- 237
+if$ -- 2928
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 45
-newline$ -- 218
-num.names$ -- 129
-pop$ -- 241
+missing$ -- 39
+newline$ -- 193
+num.names$ -- 114
+pop$ -- 199
 preamble$ -- 1
-purify$ -- 320
+purify$ -- 272
 quote$ -- 0
-skip$ -- 514
+skip$ -- 452
 stack$ -- 0
-substring$ -- 1347
-swap$ -- 91
-text.length$ -- 7
+substring$ -- 1201
+swap$ -- 77
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 252
+type$ -- 222
 warning$ -- 2
-while$ -- 161
+while$ -- 141
 width$ -- 0
-write$ -- 556
+write$ -- 490
 (There was 1 error message)

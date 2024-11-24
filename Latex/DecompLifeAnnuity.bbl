@@ -5,39 +5,11 @@ Aburto, J.~M., Alvarez, J.-A., Villavicencio, F., and Vaupel, J.~W. (2019).
 \newblock The threshold age of the lifetable entropy.
 \newblock {\em Demographic Research}, 41:83--102.
 
-\bibitem[Aburto et~al., 2022]{aburto2022quantifying}
-Aburto, J.~M., Sch{\"o}ley, J., Kashnitsky, I., Zhang, L., Rahal, C., Missov,
-  T.~I., Mills, M.~C., Dowd, J.~B., and Kashyap, R. (2022).
-\newblock Quantifying impacts of the covid-19 pandemic through life-expectancy
-  losses: a population-level study of 29 countries.
-\newblock {\em International journal of epidemiology}, 51(1):63--74.
-
-\bibitem[Aburto et~al., 2020]{aburto2020dynamics}
-Aburto, J.~M., Villavicencio, F., Basellini, U., Kj{\ae}rgaard, S., and Vaupel,
-  J.~W. (2020).
-\newblock Dynamics of life expectancy and life span equality.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  117(10):5250--5259.
-
 \bibitem[Alvarez et~al., 2021]{alvarez2021linking}
 Alvarez, J.-A., Kallestrup-Lamb, M., and Kj{\ae}rgaard, S. (2021).
 \newblock Linking retirement age to life expectancy does not lessen the
   demographic implications of unequal lifespans.
 \newblock {\em Insurance: Mathematics and Economics}, 99:363--375.
-
-\bibitem[Cairns et~al., 2019]{cairns2019modelling}
-Cairns, A.~J., Kallestrup-Lamb, M., Rosenskjold, C., Blake, D., and Dowd, K.
-  (2019).
-\newblock Modelling socio-economic differences in mortality using a new
-  affluence index.
-\newblock {\em ASTIN Bulletin: The Journal of the IAA}, pages 1--36.
-
-\bibitem[Cairns et~al., 2017]{cairns2017modelling}
-Cairns, A.~J., Kallestrup-Lamb, M., Rosenskjold, C.~P., Blake, D., and Dowdd,
-  K. (2017).
-\newblock Modelling socio-economic differences in the mortality of danish males
-  using a new affluence index.
-\newblock {\em CREATES}, page~1.
 
 \bibitem[Camarda et~al., 2012]{camarda2012mortalitysmooth}
 Camarda, C.~G. et~al. (2012).
@@ -73,11 +45,6 @@ Djeundje, V.~B., Haberman, S., Bajekal, M., and Lu, J. (2022).
   multi-country analysis.
 \newblock {\em European Actuarial Journal}, pages 1--40.
 
-\bibitem[Fernandez and Beltr{\'a}n-S{\'a}nchez, 2015]{fernandez2015entropy}
-Fernandez, O.~E. and Beltr{\'a}n-S{\'a}nchez, H. (2015).
-\newblock The entropy of the life table: A reappraisal.
-\newblock {\em Theoretical population biology}, 104:26--45.
-
 \bibitem[Fisher and Weil, 1971]{fisher1971coping}
 Fisher, L. and Weil, R.~L. (1971).
 \newblock Coping with the risk of interest-rate fluctuations: returns to
@@ -109,6 +76,13 @@ Ho, T.~S. (1992).
 {Human Mortality Database} (2020).
 \newblock University of {C}alifornia, {B}erkeley ({USA}), and {M}ax {P}lanck
   {I}nstitute for {D}emographic {R}esearch ({G}ermany).
+\newblock \url{www.mortality.org}.
+
+\bibitem[{Human Mortality Database}, 2022]{HCD2022}
+{Human Mortality Database} (2022).
+\newblock Human cause-of-death data series. french institute for demographic
+  studies (france), max planck institute for demographic research (germany) and
+  the university of california, berkeley (usa)).
 \newblock \url{www.mortality.org}.
 
 \bibitem[Kallestrup-Lamb et~al., 2020]{kallestrup2020insight}
@@ -215,28 +189,24 @@ Tsai, C. C.-L. and Jiang, L. (2011).
   contingencies.
 \newblock {\em Insurance: Mathematics and Economics}, 49(1):70--80.
 
-\bibitem[Vaupel, 1986]{Vaupel1986}
-Vaupel, J.~W. (1986).
-\newblock {How change in age-specific mortality affects life expectancy*}.
-\newblock {\em Population Studies}, 40(1):147--157.
-
 \bibitem[Vaupel and Canudas-Romo, 2003]{Vaupel2003}
 Vaupel, J.~W. and Canudas-Romo, V. (2003).
 \newblock {Decomposing change in life expectancy: a bouquet of formulas in
   honor of Nathan Keyfitz's 90th birthday.}
 \newblock {\em Demography}, 40(2):201--16.
 
-\bibitem[Vaupel et~al., 2011]{vaupel2011life}
-Vaupel, J.~W., Zhang, Z., and van Raalte, A.~A. (2011).
-\newblock Life expectancy and disparity: an international comparison of life
-  table data.
-\newblock {\em BMJ open}, 1(1).
-
 \bibitem[Wang et~al., 2010]{wang2010optimal}
 Wang, J.~L., Huang, H., Yang, S.~S., and Tsai, J.~T. (2010).
 \newblock An optimal product mix for hedging longevity risk in life insurance
   companies: The immunization theory approach.
 \newblock {\em Journal of Risk and Insurance}, 77(2):473--497.
+
+\bibitem[W{\'e}ber et~al., 2023]{weber2023gains}
+W{\'e}ber, A., Laversanne, M., Nagy, P., Kenessey, I., Soerjomataram, I., and
+  Bray, F. (2023).
+\newblock Gains in life expectancy from decreasing cardiovascular disease and
+  cancer mortality--an analysis of 28 european countries 1995--2019.
+\newblock {\em European Journal of Epidemiology}, 38(11):1141--1152.
 
 \bibitem[Wong et~al., 2015]{Wong2015}
 Wong, A., Sherris, M., and Stevens, R. (2015).
