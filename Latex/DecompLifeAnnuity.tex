@@ -128,7 +128,7 @@ From a mathematical perspective, duration corresponds to the first-order derivat
 
 \textbf{Entropy}
 
-In demography, entropy (denoted as $H$) is defined as a measure of the sensitivity of life expectancy to changes in mortality rates \citep{leser1955variations,keyfitz1977difference,demetrius1974demographic,goldman1986new, aburto2019threshold}. Mathematically, the entropy is the first-order derivative of life expectancy with respect to the force of mortality $\mu$. Higher entropy values indicate greater responsiveness of life expectancy to proportional changes in death rates.
+In demography, entropy (denoted as $H$) is defined as a measure of the sensitivity of life expectancy to changes in mortality rates \citep{leser1955variations,keyfitz1977difference,demetrius1974demographic,goldman1986new, aburto2019threshold}. Mathematically, the entropy is the first-order derivative of life expectancy with respect to the force of mortality $\mu$. Higher entropy values indicate greater responsiveness of life expectancy to proportional changes in mortality rates.
 
 \citet{Vaupel2003} made a significant contribution by expressing the time derivative of life expectancy, $e(0, t)$, as a function of the pace of reducing mortality, $\rho_e(t)$, and entropy, $H_e(t)$:
 
@@ -503,18 +503,18 @@ Throughout Section \ref{sec:TimeDynamics}, we derived equations that facilitate 
 	\centering
 	\begin{tabular}{lcc}
 		\toprule
-		\textbf{Description}&	\textbf{Financial component} & \textbf{Longevity component}   \\
-		\hline
+		\textbf{}&	\textbf{Financial component} & \textbf{Longevity component}   \\
+	
 		\textit{General representation}&	$\bar{\upvarphi}(t){D}_x(t)$                           & $\bar{\rho}(t){H}_x(t)$ \\
-		\hline
+	
 		\textit{Age-Term attributions}&	$\sum_{j=1}^m\bar{\upvarphi}(t;t_{j-1},t_{j}){D}_x(t;t_{j-1},t_{j})$                               & $\sum_{i=1}^n\bar{\rho}_x(t;x_{i-1}, x_i){H}^{p}_x(t;x_{i-1}, x_i)$ \\
-		\hline
+		
 		\textit{Causes of death}&	$\bar{\upvarphi}(t){D}_x(t)$   & $\sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)$ \\
-		\hline
+	
 		\textit{Single interest rate}&	$\dot{\delta}(t){D}_x(t)$ & $\bar{\rho}(t){H}_x(t)$  \\
 		\bottomrule
 	\end{tabular}
-	\caption{{Summary of expressions of the financial and longevity components used to determine the sources of change $\acute{\bar{a}}_x(t)$}.}
+	\caption{{Summary of components used in the representation of $\acute{\bar{a}}_x(t)$}.}
 	\label{table:Table1}
 \end{table}
 
@@ -635,13 +635,21 @@ The risk analysis can be further extended by examining the age-specific and term
 
 \section{Historical Changes in Life Annuities in the United Kingdom}\label{sec:UK_Illustration}
 
-In this section, we illustrate the formulations introduced in Section \ref{sec:TimeDynamics} by examining the sources of change in the long-term development of life annuities in the United Kingdom. We utilize more than 100 years of financial and demographic data, spanning the years 1841 to 2018. Age-specific mortality rates are sourced from \citep{HMD2020}, while long-term interest rates are represented by the yield on 2.5\% consols up to 2015 and subsequently by the yield of 20-year maturity bills \citep[Bank of England, 2021]. Both mortality and interest rates were smoothed using splines \citep{green1993nonparametric,camarda2012mortalitysmooth} to obtain continuous estimates of the forces of mortality and interest, respectively (Figure \ref{fig:Fig1}). Using these estimates of $\mu$ and $\delta$, we construct time series of life annuities at different ages for both sexes. This section primarily focuses on lifelong annuity factors calculated for males at age 65, as this age often serves as a benchmark for retirement in various populations.
+In this section, we illustrate the equations introduced in Section \ref{sec:TimeDynamics} by analyzing the sources of change in the long-term development of life annuities in the United Kingdom. We utilize more than 160 years of financial and demographic data. Age-specific mortality rates, spanning from 1860 to 2021, are obtained from \citep{HMD2024}. Interest rates are represented by the yield on 2.5\% consols up to 2015 and subsequently by the yield of 20-year maturity bills, retrieved from \citep{BankOfEngland2024}. Although the interest rate time series covers the period from 1841 to 2024, we limit the analysis to historical data up to 2021 to align with the mortality data period.
+
+Continuous estimates of the forces of mortality (\(\mu\)) and interest (\(\delta\)) were derived using splines \citep{green1993nonparametric,camarda2012mortalitysmooth} (see Figure \ref{fig:Fig1}). This smoothing procedure is employed solely for illustrative purposes, providing a depiction of the long-term behavior of life annuities. In practice, the equations introduced in this paper can be applied to finer time intervals (e.g., months or days).
+
+Using these estimates of \(\mu\) and \(\delta\), we construct time series of life annuity factors, \( \bar{a}_x(t) \). This analysis focuses primarily on annuities calculated for males aged 65, as this age often serves as a benchmark for retirement across various populations.
+
 
 \begin{center}
 	\textit{Figure 1 about here}
 \end{center}
 
-The upper panel of Figure \ref{fig:Fig2} presents values of $\bar{a}_x(t)$ from 1841 to 2018 for males aged 65. During the second half of the 19th century and up until the 1940s, $\bar{a}_{65}(t)$ remained relatively stable, exhibiting small fluctuations. However, this was followed by a sharp decline up to the 1980s, after which an increasing trend persisted into recent years. The lower panel of Figure \ref{fig:Fig2} shows the relative derivative of $\bar{a}_{65}(t)$ with respect to time ($\acute{\bar{a}}_{65}(t)$). Positive values of $\acute{\bar{a}}_{65}(t)$ indicate an upward trend in $\bar{a}_{65}(t)$, while negative values indicate a decline. In the following sections, we analyze the sources of change in the time trend of $\acute{\bar{a}}_{65}(t)$ using the equations developed in Section \ref{sec:TimeDynamics}.
+The upper panel of Figure \ref{fig:Fig2} presents life annuity factors, \( \bar{a}_x(t) \), from 1860 to 2021, calculated for males aged 65. During the second half of the 19th century and up until the 1940s, \( \bar{a}_{65}(t) \) remained relatively stable, exhibiting only small fluctuations. This period of stability was followed by a sharp decline that continued into the 1980s, after which an increasing trend persisted into recent years. 
+
+The lower panel of Figure \ref{fig:Fig2} illustrates the changes in \( \bar{a}_{65}(t) \) through its relative derivative with respect to time \( t \) (i.e., \( \acute{\bar{a}}_{65}(t) \)). Positive values of \( \acute{\bar{a}}_{65}(t) \) indicate an upward trend in life annuity factors, whereas negative values signify a decline. In the following sections, we analyze the sources driving the time trend of \( \acute{\bar{a}}_{65}(t) \) using the equations developed in Section \ref{sec:TimeDynamics}.
+
 
 \begin{center}
 	\textit{Figure 2 about here}
@@ -649,37 +657,68 @@ The upper panel of Figure \ref{fig:Fig2} presents values of $\bar{a}_x(t)$ from 
 
 \subsection{Contribution of Financial and Longevity Components to Changes in $\bar{a}_x(t)$}
 
-As shown in the formulas developed in Section \ref{sec:TimeDynamics}, changes over time in $\bar{a}_x(t)$ can be decomposed into longevity and financial components. Each component is influenced by the time fluctuations of $\mu(x,t)$ and $\delta(s,t)$ (captured by $\bar{\rho}(t)$ and $\dot{\delta}(t)$, respectively), modulated by the sensitivity of $\bar{a}_x(t)$ to these fluctuations (entropy, ${H}^{p}_x(t)$, and modified duration, ${D}^{c}_x(t)$). Figure \ref{fig:Fig3} depicts the components driving fluctuations in $\bar{a}_x(t)$ over time.
+As demonstrated in Section \ref{sec:TimeDynamics}, changes over time in \( \bar{a}_x(t) \) can be decomposed into longevity and financial components, expressed as \( \acute{\bar{a}}_x(t) = \bar{\rho}(t) {H}^{p}_x(t) + \dot{\delta}(t) D^{c}_x(t) \). Each component is influenced by the time fluctuations of \( \mu(x,t) \) and \( \delta(s,t) \), captured by \( \bar{\rho}(t) \) and \( \dot{\delta}(t) \), respectively. These fluctuations are modulated by the sensitivity of \( \bar{a}_x(t) \) to each factor, represented by entropy (\( {H}^{p}_x(t) \)) and modified duration (\( {D}^{c}_x(t) \)). Figure \ref{fig:Fig3} illustrates the components driving time fluctuations in \( \bar{a}_x(t) \).
+
 
 \begin{center}
 	\textit{Figure 3 about here}
 \end{center}
 
-The upper panel of Figure \ref{fig:Fig3} shows that between 1860 and 1940, there were periods of both mortality improvement and deterioration. However, beginning in the 1980s, $\bar{\rho}(t)$ increased steadily, reflecting an average annual mortality improvement of 2\% to 3\%. In recent years, $\bar{\rho}(t)$ has trended downward, coinciding with the current stagnation in mortality improvements in the United Kingdom \citep{djeundje2022slowdown}. Regarding interest rates, $\dot{\delta}(t)$ remained relatively stable for most of the observation period, with some fluctuations between 1930 and 1950. Starting in the 1960s, $\dot{\delta}(t)$ increased rapidly, peaking in the 1970s before declining sharply and turning negative, reflecting the prolonged decline in interest rates observed to this day. These trends in $\bar{\rho}(t)$ and $\dot{\delta}(t)$ drive the time dynamics of $\bar{a}_x(t)$, modulated by entropy (${H}^{p}_x(t)$) and modified duration (${D}^{c}_x(t)$).
+The upper panel of Figure \ref{fig:Fig3} shows that between 1860 and 1940, there were periods of both mortality improvement and deterioration (e.g., during the World Wars and the Spanish Flu pandemic). Beginning in the 1980s, \( \bar{\rho}(t) \) increased steadily, reflecting an average annual mortality improvement of 2\% to 3\%. In recent years, \( \bar{\rho}(t) \) has trended downward, mirroring the stagnation in mortality improvements in the United Kingdom, as documented in \citep{djeundje2022slowdown}. The substantial impact of the Covid-19 pandemic is evident in the sharp decline in \( \bar{\rho}(t) \) in 2020 and 2021.
 
-The lower panel of Figure \ref{fig:Fig3} indicates that ${H}^{p}_x(t)$ was higher than ${D}^{c}_x(t)$ during most of the observation period, signifying greater sensitivity of $\bar{a}_x(t)$ to mortality changes than to interest rate changes. However, these sensitivities have evolved over time. Entropy exhibited a declining trend until the 1980s, whereas modified duration remained relatively constant before trending upward in the 1950s and peaking in the 1980s. Thereafter, modified duration declined. Notably, during specific periods, such as the 1960s, ${H}^{p}_x(t)$ and ${D}^{c}_x(t)$ were nearly identical, indicating equal sensitivity of $\bar{a}_x(t)$ to changes in mortality and interest rates.
+With respect to interest rates, \( \dot{\delta}(t) \) remained relatively stable for most of the observation period, with some fluctuations between 1930 and 1950. Beginning in the 1960s, \( \dot{\delta}(t) \) increased rapidly, peaking in the 1970s before declining sharply and turning negative, reflecting the prolonged decline in interest rates observed through the 2010s. Since the Covid-19 pandemic, interest rates have risen rapidly.
 
-Using the measures in Figure \ref{fig:Fig3}, we calculate the contributions of financial ($\dot{\delta}(t){D}^{c}_x(t)$) and longevity ($\bar{\rho}(t){H}^{p}_x(t)$) risks to changes in $\bar{a}_{65}(t)$ over time. The upper panel of Figure \ref{fig:Fig4} shows $\acute{\bar{a}}_{65}(t)$ (as in Figure \ref{fig:Fig2}), while the lower panel shows the respective contributions of financial and longevity components. Positive values indicate upward contributions, while negative values indicate downward effects. Figure \ref{fig:Fig4} clearly demonstrates the significant roles of both longevity and financial risks in shaping the long-term development of $\bar{a}_x(t)$.
+The impact of fluctuations in \( \bar{\rho}(t) \) and \( \dot{\delta}(t) \) on the time dynamics of \( \bar{a}_x(t) \) is modulated by entropy (\( {H}^{p}_x(t) \)) and modified duration (\( {D}^{c}_x(t) \)). The lower panel of Figure \ref{fig:Fig3} indicates that, up until the 1960s, \( \bar{a}_x(t) \) was more sensitive to changes in mortality than to changes in interest rates, as entropy was higher than duration during this period. Starting in the 1960s, entropy exhibited a sharp decline, reaching its lowest point in the 1980s, before beginning to rise again.
+
+Duration remained relatively constant from 1860 until the 1950s, when it began trending upward, peaking in the 1980s. Thereafter, duration declined through the 2010s, reflecting the low-interest rate environment during this period, which reduced sensitivity to interest rate changes. More recently, duration has increased in tandem with the rapid rise in interest rates.
+
+As noted in Figure \ref{fig:Fig3}, there were specific years when duration and entropy were nearly identical. For example, in 1964, both duration and entropy were approximately 0.42, whereas in 2014, these values were around 0.32, indicating equal sensitivity of \( \bar{a}_x(t) \) to changes in mortality and interest rates during these years.
+
+To further explore the interplay between entropy and duration, Table \ref{tab:entropyDuration} presents values for selected years. For instance, a proportional 1\% decline in mortality rates across all ages after 65 in 2021 would result in an increase of 0.37 in \( \bar{a}_{65}(t) \). Similarly, a constant 1\% decrease in interest rates during the same year would lead to an increase of 0.20 in \( \bar{a}_{65}(t) \).
+
+
+
+\begin{table}[ht]
+	\begin{tabular}{rccccc}
+		\toprule
+		& \multicolumn{5}{c}{\textbf{Year}}  \\
+
+		& \textbf{1950} & \textbf{1980} & \textbf{2010 }& \textbf{2020} & \textbf{2021} \\
+\hline
+	\textit{Entropy} &  0.49    & 0.28     & 0.30     &   0.38 & 0.37  \\
+	
+		\textit{Duration} &  0.26    & 0.68     &  0.42    &     0.16 & 0.20\\
+\bottomrule
+	\end{tabular}
+	 \caption{Entropies and durations for life annuities at age 65. Calculated for selected years for males.}
+	\label{tab:entropyDuration}   
+\end{table}
+
+These results stand in contrast to the findings of \citet{rabitti2020mortality}, who argued that duration is the primary driver of changes in life annuities. Table \ref{tab:entropyDuration}, however, underscores the interplay between mortality and interest rates, demonstrating that both factors contribute substantially to changes in life annuities during specific periods.
+
+Using the equation \( \acute{\bar{a}}_x(t) = \bar{\rho}(t) {H}^{p}_x(t) + \dot{\delta}(t) D^{c}_x(t) \), the contributions of financial and longevity risks to changes in life annuity factors are calculated. The upper panel of Figure \ref{fig:Fig4} presents \( \acute{\bar{a}}_{65}(t) \) (as shown in Figure \ref{fig:Fig2}), while the lower panel illustrates the respective contributions of financial and longevity components. Positive values indicate upward contributions, whereas negative values represent downward effects. Figure \ref{fig:Fig4} clearly highlights the significant roles that both longevity and financial risks play in shaping the long-term development of \( \bar{a}_x(t) \).
+
 
 \begin{center}
 	\textit{Figure 4 about here}
 \end{center}
 
-We identify four distinct periods during which annuity factors responded to specific changes in financial and longevity risks. From 1860 to 1945, annuity factors were stable, with modest contributions from both components. Between 1945 and 1970, annuity factors declined, driven primarily by the financial component. Around 1970, interest rates peaked, causing a pronounced negative contribution from the financial component. From 1970 to 2015, annuities increased due to positive contributions from both components. Since 2015, $\bar{a}_x(t)$ has continued to rise, albeit with a diminished contribution from the longevity component, reflecting the deceleration in mortality improvements observed in the United Kingdom and other populations \citep{djeundje2022slowdown}.
+We identify five distinct periods during which annuity factors responded to specific changes in financial and longevity components. From 1860 to 1945, annuity factors remained stable, with modest contributions from both components. Between 1945 and 1970, annuity factors declined, driven primarily by the financial component. Around 1970, interest rates peaked, resulting in a pronounced negative contribution from the financial component. From 1970 to 2015, annuity factors increased due to positive contributions from both financial and longevity components. Since 2015, \( \bar{a}_x(t) \) has continued to rise, albeit with a diminished contribution from the longevity component, reflecting the deceleration in mortality improvements observed in the United Kingdom and other populations \citep{djeundje2022slowdown}. A new pattern has emerged since 2020, attributed to the Covid-19 pandemic, characterized by negative contributions from both the longevity and financial components.
 
-\subsection{Attribution to Age-Groups and Terms}
 
-Next, we analyze how the longevity and financial components shown in Figure \ref{fig:Fig4} can be further decomposed by age groups and yield curve terms. The yield curve data for this analysis were constructed using government bonds (gilts) issued at various maturities, covering the years 1970 to 2020 \citep[Bank of England, 2021]. 
+\subsection{Age and Term Contributions}
 
-Figure \ref{fig:Fig5} depicts the contributions of different age groups (65–74, 75–84, 85–94, 95–104) to the longevity component, as well as contributions from yield curve terms (0–9, 10–19, 20–29, 30–39 years). The figure reveals that the primary contributions originate from ages 65–74 and interest rates with terms below 20 years.
+Next, the longevity and financial components shown in Figure \ref{fig:Fig4} are further decomposed into contributions from age groups and yield curve terms. The yield curve for this analysis was constructed using government bonds (gilts) issued at various maturities \citep{BankOfEngland2024}. The analysis is restricted to the period from 1970 to 2024 due to data availability.
+
+Figure \ref{fig:Fig5} illustrates the contributions of 10-year age groups (i.e., 65–74, 75–84, 85–94, 95–104) to the longevity component, as well as the corresponding contributions from yield curve terms (i.e., 0–9, 10–19, 20–29, 30–39 years). The figure reveals that the primary drivers of changes in \( \bar{a}_{65}(t) \) stem from the age group 65–74 and interest rates with terms below 10 years.
 
 \begin{center}
 	\textit{Figure 5 about here}
 \end{center}
 
-Figure \ref{fig:Fig6} provides a closer examination of age-term sensitivities in 1975 and 2015. The left panel illustrates that in 1975, durations and entropies for the 65–74 age group (terms 0–9 years) were significantly higher than for other age-term groups, indicating heightened sensitivity of annuities to changes in mortality and interest rates in these groups. By 2015, the entropy had become much higher than the duration, with increased sensitivity to mortality improvements observed in the 75–94 age group.
+Figure \ref{fig:Fig6} provides a closer examination of age-term sensitivities for the years 1990, 2000, 2015, and 2021. The upper left panel shows that in 1990, the duration for yield terms of 0–9 years and the entropy for the age group 65–74 were significantly higher than for other age-term groups, indicating heightened sensitivity of annuities to changes in mortality and interest rates within these age-term ranges. 
 
-These findings contrast with \citet{rabitti2020mortality}, who argued that duration is the primary driver of total sensitivity. Indeed, Figure \ref{fig:Fig6} highlights the interplay between mortality and interest rates, demonstrating that both factors contribute substantially to changes in life annuities during specific periods of time.
+However, this sensitivity has shifted over time. By 2015, greater values for duration and entropy had shifted to later age-term groups. For instance, by 2015, entropy had become much higher than duration, with increased sensitivity to mortality changes observed in the 75–94 age group. This pattern persisted into 2021, reflecting the first year of the Covid-19 pandemic.
 
 
 
@@ -690,16 +729,37 @@ These findings contrast with \citet{rabitti2020mortality}, who argued that durat
 
 \subsection{Cause of Death Contributions}
 
-In this subsection, we examine the causes of death driving the longevity component. To achieve this, we utilize cause-specific death rates from the Human Cause-of-Death Database \citet{HCD2022} for the United Kingdom during the period 2001–2016. The causes of death are categorized according to the ICD-10 International Classification of Diseases. For illustration purposes, we group them into six major categories: neoplasms (ICD-10 codes C00–D48), heart diseases (ICD-10 codes I00–I52), cerebrovascular diseases (ICD-10 codes G45, I60–I69), respiratory diseases (ICD-10 codes J00–J22, J30–J98, U04), and other causes.
+Finally in this section we examine the causes of death driving the change in observed life annuity factors through the equation $\acute{\bar{a}} _x(t) = \sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)+\bar{\upvarphi}(t){D}{^P_x}(t)$, where the longevity component is given by $\sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)$. 
+
+
+We use cause-specific mortality rates from the Human Cause-of-Death Data Series retrieved from \citep{HCD2024} for the period 2001 to 2020. Causes of death in this database are categorized according to the ICD-10 International Classification of Diseases. For illustration purposes, six major categories are used: neoplasms (ICD-10 codes C00–D48), heart diseases (ICD-10 codes I00–I52), cerebrovascular diseases (ICD-10 codes G45, I60–I69), respiratory diseases (ICD-10 codes J00–J22, J30–J98, U04, U07-U10), and other causes. Covid-19 (ICD-10 code U07) is included in the category respiratory diseases only in the year 2020, which is the first year of appearance of the disease.
+
+\begin{center}
+	\textit{Figure 7 about here}
+\end{center}
+Finally, in this section, we examine the causes of death driving changes in observed life annuity factors through the equation 
+
+\[
+\acute{\bar{a}}_x(t) = \sum_{i=1}^{n} \bar{\rho}^i_x(t) {H}^i_x(t) + \bar{\upvarphi}(t) {D}^P_x(t),
+\]
+
+where the longevity component is given by \( \sum_{i=1}^{n} \bar{\rho}^i_x(t) {H}^i_x(t) \).
+
+We use cause-specific mortality rates from the Human Cause-of-Death Data Series, retrieved from \citep{HCD2024}, covering the period from 2001 to 2020. Causes of death in this database are categorized according to the ICD-10 International Classification of Diseases. For illustrative purposes, six major categories are used: neoplasms (ICD-10 codes C00–D48), heart diseases (ICD-10 codes I00–I52), cerebrovascular diseases (ICD-10 codes G45, I60–I69), respiratory diseases (ICD-10 codes J00–J22, J30–J98, U04, U07–U10), and other causes. Covid-19 (ICD-10 code U07) is included in the category of respiratory diseases only for the year 2020, as it was the first year the disease was observed.
 
 \begin{center}
 	\textit{Figure 7 about here}
 \end{center}
 
-Figure \ref{fig:Fig7} illustrates the cause-specific contributions to the longevity component for the years 2005, 2010, and 2015. Positive values represent an increase in the longevity component, while negative values indicate a reduction. In 2005, heart diseases were the leading contributors to life annuity changes, followed by neoplasms and cerebrovascular diseases, with minor positive contributions from respiratory diseases. Over time, this configuration shifted significantly. By 2015, neoplasms had become the primary contributors to positive changes, followed by heart diseases. Conversely, respiratory diseases and other causes of death exerted negative contributions to the longevity component.
+Figure \ref{fig:Fig7} illustrates the cause-specific contributions to changes in life annuity factors for the periods 2004–2005, 2009–2010, 2014–2015, and 2019–2020. Positive values represent increases in life annuity factors, while negative values indicate reductions. Contributions from changes in interest rates are also shown in Figure \ref{fig:Fig7}.
 
-Understanding these sources is critical for several reasons. First, it enables actuaries and risk managers to link changes in life annuities to specific health trends, allowing for more targeted risk assessments. Second, it provides insights into how improvements or setbacks in public health affect longevity risks over time. For example, studies have shown that advancements in cancer treatment and cardiovascular care have substantially influenced mortality improvements in high-income countries \citet{weber2023gains}. Such findings underscore the importance of integrating cause-of-death analysis into actuarial practice, particularly when managing longevity risk in life annuity portfolios.
+From 2004 to 2005, heart diseases were the leading contributors to changes in life annuity factors, followed by neoplasms and cerebrovascular diseases, with minor positive contributions from respiratory diseases. This result indicates that reductions in mortality due to heart diseases were primarily responsible for the observed increases in life annuity factors during these years. Notably, the contribution of heart diseases during this period was similar in magnitude to the contribution from changes in interest rates (about 0.6\%).
 
+From 2014 to 2015, neoplasms emerged as the primary cause of death contributing to increases in life annuity factors, followed by heart diseases. However, these increases were small compared to the impact of changes in interest rates. Significant reductions in interest rates during this period resulted in increases of approximately 5\% in life annuity factor values, as observed in the interest rate component.
+
+From 2019 to 2020, the contribution of causes of death shifted considerably due to the emergence of Covid-19. High mortality from respiratory diseases accounted for a 5.4\% decrease in life annuity factors, with Covid-19 deaths representing 56\% of all respiratory disease-related deaths. Thus, it can be estimated that Covid-19 mortality contributed to a 3\% decline in life annuity factors at age 65. Interestingly, during this period, there were positive contributions from neoplasms and heart diseases. This phenomenon is likely linked to the Covid-19 pandemic, as fewer deaths were attributed to these causes due to the predominance of Covid-19-related mortality.
+
+Understanding the sources of changes in life annuities is critical for several reasons. First, it enables actuaries and risk managers to link changes in life annuities to specific health trends, allowing for more targeted risk assessments. Second, it provides insights into how improvements or setbacks in public health affect longevity risks over time. For example, advancements in cancer treatment and cardiovascular care have substantially influenced mortality improvements in high-income countries \citep{weber2023gains}. Conversely, the Covid-19 pandemic has had a profound impact on life annuity businesses. The findings of this section underscore the importance of integrating cause-of-death analysis into actuarial practice, particularly when managing longevity risk in life annuity portfolios.
 
 \section{Concluding Remarks}\label{sec:6_Conclusion}
 
@@ -732,31 +792,31 @@ Looking ahead, we anticipate that the differential equations developed in this p
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.5\linewidth]{Fig/deltamu}
-	\caption{{Trends in interest and mortality rates calculated at ages 65, 70 and 75. Males, 1860-2018.}}
+	\includegraphics[width=0.5\linewidth]{Fig/interestMortalityRates}
+	\caption{{Interest and mortality rates for the United Kingdom. Males, 1860-2021.}}
 	\label{fig:Fig1}
 \end{figure}
 
 
  \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.5\linewidth]{Fig/axm}
-	\caption{{Trends in life annuity factors and relative change in $\bar{a}_x(t)$ calculated at age 65. Males, 1860-2018.}}
+	\includegraphics[width=0.5\linewidth]{Fig/lifeAnnuityFactorsAndChanges}
+	\caption{{Life annuity factors, $\bar{a}_x(t)$, and relative change $\acute{\bar{a}}_x(t)$ calculated at age 65. Males, 1860-2021.}}
 	\label{fig:Fig2}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.5\linewidth]{Fig/IntMort}
-	\caption{{Development in changes in mortality and interest and sensitivities. Upper panel shows the average mortality improvement ($\bar{\rho}(t)$), and change in interest rates ($\dot{\delta}(t)$). Lower panel depicts the entropy ($H$) and modified duration ($D$). Males at age 65, 1860-2018.}}
+	\includegraphics[width=0.5\linewidth]{Fig/changeMortalityInterestAndSensitivities}
+	\caption{{Development in changes in mortality and interest and sensitivities. Upper panel shows the average mortality improvement ($\bar{\rho}(t)$), and change in interest rates ($\dot{\delta}(t)$). Lower panel depicts the entropy ($H$) and modified duration ($D$). Males at age 65, 1860-2021.}}
 	\label{fig:Fig3}
 \end{figure}
 
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.5\linewidth]{Fig/DescSingle}
-	\caption{{Decomposition of changes over time in life annuity factors. Upper panel shows the relative change in a life annuity factor calculated at age 65 for males from 1860-2018. Lower panel shows the financial and longevity components that drive the relative change in the life annuity. }}
+	\includegraphics[width=0.5\linewidth]{Fig/decompositionLongTermSingleInterestRates}
+	\caption{{Decomposition of changes over time in life annuity factors. Upper panel shows the relative change in a life annuity factor calculated at age 65 for males from 1860-2021. Lower panel shows the financial and longevity components that drive the relative change in the life annuity. }}
 	\label{fig:Fig4}
 \end{figure}
 
@@ -764,23 +824,23 @@ Looking ahead, we anticipate that the differential equations developed in this p
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.4\linewidth]{Fig/DescAge}
-	\caption{{Age and term attributions to changes over time in life annuity factors calculated at ages 65. Males, 1970-2018.}}
+	\includegraphics[width=0.8\linewidth]{Fig/ageTermStructureDescomposition}
+	\caption{{Age and term attributions to changes over time in life annuity factors calculated at ages 65. Males, 1970-2021.}}
 	\label{fig:Fig5}
 \end{figure}
 
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\linewidth]{Fig/AttributionDH}
-	\caption{{Entropy and duration by age groups. Males, 1975 and 2015.}}
+	\includegraphics[width=0.8\linewidth]{Fig/attributionEntropyDuration}
+	\caption{{Entropy and duration by age groups. Males, 1990, 2000, 2015 and 2021.}}
 	\label{fig:Fig6}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=1\linewidth]{Fig/DescCod}
-	\caption{{Causes of death contributions to the changes in the longevity component. Males, 2005, 2010 and 2015.}}
+	\includegraphics[width=1\linewidth]{Fig/attributionCauseOfDeath}
+	\caption{{Causes of death contributions to the changes in the longevity component. Males, 2004-2005, 2009-2010, 2014-2015 and 2019-2020.}}
 	\label{fig:Fig7}
 \end{figure}
 

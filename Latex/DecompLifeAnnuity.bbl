@@ -11,6 +11,11 @@ Alvarez, J.-A., Kallestrup-Lamb, M., and Kj{\ae}rgaard, S. (2021).
   demographic implications of unequal lifespans.
 \newblock {\em Insurance: Mathematics and Economics}, 99:363--375.
 
+\bibitem[{Bank of England Database}, 2024]{BankOfEngland2024}
+{Bank of England Database} (2024).
+\newblock {B}ank of {E}ngland ({L}ondon).
+\newblock \url{www.bankofengland.co.uk}.
+
 \bibitem[Camarda et~al., 2012]{camarda2012mortalitysmooth}
 Camarda, C.~G. et~al. (2012).
 \newblock Mortalitysmooth: An {R} package for smoothing poisson counts with
@@ -72,17 +77,18 @@ Ho, T.~S. (1992).
 \newblock {Key Rate Durations}.
 \newblock {\em The Journal of Fixed Income}, 2(2):29--44.
 
-\bibitem[{Human Mortality Database}, 2020]{HMD2020}
-{Human Mortality Database} (2020).
-\newblock University of {C}alifornia, {B}erkeley ({USA}), and {M}ax {P}lanck
-  {I}nstitute for {D}emographic {R}esearch ({G}ermany).
+\bibitem[{Human Mortality Database}, 2024a]{HCD2024}
+{Human Mortality Database} (2024a).
+\newblock {H}uman {C}ause-of-{D}eath {D}ata {S}eries. {F}rench {I}nstitute for
+  {D}emographic {S}tudies (france), {M}ax {P}lanck {I}nstitute for
+  {D}emographic {R}esearch ({G}ermany) and the {U}niversity of {C}alifornia,
+  {B}erkeley ({USA}).
 \newblock \url{www.mortality.org}.
 
-\bibitem[{Human Mortality Database}, 2022]{HCD2022}
-{Human Mortality Database} (2022).
-\newblock Human cause-of-death data series. french institute for demographic
-  studies (france), max planck institute for demographic research (germany) and
-  the university of california, berkeley (usa)).
+\bibitem[{Human Mortality Database}, 2024b]{HMD2024}
+{Human Mortality Database} (2024b).
+\newblock University of {C}alifornia, {B}erkeley ({USA}), and {M}ax {P}lanck
+  {I}nstitute for {D}emographic {R}esearch ({G}ermany).
 \newblock \url{www.mortality.org}.
 
 \bibitem[Kallestrup-Lamb et~al., 2020]{kallestrup2020insight}

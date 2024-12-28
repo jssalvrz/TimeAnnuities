@@ -5,53 +5,47 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apalike.bst
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: library.bib
-I was expecting a `,' or a `}'---line 2873 of file library.bib
- : 
- : @Misc{HMD2020,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "."
 Warning--there's a number but no volume in Daul2012
 Warning--there's a number but no volume in Li2012
-You've used 38 entries,
+You've used 39 entries,
             1935 wiz_defined-function locations,
-            707 strings with 10032 characters,
-and the built_in function-call counts, 14960 in all, are:
-= -- 1521
-> -- 524
-< -- 31
-+ -- 182
-- -- 168
-* -- 1269
-:= -- 2564
-add.period$ -- 114
-call.type$ -- 38
-change.case$ -- 269
+            712 strings with 10191 characters,
+and the built_in function-call counts, 15205 in all, are:
+= -- 1547
+> -- 531
+< -- 32
++ -- 185
+- -- 170
+* -- 1284
+:= -- 2613
+add.period$ -- 117
+call.type$ -- 39
+change.case$ -- 275
 chr.to.int$ -- 36
-cite$ -- 40
-duplicate$ -- 562
-empty$ -- 1066
-format.name$ -- 237
-if$ -- 2928
-int.to.chr$ -- 3
+cite$ -- 41
+duplicate$ -- 572
+empty$ -- 1081
+format.name$ -- 240
+if$ -- 2973
+int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 39
-newline$ -- 193
-num.names$ -- 114
-pop$ -- 199
+newline$ -- 198
+num.names$ -- 117
+pop$ -- 202
 preamble$ -- 1
-purify$ -- 272
+purify$ -- 278
 quote$ -- 0
-skip$ -- 452
+skip$ -- 460
 stack$ -- 0
-substring$ -- 1201
+substring$ -- 1213
 swap$ -- 77
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 222
+type$ -- 228
 warning$ -- 2
-while$ -- 141
+while$ -- 143
 width$ -- 0
-write$ -- 490
-(There was 1 error message)
+write$ -- 502
+(There were 2 warnings)
