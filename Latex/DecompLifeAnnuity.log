@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.1)  28 DEC 2024 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.1)  29 DEC 2024 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,101 +565,94 @@ LaTeX Font Info:    Trying to load font information for U+dsrom on input line 1
 (C:\Users\Jesus\AppData\Local\Programs\MiKTeX\tex/latex/doublestroke\udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [4] [5] [6] [7] [8] [9]
-Overfull \hbox (32.44539pt too wide) detected at line 444
+Overfull \hbox (32.44539pt too wide) detected at line 437
 []
  []
 
 [10] [11]
 LaTeX Font Info:    Trying to load font information for U+dutchcal on input lin
-e 534.
+e 527.
 
 (C:\Users\Jesus\AppData\Local\Programs\MiKTeX\tex/latex/dutchcal\udutchcal.fd
 File: udutchcal.fd 2011/06/16 Fontinst v1.933 font definitions for U/dutchcal.
 )
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 12.0pt on input line 534.
+(Font)              scaled to size 12.0pt on input line 527.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 8.0pt on input line 534.
+(Font)              scaled to size 8.0pt on input line 527.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 6.0pt on input line 534.
+(Font)              scaled to size 6.0pt on input line 527.
 
 [12]
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 14.4pt on input line 578.
+(Font)              scaled to size 14.4pt on input line 571.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 10.0pt on input line 578.
+(Font)              scaled to size 10.0pt on input line 571.
 LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
-(Font)              scaled to size 7.0pt on input line 578.
- [13] [14] [15] [16] [17] [18] [19] [20] [21] (DecompLifeAnnuity.bbl
-[22] [23]) [24]
-<Fig/interestMortalityRates.pdf, id=104, 198.5935pt x 211.7603pt>
-File: Fig/interestMortalityRates.pdf Graphic file (type pdf)
-<use Fig/interestMortalityRates.pdf>
-Package pdftex.def Info: Fig/interestMortalityRates.pdf  used on input line 795
-.
-(pdftex.def)             Requested size: 250.24199pt x 266.85168pt.
-<Fig/lifeAnnuityFactorsAndChanges.pdf, id=105, 171.42235pt x 199.49744pt>
+(Font)              scaled to size 7.0pt on input line 571.
+ [13] [14] [15]
+<Fig/lifeAnnuityFactorsAndChanges.pdf, id=74, 171.42235pt x 199.49744pt>
 File: Fig/lifeAnnuityFactorsAndChanges.pdf Graphic file (type pdf)
 <use Fig/lifeAnnuityFactorsAndChanges.pdf>
 Package pdftex.def Info: Fig/lifeAnnuityFactorsAndChanges.pdf  used on input li
-ne 803.
+ne 640.
 (pdftex.def)             Requested size: 250.24199pt x 291.22426pt.
-<Fig/changeMortalityInterestAndSensitivities.pdf, id=106, 182.39438pt x 204.871
-41pt>
+ [16 <./Fig/lifeAnnuityFactorsAndChanges.pdf>]
+Overfull \hbox (8.8553pt too wide) in paragraph at lines 652--652
+[]\OT1/cmr/bx/n/14.4 Contribution of Fi-nan-cial and Longevity Com-po-nents to 
+the Change
+ []
+
+<Fig/changeMortalityInterestAndSensitivities.pdf, id=95, 182.39438pt x 204.8714
+1pt>
 File: Fig/changeMortalityInterestAndSensitivities.pdf Graphic file (type pdf)
 <use Fig/changeMortalityInterestAndSensitivities.pdf>
 Package pdftex.def Info: Fig/changeMortalityInterestAndSensitivities.pdf  used 
-on input line 810.
+on input line 664.
 (pdftex.def)             Requested size: 250.24199pt x 281.08476pt.
-<Fig/decompositionLongTermSingleInterestRates.pdf, id=107, 187.87096pt x 222.08
+[17 <./Fig/changeMortalityInterestAndSensitivities.pdf>]
+<Fig/decompositionLongTermSingleInterestRates.pdf, id=168, 187.87096pt x 222.08
 871pt>
 File: Fig/decompositionLongTermSingleInterestRates.pdf Graphic file (type pdf)
 <use Fig/decompositionLongTermSingleInterestRates.pdf>
 Package pdftex.def Info: Fig/decompositionLongTermSingleInterestRates.pdf  used
- on input line 818.
+ on input line 709.
 (pdftex.def)             Requested size: 250.24199pt x 295.83514pt.
-<Fig/ageTermStructureDescomposition.pdf, id=108, 215.89763pt x 144.54pt>
+ [18]
+<Fig/ageTermStructureDescomposition.pdf, id=172, 215.89763pt x 144.54pt>
 File: Fig/ageTermStructureDescomposition.pdf Graphic file (type pdf)
 <use Fig/ageTermStructureDescomposition.pdf>
 Package pdftex.def Info: Fig/ageTermStructureDescomposition.pdf  used on input 
-line 827.
-(pdftex.def)             Requested size: 400.38872pt x 268.08069pt.
-<Fig/attributionEntropyDuration.pdf, id=109, 208.42691pt x 204.127pt>
+line 725.
+(pdftex.def)             Requested size: 300.29344pt x 201.06216pt.
+ [19 <./Fig/decompositionLongTermSingleInterestRates.pdf>]
+<Fig/attributionEntropyDuration.pdf, id=207, 208.42691pt x 204.127pt>
 File: Fig/attributionEntropyDuration.pdf Graphic file (type pdf)
 <use Fig/attributionEntropyDuration.pdf>
 Package pdftex.def Info: Fig/attributionEntropyDuration.pdf  used on input line
- 835.
-(pdftex.def)             Requested size: 400.38872pt x 392.1654pt.
-<Fig/attributionCauseOfDeath.pdf, id=110, 406.97597pt x 226.48752pt>
-File: Fig/attributionCauseOfDeath.pdf Graphic file (type pdf)
-<use Fig/attributionCauseOfDeath.pdf>
-Package pdftex.def Info: Fig/attributionCauseOfDeath.pdf  used on input line 84
-2.
-(pdftex.def)             Requested size: 500.484pt x 278.5296pt.
- [25 <./Fig/interestMortalityRates.pdf> <./Fig/lifeAnnuityFactorsAndChanges.pdf
+ 734.
+(pdftex.def)             Requested size: 300.29344pt x 294.12639pt.
+ [20 <./Fig/ageTermStructureDescomposition.pdf> <./Fig/attributionEntropyDurati
+on.pdf
 
-
-pdfTeX warning: pdflatex.exe (file ./Fig/lifeAnnuityFactorsAndChanges.pdf): PDF
- inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./Fig/attributionEntropyDuration.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
 >]
-
-LaTeX Warning: Text page 26 contains only floats.
-
-
-Overfull \vbox (3.3081pt too high) has occurred while \output is active []
-
-
-[26 <./Fig/changeMortalityInterestAndSensitivities.pdf> <./Fig/decompositionLon
-gTermSingleInterestRates.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Fig/decompositionLongTermSingleInterestRat
-es.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-
->] [27 <./Fig/ageTermStructureDescomposition.pdf>] [28 <./Fig/attributionEntrop
-yDuration.pdf>] [29 <./Fig/attributionCauseOfDeath.pdf>] [30
-
-] [31] [32]
-(DecompLifeAnnuity.aux)
+<Fig/attributionCauseOfDeathInLine.pdf, id=284, 578.16pt x 144.54pt>
+File: Fig/attributionCauseOfDeathInLine.pdf Graphic file (type pdf)
+<use Fig/attributionCauseOfDeathInLine.pdf>
+Package pdftex.def Info: Fig/attributionCauseOfDeathInLine.pdf  used on input l
+ine 756.
+(pdftex.def)             Requested size: 500.484pt x 125.1202pt.
+ [21 <./Fig/attributionCauseOfDeathInLine.pdf>] [22] [23]
+(DecompLifeAnnuity.bbl [24] [25]) [26] [27] [28]
+<Fig/interestMortalityRates.pdf, id=340, 198.5935pt x 211.7603pt>
+File: Fig/interestMortalityRates.pdf Graphic file (type pdf)
+<use Fig/interestMortalityRates.pdf>
+Package pdftex.def Info: Fig/interestMortalityRates.pdf  used on input line 952
+.
+(pdftex.def)             Requested size: 300.29344pt x 320.25044pt.
+ [29] [30 <./Fig/interestMortalityRates.pdf>] (DecompLifeAnnuity.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -668,49 +661,52 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were multiply-defined labels.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 261 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 8564 strings out of 474485
- 143510 string characters out of 5743734
+ 8565 strings out of 474485
+ 143594 string characters out of 5743734
  1945542 words of memory out of 5000000
- 30661 multiletter control sequences out of 15000+600000
- 576000 words of font info for 107 fonts, out of 8000000 for 9000
+ 30663 multiletter control sequences out of 15000+600000
+ 575641 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,23n,65p,1276b,327s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-0700.pk> <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1000.pk><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-dutchcal/DutchCalReg.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jesus/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Jesus/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Jesus/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/User
-s/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8
-.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Jesus/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jesus/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jesus/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Jesus/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users
-/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C
-:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy6.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmsy8.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Jesus/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Jesus/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Users/Jesus/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/User
-s/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on DecompLifeAnnuity.pdf (32 pages, 557359 bytes).
+ 57i,23n,65p,1276b,427s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm0700.pk> <C:\Users\Jesus\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
+appen/ec/dpi600\tcrm1000.pk><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/dutchcal/DutchCalReg.pfb><C:/Users/Jesus/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Jesus/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Jesus/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Jesu
+s/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/U
+sers/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cm
+ex8.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Jesus/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Jesus/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Jesus/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Jes
+us/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Us
+ers/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr8.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Jesus/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Jesus/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Users/Jesus/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom12.pfb><C:/Users/Jesus/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/U
+sers/Jesus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb>
+Output written on DecompLifeAnnuity.pdf (30 pages, 550327 bytes).
 PDF statistics:
- 500 PDF objects out of 1000 (max. 8388607)
+ 483 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

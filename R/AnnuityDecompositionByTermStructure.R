@@ -132,7 +132,7 @@ jj<- c(ii,kk)
   scale_y_continuous(breaks = seq(-10,10,by = 2), expand = c(0,0))+
   scale_x_continuous(breaks = brks,labels = labs, expand = c(0,0))+
   theme_minimal()+
-  coord_cartesian(ylim = c(-5,5), xlim=c(Syear,Fyear))+
+  coord_cartesian(ylim = c(-6,6), xlim=c(Syear,Fyear))+
   theme(panel.grid = element_blank(),
         panel.background = element_blank(),
         axis.ticks = element_line(size = 0.1, colour = "gray30"),

@@ -146,9 +146,10 @@ yearsLabels <- c('2005' = "2004 to 2005", '2010' = "2009 to 2010",
     geom_hline(aes(yintercept = 0), colour = "black", size = 0.1, alpha =  0.8)+
     geom_bar(aes(x= as.factor(Component), y = Percentage*100, fill = Component),
              position = "stack", stat = "identity",width = 0.8)+
-    scale_y_continuous(breaks = seq(-10,10, by = 1))+
+    scale_y_continuous(breaks = seq(-10,10, by = 0.5))+
     scale_fill_manual(values = rev(colores))+
-    facet_wrap(~Year, ncol=2, labeller = as_labeller(yearsLabels))+
+    facet_grid(.~Year, scales = "free", space = "free"
+               )+ # , labeller = as_labeller(yearsLabels)
     theme_minimal()+
     coord_flip()+
     theme(panel.grid = element_blank(),
@@ -157,12 +158,12 @@ yearsLabels <- c('2005' = "2004 to 2005", '2010' = "2009 to 2010",
           text = element_text(size = 7,font_rc),
           panel.border = element_blank(),
           legend.position = "none",
-          aspect.ratio = 0.5,
+          #aspect.ratio = 0.5,
           strip.text = element_text(size = 7),
-          panel.spacing.x = unit(1,"lines"))+
+          panel.spacing.x = unit(2,"lines"))+
     ylab("Contribution to the \n change in life annuity factors (%)")+
     xlab("")
  
-ggsave("Fig/attributionCauseOfDeath.svg", width = 6, height = 5)
+ggsave("Fig/attributionCauseOfDeathInLine.svg", width = 8, height = 2)
 
 
