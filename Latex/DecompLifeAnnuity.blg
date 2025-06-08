@@ -7,45 +7,45 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 Database file #1: library.bib
 Warning--there's a number but no volume in Daul2012
 Warning--there's a number but no volume in Li2012
-You've used 39 entries,
+You've used 40 entries,
             1935 wiz_defined-function locations,
-            712 strings with 10191 characters,
-and the built_in function-call counts, 15205 in all, are:
-= -- 1547
-> -- 531
-< -- 32
-+ -- 185
-- -- 170
-* -- 1284
-:= -- 2613
-add.period$ -- 117
-call.type$ -- 39
-change.case$ -- 275
-chr.to.int$ -- 36
-cite$ -- 41
-duplicate$ -- 572
-empty$ -- 1081
-format.name$ -- 240
-if$ -- 2973
+            717 strings with 10269 characters,
+and the built_in function-call counts, 15592 in all, are:
+= -- 1588
+> -- 538
+< -- 34
++ -- 187
+- -- 172
+* -- 1309
+:= -- 2676
+add.period$ -- 120
+call.type$ -- 40
+change.case$ -- 281
+chr.to.int$ -- 37
+cite$ -- 42
+duplicate$ -- 591
+empty$ -- 1111
+format.name$ -- 243
+if$ -- 3055
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 39
-newline$ -- 198
-num.names$ -- 117
-pop$ -- 202
+missing$ -- 40
+newline$ -- 203
+num.names$ -- 120
+pop$ -- 207
 preamble$ -- 1
-purify$ -- 278
+purify$ -- 284
 quote$ -- 0
-skip$ -- 460
+skip$ -- 477
 stack$ -- 0
-substring$ -- 1213
-swap$ -- 77
-text.length$ -- 5
+substring$ -- 1244
+swap$ -- 83
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 228
+type$ -- 234
 warning$ -- 2
-while$ -- 143
+while$ -- 148
 width$ -- 0
-write$ -- 502
+write$ -- 515
 (There were 2 warnings)
