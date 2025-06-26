@@ -72,7 +72,7 @@
 
 \author[1]{Jes\'us-Adri\'an \'Alvarez\thanks{jesusalvarezmtz@gmail.com}}
 
-\author[2]{Andr\'es M. Villegas}
+\author[2]{Andr\'es M. Villegas\thanks{a.villegas@unsw.edu.au}}
 
 \affil[1]{{\small Independent Researcher} }
 
@@ -103,6 +103,9 @@ Our equations explicitly capture the joint dynamics of mortality and interest ra
 	
 \end{abstract}
 
+\textbf{JEL Codes:} G22, J11, E43
+
+
 \textbf{Keywords:} entropy, duration, longevity risk, interest rates, Thiele differential equation
 
 
@@ -127,7 +130,7 @@ We begin by developing differential equations for a deterministic life annuity f
 
 Our equations are simple, intuitive, and easily applicable, enabling actuaries and risk managers to assess the financial and longevity risks embedded in their life annuity portfolios. From an actuarial perspective, these differential equations provide valuable insights for developing strategies to improve risk management by leveraging well-established concepts from mathematical demography and immunisation theory.
 
-The remainder of the article is structured as follows. In Section \ref{sec:SensitivityMortalityInterest}, we review key results from the actuarial and demographic literature on mortality and interest rate sensitivities. Section \ref{sec:TimeDynamics} presents a set of differential equations for the time dynamics of life annuities in the deterministic case. Section \ref{sec:UK_Illustration} illustrates the application of our equations using historical data from the United Kingdom.  In Section \ref{sec:Reserves}, the equations are extended to the stochastic representation of annuity reserves. Lastly, we conclude with a discussion on the potential applications of the equations developed in this paper. The code to replicate the results and all derivations presented in this article are available in the open-source repository: \textit{link available upon publication}.
+The remainder of the article is structured as follows. In Section \ref{sec:SensitivityMortalityInterest}, we review key results from the actuarial and demographic literature on mortality and interest rate sensitivities. Section \ref{sec:TimeDynamics} presents a set of differential equations for the time dynamics of life annuities in the deterministic case. Section \ref{sec:UK_Illustration} illustrates the application of our equations using historical data from the United Kingdom.  In Section \ref{sec:Reserves}, the equations are extended to the stochastic representation of annuity reserves. Lastly, we conclude with a discussion on the potential applications of the equations developed in this paper. 
 
 
 
@@ -808,7 +811,24 @@ An important direction for future research is the adaptation of these equations 
 
 Looking ahead, we hope that the differential equations developed in this paper may find applications in both actuarial practice and academic research. While their full potential remains to be explored, we believe they offer the ability to provide valuable insights into the time dynamics of life annuities, particularly in understanding the interplay between longevity and financial risk. In doing so, they may contribute to a deeper understanding of economic-demographic interactions in long-term financial products, with implications for product design, solvency assessment, and risk management.
 
+
 \newpage
+
+\section*{Acknowledgements}
+
+The authors acknowledge the support of the Australian Research Council Centre of Excellence in Population Ageing Research (CEPAR) project number CE110001029.
+
+\section*{Data Availability}
+
+The datasets used in this article are publicly available. We used all-cause mortality rates retrieved from the \citet{HMD2024} and cause-specific mortality rates from the Human Cause-of-Death Data Series provided by the \citet{HCD2024}. Interest rate data were obtained from the \citet{BankOfEngland2024}. 
+
+The code and data to replicate the results and all derivations presented in this article are available at the following GitHub repository: \url{https://github.com/jssalvrz/TimeAnnuities}.
+
+
+\section*{Declaration of generative AI and AI-assisted technologies in the writing process}
+
+During the preparation of this work the author(s) used ChatGPT and Copilot in order to improve the readability and language of the manuscript in the writing process. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the published article. 
+
 
 \bibliographystyle{apalike}
 %\bibliography{/Users/Jesus/Documents/Papers/BibTex/Proposal}
