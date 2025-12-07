@@ -38,18 +38,23 @@ rstr <- rstr %>% group_by(Year,term)  %>% summarize(rawdelta = mean(forward_forc
 rstr$term  <- rstr$term - 1 # To start at age 0, e.g. age 65
 
 # smooth rates over the term and over time
-
-rsm <- data.table(rstr)
-rsm <- rsm[,smooth.spline(rawdelta, spar = 0.6)$y,by = Year ]
-rsm$term <- rstr$term
-rsm <- as.data.frame(rsm[,smooth.spline(V1, spar = 0.6)$y,by = term ])
 years <- 1970:2024 
-rsm$Year <- years
+rsm <- data.table(rstr)
+rsm <- rsm[,smooth.spline(rawdelta, spar = 0)$y,by = Year ]
+rsm$term <- rstr$term
+rsm1 <- as.data.frame(rsm[,smooth.spline(V1, spar = 0.52)$y,by = term ])
+rsm1$Year <- years
+rstr1 <- merge(rstr, rsm1, by = c("Year", "term"))
+names(rstr1)[4] <- "delta"
+rstr1 <- arrange(rstr1, Year, term)
 
-rstr <- merge(rstr, rsm, by = c("Year", "term"))
-names(rstr)[4] <- "delta"
-rstr <- arrange(rstr, Year, term)
-
+rsm2 <- as.data.frame(rsm[,smooth.spline(V1, spar = 0.42)$y,by = term ])
+rsm2$Year <- years
+rstr2 <- merge(rstr, rsm2, by = c("Year", "term"))
+names(rstr2)[4] <- "delta"
+rstr2 <- arrange(rstr2, Year, term)
+yearcutoff <- 2015
+rstr <- as.data.frame(rbind(subset(rstr1, Year<=yearcutoff),subset(rstr2, Year>yearcutoff) ))
 # Merge interest rates with mortality data
 x <- 65 # Age to calculate annuities
 

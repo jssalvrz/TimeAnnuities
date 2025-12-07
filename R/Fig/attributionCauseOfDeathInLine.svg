@@ -1,42 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   class="svglite"
-   width="576.00pt"
-   height="144.00pt"
-   viewBox="0 0 576.00 144.00"
-   version="1.1"
-   id="svg96"
-   sodipodi:docname="attributionCauseOfDeathInLine.svg"
-   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview96"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="pt"
-     showgrid="false"
-     inkscape:zoom="0.562555"
-     inkscape:cx="570.61087"
-     inkscape:cy="77.325772"
-     inkscape:window-width="1366"
-     inkscape:window-height="705"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg96" />
-  <defs
-     id="defs1">
-    <style
-       type="text/css"
-       id="style1"><![CDATA[
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='576.00pt' height='144.00pt' viewBox='0 0 576.00 144.00'>
+<defs>
+  <style type='text/css'><![CDATA[
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
       fill: none;
       stroke: #000000;
@@ -48,907 +13,127 @@
       white-space: pre;
     }
   ]]></style>
-  </defs>
-  <rect
-     width="100%"
-     height="100%"
-     style="stroke: none; fill: none;"
-     id="rect1" />
-  <defs
-     id="defs2">
-    <clipPath
-       id="cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=">
-      <rect
-         x="0.00"
-         y="0.00"
-         width="576.00"
-         height="144.00"
-         id="rect2" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g2" />
-  <defs
-     id="defs3">
-    <clipPath
-       id="cpNzYuNDV8OTQuOTZ8MjAuNjh8MTExLjcw">
-      <rect
-         x="76.45"
-         y="20.68"
-         width="18.51"
-         height="91.02"
-         id="rect3" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpNzYuNDV8OTQuOTZ8MjAuNjh8MTExLjcw)"
-     id="g8">
-    <line
-       x1="77.29"
-       y1="111.70"
-       x2="77.29"
-       y2="20.68"
-       style="stroke-width: 0.21; stroke: #000000; stroke-opacity: 0.80; stroke-linecap: butt;"
-       id="line3" />
-    <rect
-       x="77.29"
-       y="41.69"
-       width="7.96"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C02942;"
-       id="rect4" />
-    <rect
-       x="77.29"
-       y="59.19"
-       width="14.97"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E6AC27;"
-       id="rect5" />
-    <rect
-       x="77.29"
-       y="76.70"
-       width="6.00"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #A37E58;"
-       id="rect6" />
-    <rect
-       x="77.29"
-       y="94.20"
-       width="0.56"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #254540;"
-       id="rect7" />
-    <rect
-       x="77.29"
-       y="24.18"
-       width="16.83"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #68B3AF;"
-       id="rect8" />
-  </g>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g9" />
-  <defs
-     id="defs9">
-    <clipPath
-       id="cpMTIzLjc2fDEzOS44OXwyMC42OHwxMTEuNzA=">
-      <rect
-         x="123.76"
-         y="20.68"
-         width="16.13"
-         height="91.02"
-         id="rect9" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpMTIzLjc2fDEzOS44OXwyMC42OHwxMTEuNzA=)"
-     id="g14">
-    <line
-       x1="124.49"
-       y1="111.70"
-       x2="124.49"
-       y2="20.68"
-       style="stroke-width: 0.21; stroke: #000000; stroke-opacity: 0.80; stroke-linecap: butt;"
-       id="line9" />
-    <rect
-       x="124.49"
-       y="41.69"
-       width="6.92"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C02942;"
-       id="rect10" />
-    <rect
-       x="124.49"
-       y="59.19"
-       width="8.48"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E6AC27;"
-       id="rect11" />
-    <rect
-       x="124.49"
-       y="76.70"
-       width="1.69"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #A37E58;"
-       id="rect12" />
-    <rect
-       x="124.49"
-       y="94.20"
-       width="3.91"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #254540;"
-       id="rect13" />
-    <rect
-       x="124.49"
-       y="24.18"
-       width="14.66"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #68B3AF;"
-       id="rect14" />
-  </g>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g15" />
-  <defs
-     id="defs15">
-    <clipPath
-       id="cpMTY4LjY5fDMyOS4xMHwyMC42OHwxMTEuNzA=">
-      <rect
-         x="168.69"
-         y="20.68"
-         width="160.42"
-         height="91.02"
-         id="rect15" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpMTY4LjY5fDMyOS4xMHwyMC42OHwxMTEuNzA=)"
-     id="g20">
-    <line
-       x1="181.07"
-       y1="111.70"
-       x2="181.07"
-       y2="20.68"
-       style="stroke-width: 0.21; stroke: #000000; stroke-opacity: 0.80; stroke-linecap: butt;"
-       id="line15" />
-    <rect
-       x="181.07"
-       y="41.69"
-       width="13.78"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C02942;"
-       id="rect16" />
-    <rect
-       x="181.07"
-       y="59.19"
-       width="5.92"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E6AC27;"
-       id="rect17" />
-    <rect
-       x="181.07"
-       y="76.70"
-       width="2.36"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #A37E58;"
-       id="rect18" />
-    <rect
-       x="175.98"
-       y="94.20"
-       width="5.09"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #254540;"
-       id="rect19" />
-    <rect
-       x="181.07"
-       y="24.18"
-       width="140.74"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #68B3AF;"
-       id="rect20" />
-  </g>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g21" />
-  <defs
-     id="defs21">
-    <clipPath
-       id="cpMzU3LjkwfDU3MC41MnwyMC42OHwxMTEuNzA=">
-      <rect
-         x="357.90"
-         y="20.68"
-         width="212.62"
-         height="91.02"
-         id="rect21" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpMzU3LjkwfDU3MC41MnwyMC42OHwxMTEuNzA=)"
-     id="g26">
-    <line
-       x1="519.53"
-       y1="111.70"
-       x2="519.53"
-       y2="20.68"
-       style="stroke-width: 0.21; stroke: #000000; stroke-opacity: 0.80; stroke-linecap: butt;"
-       id="line21" />
-    <rect
-       x="519.53"
-       y="41.69"
-       width="41.33"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C02942;"
-       id="rect22" />
-    <rect
-       x="519.53"
-       y="59.19"
-       width="17.68"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E6AC27;"
-       id="rect23" />
-    <rect
-       x="519.53"
-       y="76.70"
-       width="7.24"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #A37E58;"
-       id="rect24" />
-    <rect
-       x="367.57"
-       y="94.20"
-       width="151.96"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #254540;"
-       id="rect25" />
-    <rect
-       x="485.35"
-       y="24.18"
-       width="34.18"
-       height="14.00"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #68B3AF;"
-       id="rect26" />
-  </g>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g27" />
-  <defs
-     id="defs27">
-    <clipPath
-       id="cpNzYuNDV8OTQuOTZ8NS40OHwyMC42OA==">
-      <rect
-         x="76.45"
-         y="5.48"
-         width="18.51"
-         height="15.20"
-         id="rect27" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpNzYuNDV8OTQuOTZ8NS40OHwyMC42OA==)"
-     id="g28">
-    <text
-       x="85.709999"
-       y="15.57"
-       text-anchor="middle"
-       style="font-size:7px;font-family:'Roboto Condensed';fill:#1a1a1a"
-       textLength="13.82"
-       lengthAdjust="spacingAndGlyphs"
-       id="text27" />
-  </g>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g29" />
-  <defs
-     id="defs29">
-    <clipPath
-       id="cpMTIzLjc2fDEzOS44OXw1LjQ4fDIwLjY4">
-      <rect
-         x="123.76"
-         y="5.48"
-         width="16.13"
-         height="15.20"
-         id="rect29" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g31" />
-  <defs
-     id="defs31">
-    <clipPath
-       id="cpMTY4LjY5fDMyOS4xMHw1LjQ4fDIwLjY4">
-      <rect
-         x="168.69"
-         y="5.48"
-         width="160.42"
-         height="15.20"
-         id="rect31" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g33" />
-  <defs
-     id="defs33">
-    <clipPath
-       id="cpMzU3LjkwfDU3MC41Mnw1LjQ4fDIwLjY4">
-      <rect
-         x="357.90"
-         y="5.48"
-         width="212.62"
-         height="15.20"
-         id="rect33" />
-    </clipPath>
-  </defs>
-  <g
-     clip-path="url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)"
-     id="g96">
-    <polyline
-       points="77.29,114.44 77.29,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline34" />
-    <polyline
-       points="91.45,114.44 91.45,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline35" />
-    <text
-       x="77.29"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text35">0.0</text>
-    <text
-       x="91.45"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text36">0.5</text>
-    <polyline
-       points="124.49,114.44 124.49,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline36" />
-    <polyline
-       points="138.65,114.44 138.65,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline37" />
-    <text
-       x="124.49"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text37">0.0</text>
-    <text
-       x="138.65"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text38">0.5</text>
-    <polyline
-       points="181.07,114.44 181.07,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline38" />
-    <polyline
-       points="195.22,114.44 195.22,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline39" />
-    <polyline
-       points="209.37,114.44 209.37,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline40" />
-    <polyline
-       points="223.53,114.44 223.53,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline41" />
-    <polyline
-       points="237.68,114.44 237.68,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline42" />
-    <polyline
-       points="251.83,114.44 251.83,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline43" />
-    <polyline
-       points="265.98,114.44 265.98,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline44" />
-    <polyline
-       points="280.13,114.44 280.13,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline45" />
-    <polyline
-       points="294.28,114.44 294.28,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline46" />
-    <polyline
-       points="308.44,114.44 308.44,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline47" />
-    <polyline
-       points="322.59,114.44 322.59,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline48" />
-    <text
-       x="181.07"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text48">0.0</text>
-    <text
-       x="195.22"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text49">0.5</text>
-    <text
-       x="209.37"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text50">1.0</text>
-    <text
-       x="223.53"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text51">1.5</text>
-    <text
-       x="237.68"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text52">2.0</text>
-    <text
-       x="251.83"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text53">2.5</text>
-    <text
-       x="265.98"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text54">3.0</text>
-    <text
-       x="280.13"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text55">3.5</text>
-    <text
-       x="294.28"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text56">4.0</text>
-    <text
-       x="308.44"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text57">4.5</text>
-    <text
-       x="322.59"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text58">5.0</text>
-    <polyline
-       points="363.86,114.44 363.86,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline58" />
-    <polyline
-       points="378.01,114.44 378.01,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline59" />
-    <polyline
-       points="392.16,114.44 392.16,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline60" />
-    <polyline
-       points="406.31,114.44 406.31,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline61" />
-    <polyline
-       points="420.46,114.44 420.46,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline62" />
-    <polyline
-       points="434.62,114.44 434.62,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline63" />
-    <polyline
-       points="448.77,114.44 448.77,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline64" />
-    <polyline
-       points="462.92,114.44 462.92,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline65" />
-    <polyline
-       points="477.07,114.44 477.07,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline66" />
-    <polyline
-       points="491.22,114.44 491.22,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline67" />
-    <polyline
-       points="505.37,114.44 505.37,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline68" />
-    <polyline
-       points="519.53,114.44 519.53,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline69" />
-    <polyline
-       points="533.68,114.44 533.68,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline70" />
-    <polyline
-       points="547.83,114.44 547.83,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline71" />
-    <polyline
-       points="561.98,114.44 561.98,111.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline72" />
-    <text
-       x="363.86"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text72">-5.5</text>
-    <text
-       x="378.01"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text73">-5.0</text>
-    <text
-       x="392.16"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text74">-4.5</text>
-    <text
-       x="406.31"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text75">-4.0</text>
-    <text
-       x="420.46"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text76">-3.5</text>
-    <text
-       x="434.62"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text77">-3.0</text>
-    <text
-       x="448.77"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text78">-2.5</text>
-    <text
-       x="462.92"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text79">-2.0</text>
-    <text
-       x="477.07"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text80">-1.5</text>
-    <text
-       x="491.22"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text81">-1.0</text>
-    <text
-       x="505.37"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="8.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text82">-0.5</text>
-    <text
-       x="519.53"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text83">0.0</text>
-    <text
-       x="533.68"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text84">0.5</text>
-    <text
-       x="547.83"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text85">1.0</text>
-    <text
-       x="561.98"
-       y="120.61"
-       text-anchor="middle"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="7.01px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text86">1.5</text>
-    <text
-       x="71.52"
-       y="103.19"
-       text-anchor="end"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="45.96px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text87">Respiratory diseases</text>
-    <text
-       x="71.52"
-       y="85.69"
-       text-anchor="end"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="56.87px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text88">Cerebrovascular diseases</text>
-    <text
-       x="71.52"
-       y="68.18"
-       text-anchor="end"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="33.03px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text89">Heart diseases</text>
-    <text
-       x="71.52"
-       y="50.68"
-       text-anchor="end"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="24.92px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text90">Neoplasms</text>
-    <text
-       x="71.52"
-       y="33.17"
-       text-anchor="end"
-       style="font-size: 5.60px;fill: #4D4D4D; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="29.40px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text91">Interest rates</text>
-    <polyline
-       points="73.71,101.20 76.45,101.20 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline91" />
-    <polyline
-       points="73.71,83.70 76.45,83.70 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline92" />
-    <polyline
-       points="73.71,66.19 76.45,66.19 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline93" />
-    <polyline
-       points="73.71,48.69 76.45,48.69 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline94" />
-    <polyline
-       points="73.71,31.19 76.45,31.19 "
-       style="stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;"
-       id="polyline95" />
-    <text
-       x="323.49"
-       y="129.50"
-       text-anchor="middle"
-       style="font-size: 7.00px; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="53.24px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text95">Contribution to the </text>
-    <text
-       x="323.49"
-       y="137.06"
-       text-anchor="middle"
-       style="font-size: 7.00px; font-family: &quot;Roboto Condensed&quot;;"
-       textLength="92.12px"
-       lengthAdjust="spacingAndGlyphs"
-       id="text96"> change in life annuity factors (%)</text>
-  </g>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.00002px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;stroke-width:0.75"
-     x="89.987724"
-     y="16.497545"
-     id="text97"><tspan
-       sodipodi:role="line"
-       id="tspan96"
-       style="stroke-width:0.75"
-       x="89.987724"
-       y="16.497545">2004-2005</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.00002px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;fill:#000000;stroke-width:0.75"
-     x="137.89838"
-     y="16.458357"
-     id="text97-9"><tspan
-       sodipodi:role="line"
-       id="tspan96-4"
-       style="stroke-width:0.75"
-       x="137.89838"
-       y="16.458357">2009-2010</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.00002px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;fill:#000000;stroke-width:0.75"
-     x="196.27071"
-     y="16.695263"
-     id="text97-9-8"><tspan
-       sodipodi:role="line"
-       id="tspan96-4-2"
-       style="stroke-width:0.75"
-       x="196.27071"
-       y="16.695263">2014-2015</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.00002px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed, ';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;white-space:pre;fill:#000000;stroke-width:0.75"
-     x="520.39014"
-     y="16.800766"
-     id="text97-9-8-5"><tspan
-       sodipodi:role="line"
-       id="tspan96-4-2-5"
-       style="stroke-width:0.75"
-       x="520.39014"
-       y="16.800766">2019-2020</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:0.75"
-     x="372.09659"
-     y="55.034557"
-     id="text98"><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:start;text-anchor:start;stroke-width:0.75"
-       x="372.09659"
-       y="55.034557"
-       id="tspan99">56% of the impact </tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:start;text-anchor:start;stroke-width:0.75"
-       x="372.09659"
-       y="62.534557"
-       id="tspan116">of respiratory diseases</tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:start;text-anchor:start;stroke-width:0.75"
-       x="372.09659"
-       y="70.034561"
-       id="tspan122">on annuity factors</tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:start;text-anchor:start;stroke-width:0.75"
-       x="372.09659"
-       y="77.534561"
-       id="tspan105">is attributed to</tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:start;text-anchor:start;stroke-width:0.75"
-       x="372.09659"
-       y="85.034561"
-       id="tspan106">Covid-19 deaths in 2020</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;white-space:pre;fill:#000000;stroke-width:0.75"
-     x="316.36169"
-     y="46.716106"
-     id="text98-7"><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="46.716106"
-       id="tspan106-5">interest rates </tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="54.216106"
-       id="tspan110">declined from </tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="61.716106"
-       id="tspan111">4.1% in 2014 </tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="69.216103"
-       id="tspan115">to 2.7% in 2015</tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="76.716103"
-       id="tspan117">resulting in </tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="84.216103"
-       id="tspan121">about 5%</tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="91.716103"
-       id="tspan119">increase in </tspan><tspan
-       sodipodi:role="line"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Roboto Condensed';-inkscape-font-specification:'Roboto Condensed,  Italic';text-align:end;text-anchor:end;stroke-width:0.75"
-       x="316.36169"
-       y="99.216103"
-       id="tspan118">annuity factors.</tspan></text>
-  <path
-     style="fill:none;stroke-width:0.75"
-     d="m 366.2455,102.75614 c -16.9689,-17.440265 3.29951,-28.281508 3.29951,-28.281508"
-     id="path101" />
-  <path
-     style="fill:none;stroke-width:0.75"
-     d="m 321.96852,30.996969 c 13.99863,19.331443 -5.33281,27.330661 -5.33281,27.330661"
-     id="path113" />
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA='>
+    <rect x='0.00' y='0.00' width='576.00' height='144.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpNzYuNDV8MTIxLjM0fDIwLjY4fDExMS43MA=='>
+    <rect x='76.45' y='20.68' width='44.89' height='91.02' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNzYuNDV8MTIxLjM0fDIwLjY4fDExMS43MA==)'>
+<line x1='108.95' y1='111.70' x2='108.95' y2='20.68' style='stroke-width: 0.21; stroke: #000000; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<rect x='108.95' y='41.69' width='8.48' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C02942;' />
+<rect x='108.95' y='59.19' width='10.36' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E6AC27;' />
+<rect x='108.95' y='76.70' width='2.05' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #A37E58;' />
+<rect x='108.95' y='94.20' width='4.74' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #254540;' />
+<rect x='78.49' y='24.18' width='30.45' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #68B3AF;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpMTUwLjE0fDU3MC41MnwyMC42OHwxMTEuNzA='>
+    <rect x='150.14' y='20.68' width='420.38' height='91.02' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMTUwLjE0fDU3MC41MnwyMC42OHwxMTEuNzA=)'>
+<line x1='369.48' y1='111.70' x2='369.48' y2='20.68' style='stroke-width: 0.21; stroke: #000000; stroke-opacity: 0.80; stroke-linecap: butt;' />
+<rect x='369.48' y='41.69' width='53.95' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C02942;' />
+<rect x='369.48' y='59.19' width='23.61' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E6AC27;' />
+<rect x='369.48' y='76.70' width='9.62' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #A37E58;' />
+<rect x='169.25' y='94.20' width='200.23' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #254540;' />
+<rect x='369.48' y='24.18' width='181.93' height='14.00' style='stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #68B3AF;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpNzYuNDV8MTIxLjM0fDUuNDh8MjAuNjg='>
+    <rect x='76.45' y='5.48' width='44.89' height='15.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNzYuNDV8MTIxLjM0fDUuNDh8MjAuNjg=)'>
+<text x='98.90' y='15.57' text-anchor='middle' style='font-size: 7.00px;fill: #1A1A1A; font-family: "Roboto Condensed";' textLength='36.45px' lengthAdjust='spacingAndGlyphs'>2009 to 2010</text>
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpMTUwLjE0fDU3MC41Mnw1LjQ4fDIwLjY4'>
+    <rect x='150.14' y='5.48' width='420.38' height='15.20' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMTUwLjE0fDU3MC41Mnw1LjQ4fDIwLjY4)'>
+<text x='360.33' y='15.57' text-anchor='middle' style='font-size: 7.00px;fill: #1A1A1A; font-family: "Roboto Condensed";' textLength='36.45px' lengthAdjust='spacingAndGlyphs'>2019 to 2020</text>
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHwxNDQuMDA=)'>
+<polyline points='91.47,114.44 91.47,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='108.95,114.44 108.95,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<text x='91.47' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-0.5</text>
+<text x='108.95' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<polyline points='159.79,114.44 159.79,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='177.27,114.44 177.27,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='194.74,114.44 194.74,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='212.21,114.44 212.21,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='229.69,114.44 229.69,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='247.16,114.44 247.16,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='264.64,114.44 264.64,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='282.11,114.44 282.11,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='299.58,114.44 299.58,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='317.06,114.44 317.06,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='334.53,114.44 334.53,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='352.01,114.44 352.01,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='369.48,114.44 369.48,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='386.95,114.44 386.95,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='404.43,114.44 404.43,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='421.90,114.44 421.90,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='439.37,114.44 439.37,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='456.85,114.44 456.85,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='474.32,114.44 474.32,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='491.80,114.44 491.80,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='509.27,114.44 509.27,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='526.74,114.44 526.74,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='544.22,114.44 544.22,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='561.69,114.44 561.69,111.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<text x='159.79' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-6.0</text>
+<text x='177.27' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-5.5</text>
+<text x='194.74' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-5.0</text>
+<text x='212.21' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-4.5</text>
+<text x='229.69' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-4.0</text>
+<text x='247.16' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-3.5</text>
+<text x='264.64' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-3.0</text>
+<text x='282.11' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-2.5</text>
+<text x='299.58' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-2.0</text>
+<text x='317.06' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-1.5</text>
+<text x='334.53' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-1.0</text>
+<text x='352.01' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='8.40px' lengthAdjust='spacingAndGlyphs'>-0.5</text>
+<text x='369.48' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='386.95' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>0.5</text>
+<text x='404.43' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>1.0</text>
+<text x='421.90' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>1.5</text>
+<text x='439.37' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>2.0</text>
+<text x='456.85' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>2.5</text>
+<text x='474.32' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>3.0</text>
+<text x='491.80' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>3.5</text>
+<text x='509.27' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>4.0</text>
+<text x='526.74' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>4.5</text>
+<text x='544.22' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>5.0</text>
+<text x='561.69' y='120.61' text-anchor='middle' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='7.01px' lengthAdjust='spacingAndGlyphs'>5.5</text>
+<text x='71.52' y='103.19' text-anchor='end' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='45.96px' lengthAdjust='spacingAndGlyphs'>Respiratory diseases</text>
+<text x='71.52' y='85.69' text-anchor='end' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='56.87px' lengthAdjust='spacingAndGlyphs'>Cerebrovascular diseases</text>
+<text x='71.52' y='68.18' text-anchor='end' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='33.03px' lengthAdjust='spacingAndGlyphs'>Heart diseases</text>
+<text x='71.52' y='50.68' text-anchor='end' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='24.92px' lengthAdjust='spacingAndGlyphs'>Neoplasms</text>
+<text x='71.52' y='33.17' text-anchor='end' style='font-size: 5.60px;fill: #4D4D4D; font-family: "Roboto Condensed";' textLength='29.40px' lengthAdjust='spacingAndGlyphs'>Interest rates</text>
+<polyline points='73.71,101.20 76.45,101.20 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='73.71,83.70 76.45,83.70 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='73.71,66.19 76.45,66.19 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='73.71,48.69 76.45,48.69 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<polyline points='73.71,31.19 76.45,31.19 ' style='stroke-width: 0.21; stroke: #4D4D4D; stroke-linecap: butt;' />
+<text x='323.49' y='129.50' text-anchor='middle' style='font-size: 7.00px; font-family: "Roboto Condensed";' textLength='53.24px' lengthAdjust='spacingAndGlyphs'>Contribution to the </text>
+<text x='323.49' y='137.06' text-anchor='middle' style='font-size: 7.00px; font-family: "Roboto Condensed";' textLength='92.12px' lengthAdjust='spacingAndGlyphs'> change in life annuity factors (%)</text>
+</g>
 </svg>
