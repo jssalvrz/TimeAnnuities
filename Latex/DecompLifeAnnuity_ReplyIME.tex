@@ -385,7 +385,9 @@ where ${}_sM_x(t)= \mu(x+s,t){}_s|\bar{a}_x(t)$ and ${}_sW_x(t)=\delta(s,t)  {}_
 \end{equation}
 
 where $\bar{\rho}_x(t) = \frac{\int_0^\infty \rho(x+s,t) {}_s M_x(t) \, ds}{\int_0^\infty {}_s M_x(t) \, ds}$ and 
-$\bar{\upvarphi}(t) = \frac{\int_0^\infty \upvarphi(s,t) {}_s W_x(t) \, ds}{\int_0^\infty {}_s W_x(t) \, ds}$ are the weighted-average changes in mortality and interest rates, respectively. The functions $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$ capture the changes in the forces of mortality and interest, whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ represent the sensitivities due to changes in $\mu$ and $\delta$. In other words, Equation (\ref{eq:TimeDerivP}) implies that changes over time in annuity factors are driven by $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$, respectively\footnote{Equation (\ref{eq:TimeDerivP}) can be seen as an extension of Equation (\ref{eq:lifeexpdecomp}), developed by \citet{Vaupel2003}, to measure changes over time in life expectancy, and of Equation (21) in \citet{di2025decomposing} to measure changes over time in life annuities.}
+$\bar{\upvarphi}(t) = \frac{\int_0^\infty \upvarphi(s,t) {}_s W_x(t) \, ds}{\int_0^\infty {}_s W_x(t) \, ds}$ are the weighted-average changes in mortality and interest rates, respectively. The functions $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$ capture the changes in the forces of mortality and interest, whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ represent the sensitivities due to changes in $\mu$ and $\delta$. Equation (\ref{eq:TimeDerivP}) \textcolor{blue}{indicates that the relative variation in life annuity factors} are driven by $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$, respectively\footnote{Equation (\ref{eq:TimeDerivP}) can be seen as an extension of Equation (\ref{eq:lifeexpdecomp}), developed by \citet{Vaupel2003}, to measure changes over time in life expectancy, and of Equation (\ref{eq:TimeDerivP}) in \citet{di2025decomposing} to measure changes over time in life annuities.}.
+
+ \textcolor{blue}{The decomposition in Equation (\ref{eq:TimeDerivP}) is formulated in terms of relative changes in life annuity factors, thereby providing insight into the drivers of their development in relative terms. If one wishes to obtain the absolute percentage contribution to the annuity factor, $\dot{\bar{a}}{x}(t)$, this can be achieved either by multiplying Equation (\ref{eq:TimeDerivP}) by $\bar{a}{x}(t)$ or by using Equation (\ref{eq:TimeDerivP3}) directly, depending on the application.}
 
 \subsection{Age and Term Contributions to Changes in $\bar{a}_x(t)$}
 
@@ -640,7 +642,7 @@ Figure \ref{fig:Fig5} illustrates the contributions of 10-year age groups (i.e.,
 	\label{fig:Fig5}
 \end{figure}
 
-Figure \ref{fig:Fig6} provides a closer examination of age-term sensitivities for the years 1990, 2000, 2015, and 2021. The upper left panel shows that in 1990, the duration for yield terms of 0–9 years and the entropy for the age group 65–74 were significantly higher than for other age-term groups, indicating heightened sensitivity of annuities to changes in mortality and interest rates within these age-term ranges. 
+\textcolor{blue}{Figure \ref{fig:Fig6} provides a closer examination of entropy and duration to identify which age groups and which segments of the yield curve are most sensitive to changes in mortality and interest rates. We analyse age-specific entropies and term-specific durations for the years 1990, 2000, 2015, and 2021. The upper-left panel shows that in 1990, durations for yield-curve terms of 0–9 years were higher than for longer maturities. Similarly, entropies for the age group 65–74 were considerably higher than for other age groups. This indicates that, in 1990, life annuity factors were particularly sensitive to interest rate changes at short maturities and to mortality changes within these age groups.}
 
 \begin{figure}[H]
 	\centering
@@ -650,7 +652,9 @@ Figure \ref{fig:Fig6} provides a closer examination of age-term sensitivities fo
 \end{figure}
 
 
-However, this sensitivity has shifted over time. By 2015, higher values for duration and entropy had transitioned to later age-term groups. For instance, by 2015, entropy had significantly exceeded duration, with increased sensitivity to mortality changes observed in the 75–94 age group. This pattern persisted into 2021, reflecting the economic-demographic conditions during the Covid-19 pandemic years.
+\textcolor{blue}{Figure \ref{fig:Fig6} also shows that both entropies and durations have evolved over time, indicating that the sensitivity of life annuity factors to mortality and interest rates has fluctuated across age groups and yield-curve maturities. For example, by 2015, higher values of age-specific entropies and term-specific durations had shifted toward older ages and longer maturities, indicating that changes at higher ages and longer terms exert a greater influence on life annuity values.}
+
+\textcolor{blue}{Moreover, in 2015 the entropy values were substantially larger than the corresponding durations, indicating increased sensitivity to mortality changes relative to interest rate changes. This pattern persisted in 2021.}
 
 \subsection{Cause of Death Contributions}
 
@@ -667,17 +671,24 @@ We use cause-specific mortality rates from the Human Cause-of-Death Data Series,
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{Fig/attributionCauseOfDeathInLine}
-	\caption{{Causes of death contributions to the change in life annuity factors. Males, 2004-2005, 2009-2010, 2014-2015 and 2019-2020.}}
+	\caption{{Causes of death contributions to the change in life annuity factors. Males, 2009-2010 and 2019-2020.}}
 	\label{fig:Fig7}
 \end{figure}
 
-Figure \ref{fig:Fig7} illustrates the cause-specific contributions to changes in life annuity factors for the periods 2004–2005, 2009–2010, 2014–2015, and 2019–2020. Positive values represent increases in life annuity factors, while negative values indicate reductions. Contributions from changes in interest rates are also shown.
+Figure \ref{fig:Fig7} illustrates the cause-specific contributions to changes in life annuity factors for the periods 2009–2010, and 2019–2020. Positive values represent increases in the relative derivative $\acute{\bar{a}}_x(t)$, while negative values indicate reductions. Contributions from changes in interest rates are also shown. For illustrative purposes, we focus on the 2019–2020 period to demonstrate the application of our equations to empirical cause-of-death data.  
 
-From 2004 to 2005, heart diseases were the leading cause of death contributing to changes in life annuity factors, followed by neoplasms and cerebrovascular diseases, with minor positive contributions from respiratory diseases. This result indicates that reductions in mortality due to heart diseases were primarily responsible for the observed increases in life annuity factors during these years. Notably, the contribution of heart diseases from 2004 to 2005 was similar in magnitude to the contribution from changes in interest rates (about 0.6\%).
+\textcolor{blue}{The life annuity factor for males aged 65 increased from 16.46 in 2019 to 17.42 in 2020. This corresponds to an absolute increase of 5.81\% and a relative change of 0.35\%. Two main drivers explain this change: increased mortality due to the Covid-19 pandemic and the decline in interest rates between 2019 and 2020.}
+	
+\textcolor{blue}{Regarding mortality, the emergence of Covid-19 in 2020 had a substantial impact on life annuity prices. Our decomposition shows that elevated mortality from respiratory diseases, including Covid-19, led to a -5.73\% contribution to the relative change in life annuity factors.}
+	
+\textcolor{blue}{At the same time, financial markets experienced a decline in interest rates in 2020. Our decomposition indicates that this effect contributed positively, increasing life annuity factors by 5.21\%.}
+	
+\textcolor{blue}{These opposing effects largely offset each other. The combined contribution of neoplasms, heart diseases, cerebrovascular diseases, and other causes of death accounts for an additional 0.67\%. Altogether, the components shown in Figure 6 result in a relative change of 0.35\% in the life annuity factor at age 65 from 2019 to 2020.}
+	
+\textcolor{blue}{It is worth noting that the decomposition is based on relative changes in life annuity factors; therefore, the results in this section should be interpreted in terms of the relative derivatives of annuity values. If one wishes to obtain contributions of the absolute changes, the reported factors can be multiplied by the initial annuity value.}
+	
+\textcolor{blue}{It is also important to emphasize that the results presented here are intended solely to illustrate how the equations developed in this article can be applied to empirical cause-of-death data. A detailed analysis of the impact of the Covid-19 pandemic on life annuities lies outside the scope of this paper as has been extensively documented elsewhere.}
 
-From 2014 to 2015, neoplasms emerged as the primary cause of death contributing to increases in life annuity factors, followed by heart diseases. However, these increases were small compared to the impact of changes in interest rates. Significant reductions in interest rates during this period resulted in increases of approximately 5\% in life annuity factor values, as observed in the interest rate component.
-
-From 2019 to 2020, the contribution of causes of death shifted considerably due to the emergence of Covid-19. High mortality from respiratory diseases accounted for a 5.4\% decrease in life annuity factors, with Covid-19 deaths representing 56\% of all respiratory disease-related deaths. Thus, it can be estimated that Covid-19 mortality contributed to a 3\% decline in life annuity factors at age 65. Interestingly, during this period, there were positive contributions from neoplasms and heart diseases. This phenomenon is likely linked to the Covid-19 pandemic, as fewer deaths were attributed to these causes due to the predominance of Covid-19-related mortality.
 
 Understanding the sources of changes in life annuities is crucial for several reasons. First, it allows actuaries and risk managers to link fluctuations in life annuities to specific health trends, facilitating more thorough risk assessments. Second, it provides valuable insights into how improvements or setbacks in public health impact life annuity portfolios. For instance, advances in cancer treatment and cardiovascular care have significantly improved mortality rates in high-income countries \citep{weber2023gains}, contributing to rising life expectancies. In contrast, the Covid-19 pandemic has had a profound effect on the life annuity sector, as the mortality shock led to lower longevity expectations. These findings highlight the importance of incorporating cause-of-death analysis into actuarial practice, particularly when managing longevity risk in life annuity portfolios.
 
