@@ -702,14 +702,14 @@ Let us recall that in Section \ref{preliminaries}, we defined time variable \(t\
 
 Let us now define a probability space \( \{\Omega, \mathcal{F}, \mathbb{P}\} \), with \(\textbf{F} = \{\mathcal{F}_t\}\) representing a family of sub-\(\sigma\)-algebras that encodes the information available at time \( t \) regarding the economic-demographic environment. Let \( I_{s} = \mathds{1}_{\{S_x > s\}} \) and \( \mathbb{E}[I_{s} | \mathcal{F}_t] = {}_s p_x(t) \), we define the payment stream process as \( dB(s) = b(s) I_{s} \, ds \), where \( b(s) \) is the annuity benefit payable continuously over the development of the policy for the insured life \( (x) \).  Notably, both mortality and interest rates are stochastic processes evaluated with information at time \( t \), as they are not deterministically known at the time of policy issuance (i.e., at time zero). 
 
-\textcolor{blue}{The expected value of the future discounted payments $dB(y)$ is denoted by:}
+\color{blue}{The expected value of the future discounted payments $dB(y)$ is denoted by:
 
 
 \begin{equation}\label{eq:Reserve1}
 	{}_uV_x(t) = \mathbb{E} \left[ \int_u^\infty v(y,t) \, dB(y) \,|\, \mathcal{F}_t \right],
 \end{equation}
 
-\textcolor{blue}{where \( v(y, t) \) denotes the discount factor based on forward interest rates generated with information available at time \( t \). Consequently, the quantity ${}_uV_x(t)$ represents the \textit{prospective reserve} of the annuity benefit. The reserve ${}_uV_x(t)$ is evaluated at time $u$ with information generated at time $t$. Taking the expectation of \ref{eq:Reserve1}, the prospective reserve reduces to:}
+where \( v(y, t) \) denotes the discount factor based on forward interest rates generated with information available at time \( t \). Consequently, the quantity ${}_uV_x(t)$ represents the \textit{prospective reserve} of the annuity benefit. The reserve ${}_uV_x(t)$ is evaluated at time $u$ with information generated at time $t$. Taking the expectation of \ref{eq:Reserve1}, the prospective reserve reduces to:
 
 \begin{equation}\label{eq:Reserve2}
 	{}_uV_x(t) = \int_u^\infty v(y,t) \, {}_yp_x(t) \, b(y) \, dy.
@@ -721,7 +721,7 @@ We now turn to the derivative of the reserve ${}_uV_x(t)$ with respect to time $
 	{}_u\dot{V}_x(t) = \int_u^\infty \dot{v}(y,t) \, {}_yp_x(t) \, b(y) \, dy + \int_u^\infty v(y,t) \, {}_y\dot{p}_x(t) \, b(y) \, dy.
 \end{equation}
 
-\textcolor{blue}{Recalling that ${v}(y,t)=e^{-\int_{0}^{y}\delta(z,t)dz}$ where $\delta(z,t)$ is evaluated using forward interest rates and $\upvarphi(z,t)= -\frac{\dot{\delta}(z,t)}{\delta(z,t)}$, the first part of Equation (\ref{eq:DifferentiateReserveT}) becomes:}
+Recalling that ${v}(y,t)=e^{-\int_{0}^{y}\delta(z,t)dz}$ where $\delta(z,t)$ is evaluated using forward interest rates and $\upvarphi(z,t)= -\frac{\dot{\delta}(z,t)}{\delta(z,t)}$, the first part of Equation (\ref{eq:DifferentiateReserveT}) becomes:
 
 \begin{equation}\label{eq:DifferentiateReserveTP1}
 	\begin{split}
@@ -732,7 +732,7 @@ We now turn to the derivative of the reserve ${}_uV_x(t)$ with respect to time $
 	\end{split}
 \end{equation}
 
-\textcolor{blue}{Similar, by recalling that ${}_yp_x(t)=e^{-\int_{0}^{y}\mu(x+z,t)dz}$, and $\rho(x+z,t) = - \frac{\dot{\mu}(x+z,t)}{\mu(x+z,t)}$, the second part of Equation (\ref{eq:DifferentiateReserveT}) equals:}
+Similar, by recalling that ${}_yp_x(t)=e^{-\int_{0}^{y}\mu(x+z,t)dz}$, and $\rho(x+z,t) = - \frac{\dot{\mu}(x+z,t)}{\mu(x+z,t)}$, the second part of Equation (\ref{eq:DifferentiateReserveT}) equals:
 
 
 \begin{equation}\label{eq:DifferentiateReserveTP2}
@@ -754,6 +754,7 @@ Thus, the derivative of ${}_u{V}_x(t)$ with respect to time $t$ yields to:
 	\end{split}
 \end{equation}
 where ${}_yM^V_x(t) = \mu(x+y,t) \, {}_yV_x(t)$ is the attribution to mortality of the policy holder due to reaching age $(x+y)$, and ${}_yW^V_x(t) = \delta(y,t) \, {}_yV_x(t)$ is the interest earned on the amount of the reserve. Quantities $\rho(x+y,t)$ and $\upvarphi(y,t)$ denote changes at time $t$ in the demographic-economic environment where the reserve is evaluated. 
+\color{black}
 
 
 Similar to the deterministic case of a single annuity factor developed in Section \ref{sec:TimeDynamics}, we aim to derive a closed expression for the relative change in the actuarial reserve, denoted by ${}_u\acute{V}_x(t)$. Dividing Equation (\ref{eq:DifferentiateReserveT2}) by ${}_uV_x(t)$ results in:
@@ -801,20 +802,38 @@ It is important to note that the rate of payment \( b(u) \) no longer appears in
 Furthermore, it is possible that time \( t \) and \( u \) coincide, meaning that information about the economic-demographic environment is incorporated into the valuations at the same time the policy develops. However, in most cases, this is not necessarily true. In practice, a life insurance company or pension fund may perform continuous evaluations of the actuarial provision using market-based yield curves, where financial information is continuously updated. In such cases, \( t = u \) holds for interest rates. On the other hand, demographic statistics are typically published with some delay, and estimates of the force of mortality \( \mu \) are made over broader time intervals. As a result, the experience of contract development at time \( u \) often does not align with the pace at which demographic assumptions are updated at time \( t \). Additionally, there may be value in distinguishing between times \( t \) and \( u \) in Scandinavian-style life insurance products, where it is common to differentiate between deterministic \textit{first-order} actuarial bases, prudently set by the actuary, and \textit{second-order} actuarial bases, which are typically based on market models.
 
 
-\subsection{Mortality and Interest Rate Shocks in Reserve Dynamics}
+\subsection{Mortality and Interest Rate Shocks in the Reserve Dynamics}
 
-\color{blue}The differential equations developed in Section \ref{sec:Reserves} facilitate the analysis of risk drivers in the development of reserves. One practical application is the evaluation of changes in the reserve resulting from shocks in mortality rates, using \[{}_u\acute{V}_x(t) = {}_u\bar{\rho}_x(t) \, {}_uH_x^V(t) + {}_u\bar{\upvarphi}(t) \, {}_uD_x^V(t).	\]
-	
-	
-As an illustration, consider a mortality shock that produces an immediate 20\% reduction in mortality intensities across all ages (consistent with the current Solvency II stress scenario for longevity risk). In this case, shortly after the shock at time $t+\Delta t$ the mortality hazard becomes $\mu(x,t+\Delta t)= 0.8 \cdot \mu(x,t)$.
+\color{blue}The differential equations developed in Section \ref{sec:Reserves} facilitate the analysis of risk drivers in reserve development. One practical application is the evaluation of changes in the reserve resulting from shocks to mortality rates, using  
 
-Subtracting $\mu(x,t)$ from both sides gives $\mu(x,t)-\mu(x,t+\Delta t)= 0.2 \mu(x,t)$. Over a sufficiently small time interval $[t, \Delta t]$, we approximate $\frac{\partial  }{\partial t}\mu(x,t)\approx\mu(x,t)-\mu(x,t+\Delta t)$ and hence $\rho(x,t)= 0.2$.
-  
-Because the shock applies uniformly to all ages, the average change in mortality appearing in Equation \ref{eq:DifferentiateReserveT2} simplifies to ${}_u\bar{\rho}_x(t) = \frac{\int_u^\infty 0.2 \, {}_yM^V_x(t) \, dy}{\int_u^\infty {}_yM^V_x(t) \, dy=0.2}$.
+\begin{equation} \nonumber
+	{}_u\acute{V}_x(t) = {}_u\bar{\rho}_x(t) \, {}_uH_x^V(t) + {}_u\bar{\upvarphi}(t) \, {}_uD_x^V(t).
+\end{equation}
 
-Assuming that entropy is equal to 0.38 at time $t$ (as illustrated for the UK example in Table \ref{tab:entropyDuration}), and that interest rates remain unchanged, we obtain \[{}_u\acute{V}_x(t) = 0.2 \cdot 0.38=0.076.\]. This implies that an immediate 20\% reduction in mortality results in a relative increase of 7.6\% in reserves. Multiplying this relative effect by the initial reserve value ${}_uV_x(t)$ gives the monetary impact of the mortality shock.
+As an illustration, consider a mortality shock that produces an immediate 20\% reduction in mortality intensities across all ages, consistent with the Solvency II longevity stress scenario. Shortly after the shock at time $t+\Delta t$, the mortality hazard becomes $\mu(x,t+\Delta t) = 0.8 \cdot \mu(x,t).$.
 
-Analogous scenario analyses may be conducted by simultaneously altering mortality and interest rates. In such cases, knowledge of the corresponding entropies and durations is essential in order to quantify the resulting changes in reserves.
+Subtracting $\mu(x,t)$ from both sides gives $\mu(x,t) - \mu(x,t+\Delta t) = 0.2 \, \mu(x,t)$, and over a sufficiently small time interval $[t, t+\Delta t]$, we approximate  
+
+\begin{equation} \nonumber
+	\frac{\partial}{\partial t} \mu(x,t) \approx \mu(x,t) - \mu(x,t+\Delta t), \quad \text{hence } \rho(x,t) = 0.2.
+\end{equation}
+
+Since the shock applies uniformly across all ages, the average change in mortality in Equation (\ref{eq:DifferentiateReserveT2}) simplifies to  
+
+\begin{equation} \nonumber
+	{}_u\bar{\rho}_x(t) = \frac{\int_u^\infty 0.2 \, {}_yM^V_x(t) \, dy}{\int_u^\infty {}_yM^V_x(t) \, dy} = 0.2.
+\end{equation}
+
+Assuming an entropy of 0.38 at time $t$ (as illustrated for the example in Table \ref{tab:entropyDuration}) and unchanged interest rates (i.e, ${}_u\bar{\upvarphi}(t)=0$), we obtain  
+
+\begin{equation} \nonumber
+	{}_u\acute{V}_x(t) = 0.2 \cdot 0.38 = 0.076.
+\end{equation}
+
+This implies that an immediate 20\% reduction in mortality results in a relative 7.6\% increase in reserves. Multiplying this relative effect by the initial reserve value ${}_uV_x(t)$ yields the monetary impact of the shock.
+
+Analogous scenario analyses can be conducted by simultaneously altering mortality and interest rates. In such cases, knowledge of the corresponding entropies and durations is essential to quantify the resulting changes in reserves.
+
 \color{black}
 
 Similarly, \( {}_u\bar{\rho}_x(t) \) and \( {}_u\bar{\upvarphi}(t) \) can be modeled as stochastic processes adapted to a filtration \( \textbf{G} = \{\mathcal{G}_t\}_{t \ge 0} \) such that 
