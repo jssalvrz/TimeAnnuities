@@ -142,7 +142,7 @@ levels(adotD.cause$Component)<- c("Other causes", "Respiratory diseases", "Cereb
 yearsLabels <- c('2005' = "2004 to 2005", '2010' = "2009 to 2010",
                  '2015' = "2014 to 2015",'2020' = "2019 to 2020")
 
-  ggplot(subset(adotD.cause, Sex == "Males" & Component != "Other causes" & Year %in% c(2010,2020)))+
+  ggplot(subset(adotD.cause, Sex == "Males" & Component != "Other causes" & Year %in% c(2010, 2020)))+
     geom_hline(aes(yintercept = 0), colour = "black", size = 0.1, alpha =  0.8)+
     geom_bar(aes(x= as.factor(Component), y = Percentage*100, fill = Component),
              position = "stack", stat = "identity",width = 0.8)+
@@ -161,7 +161,7 @@ yearsLabels <- c('2005' = "2004 to 2005", '2010' = "2009 to 2010",
           #aspect.ratio = 0.5,
           strip.text = element_text(size = 7),
           panel.spacing.x = unit(2,"lines"))+
-    ylab("Contribution to the \n change in life annuity factors (%)")+
+    ylab("Contribution to the relative change\n in life annuity factors at age 65 (%)")+
     xlab("")
  
 ggsave("Fig/attributionCauseOfDeathInLine.svg", width = 8, height = 2)
