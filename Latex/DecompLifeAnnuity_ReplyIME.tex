@@ -65,6 +65,7 @@
 
 \newcommand{\note}[1]{\textcolor{blue}{[#1]}}
 
+\newcommand{\revision}[1]{\textcolor{blue}{#1}}
 
 
 
@@ -210,21 +211,19 @@ Similarly, the relative change over time in the forward force of interest at mat
 The actuarial present value of a continuous life annuity at age $x$, evaluated at time $t$, is given by
 
 \begin{equation}\label{eq:Annuity}
-\bar{a}_x(t) = \int_0^\infty {}_sp_x(t) {v}(s,t)ds = \int_0^\infty {}_sE_x(t) ds,
+\revision{\bar{a}_x(t) = \int_0^\infty {}_yp_x(t) {v}(y,t)dy.}
 \end{equation}
 
-where ${}_sE_x(t)={}_sp_x(t) {v}(s,t)$. 
-
-A life annuity deferred $s$ years, starting to be paid at age $x+s$, is expressed as
+% where ${}_sE_x(t)={}_sp_x(t) {v}(s,t)$. 
+\revision{Similarly, a life annuity deferred $s$ years, starting to be paid at age $x+s$, is expressed as}
 
 \begin{equation}\label{eq:DefAnnuity}
-{}_s|\bar{a}_x(t) = {}_sE_x(t) \bar{a}_{x+s}(t)=\int_s^{\infty} v(y,t) {}_yp_x(t) dy.
+\revision{{}_s|\bar{a}_x(t) = \int_s^{\infty} {}_yp_x(t) v(y,t) dy.}
 \end{equation}
 
-
-
-\textcolor{blue}{It is important to note that when the life annuity is deferred $s$ years, as in ${}_s|\bar{a}_x(t)$, the discounting applies to payments after time $s$, that is, when the insured individual reaches age $x+s$. Therefore, the discount factor in ${}_s|\bar{a}_x(t)$ is evaluated using the forward interest rates from time $s$ onward.}
-
+% 
+% \textcolor{blue}{It is important to note that when the life annuity is deferred $s$ years, as in ${}_s|\bar{a}_x(t)$, the discounting applies to payments after time $s$, that is, when the insured individual reaches age $x+s$. Therefore, the discount factor in ${}_s|\bar{a}_x(t)$ is evaluated using the forward interest rates from time $s$ onward.}
+% 
 \subsection{Two Types of Changes: Constant and Proportional to $\mu$ and $\delta$}
 
 
@@ -348,7 +347,8 @@ To develop a closed-form expression for Equation (\ref{eq:TimeDeriv}), we consid
 \int_0^\infty {}_s\dot{p}_x(t) v(s,t)ds &= \int_0^\infty   v(s,t) \frac{\partial  }{\partial t}e^{-\int_0^{s}{\mu}(x+y,t)dy}ds\\
 &= -\int_0^\infty   v(s,t) {}_sp_x(t)\int_0^{s}\dot{\mu}(x+y,t)dyds\\
 &= -\int_0^\infty  \dot{\mu}(x+s,t) \int_s^{\infty} v(y,t) {}_yp_x(t) dyds\\
-&= - \int_0^\infty \dot{\mu}(x+s,t)   {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
+&= \revision{-\int_0^\infty  \dot{\mu}(x+s,t) {}_s|\bar{a}_x(t)ds}\\
+% &= - \int_0^\infty \dot{\mu}(x+s,t)   {}_sE_x(t) \bar{a} _{x+s}(t) ds\\
 &= \int_0^\infty \rho(x+s,t) \mu(x+s,t)   {}_s|\bar{a}_x(t) ds.\\
 \end{split}
 \end{equation}
@@ -361,6 +361,7 @@ The second part equals:
 \int_0^\infty {}_sp_x(t) \dot{v}(s,t)ds &= \int_0^\infty {}_sp_x(t)  \frac{\partial  }{\partial t} e^{-\int_0^{s}{\delta}(y,t)dy}ds\\
 &= -\int_0^\infty {}_sp_x(t) v(s,t) \int_0^{s}\dot{\delta}(y,t)dy ds\\
 &= -\int_0^\infty  \dot{\delta}(s,t)\int_s^{\infty} {}_yp_x(t) v(y,t) dy ds\\
+&= \revision{-\int_0^\infty  \dot{\delta}(s,t){}_s|\bar{a}_x(t) ds}\\
 &= \int_0^\infty  \upvarphi(s,t) \delta(s,t)  {}_s|\bar{a}_x(t) ds.\\
 \end{split}
 \end{equation}
@@ -933,12 +934,12 @@ where ${h}^{c}_x(t)=-\int_0^\infty s {}_sp_x(t) {v}(s,t)ds$
 
 \begin{equation} \label{eq:EntropyAnnuityA1}
 \begin{split}
-{H}^{p}_{x}(t) &= -\frac{ \int_{0}^{\infty}{}_sp_x(t)\ln[{}_sp_x(t)] e^{-\int_{0}^{s}\delta(y,t)dy} ds}{\int_0^\infty {}_sp_x(t) e^{-\int_{0}^{s}\delta(y,t)dy} ds}\\
+{H}^{p}_{x}(t) & = -\frac{ \int_{0}^{\infty}{}_sp_x(t)\ln[{}_sp_x(t)] e^{-\int_{0}^{s}\delta(y,t)dy} ds}{\int_0^\infty {}_sp_x(t) e^{-\int_{0}^{s}\delta(y,t)dy} ds}\\
 &= \frac{\int_0^\infty {}_sp_x(t) {v}(s,t) \int_0^s \mu(x+y,t) dy\,ds}{\bar{a}_x(t)}\\
-&= \frac{\int_0^\infty  \mu(x+s,t) \int_s^\infty {}_yp_x(t) {v}(y,t)  dy\,ds}{\bar{a}_x(t)}\\
-&= \frac{\int_0^\infty  \mu(x+s,t)  {}_sp_x(t) {v}(s,t) \int_s^\infty \frac{ {}_yp_x(t) {v}(y,t)}{ {}_sp_x(t) {v}(s,t)}  dy\,ds}{\bar{a}_x(t)}\\
-&=  \frac{\int_0^\infty \mu(x+s,t)   {}_sp_x(t) {v}(s,t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
-&=  \frac{\int_0^\infty \mu(x+s,t)  {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)} \\
+&\revision{= \frac{\int_0^\infty  \mu(x+s,t) \int_s^\infty {}_yp_x(t) {v}(y,t)  dy\,ds}{\bar{a}_x(t)}}\\
+%&= \frac{\int_0^\infty  \mu(x+s,t)  {}_sp_x(t) {v}(s,t) \int_s^\infty \frac{ {}_yp_x(t) {v}(y,t)}{ {}_sp_x(t) {v}(s,t)}  dy\,ds}{\bar{a}_x(t)}\\
+%&=  \frac{\int_0^\infty \mu(x+s,t)   {}_sp_x(t) {v}(s,t) \bar{a}_{x+s}(t) ds}{\bar{a}_x(t)} \\
+&\revision{=  \frac{\int_0^\infty \mu(x+s,t)  {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)}} \\
 &=  \frac{{h}^{p}_{x}(t)}{\bar{a}_x(t)}, \\
 \end{split}
 \end{equation}
@@ -1024,9 +1025,9 @@ Equation \ref{eq:DurationProp3} can be equivalently expressed as
 \begin{split}
 {D}^{p}_{x}(t) &= -\frac{\int_0^\infty {}_sp_x(t) v(s,t) \ln(v(s,t))ds}{\bar{a}_x(t)}\\
 &= \frac{\int_0^\infty {}_sp_x(t) v(s,t) \int_0^{s} \delta(y,t)dy ds }{\bar{a}_x(t)}\\
-&= \frac{\int_0^\infty \delta(s,t)  \int_{s}^{\infty} {}_{y}p_x(t) v(y,t)dy ds }{\bar{a}_x(t)}\\
-&= \frac{\int_0^\infty \delta(s,t) {}_sp_x(t) v(s,t) \bar{a}_{x+s}(t)  ds }{\bar{a}_x(t)}\\
-&= \frac{\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)} \\
+&\revision{= \frac{\int_0^\infty \delta(s,t)  \int_{s}^{\infty} {}_{y}p_x(t) v(y,t)dy ds }{\bar{a}_x(t)}}\\
+%&= \frac{\int_0^\infty \delta(s,t) {}_sp_x(t) v(s,t) \bar{a}_{x+s}(t)  ds }{\bar{a}_x(t)}\\
+&\revision{= \frac{\int_0^\infty \delta(s,t) {}_s|\bar{a}_x(t) ds}{\bar{a}_x(t)}} \\
 &= \frac{{d}^{p}_{x}(t)}{\bar{a}_x(t)}.
 \end{split}
 \end{equation}
