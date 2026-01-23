@@ -1,0 +1,228 @@
+\begin{thebibliography}{}
+
+\bibitem[Aburto et~al., 2019]{aburto2019threshold}
+Aburto, J.~M., Alvarez, J.-A., Villavicencio, F., and Vaupel, J.~W. (2019).
+\newblock The threshold age of the lifetable entropy.
+\newblock {\em Demographic Research}, 41:83--102.
+
+\bibitem[Alvarez et~al., 2021]{alvarez2021linking}
+Alvarez, J.-A., Kallestrup-Lamb, M., and Kj{\ae}rgaard, S. (2021).
+\newblock Linking retirement age to life expectancy does not lessen the
+  demographic implications of unequal lifespans.
+\newblock {\em Insurance: Mathematics and Economics}, 99:363--375.
+
+\bibitem[{Bank of England Database}, 2024]{BankOfEngland2024}
+{Bank of England Database} (2024).
+\newblock {B}ank of {E}ngland ({L}ondon).
+\newblock \url{www.bankofengland.co.uk}.
+
+\bibitem[Camarda et~al., 2012]{camarda2012mortalitysmooth}
+Camarda, C.~G. et~al. (2012).
+\newblock Mortalitysmooth: An {R} package for smoothing poisson counts with
+  p-splines.
+\newblock {\em Journal of Statistical Software}, 50(1):1--24.
+
+\bibitem[Charupat et~al., 2016]{charupat2016sluggish}
+Charupat, N., Kamstra, M.~J., and Milevsky, M.~A. (2016).
+\newblock The sluggish and asymmetric reaction of life annuity prices to
+  changes in interest rates.
+\newblock {\em Journal of Risk and Insurance}, 83(3):519--555.
+
+\bibitem[Courtois et~al., 2007]{courtois2007immunization}
+Courtois, C., Denuit, M., et~al. (2007).
+\newblock On immunization and s-convex extremal distributions.
+\newblock {\em Annals of Actuarial Science}, 2(1):67--90.
+
+\bibitem[Daul et~al., 2012]{Daul2012}
+Daul, S., Sharp, N., and S{\o}rensen, L.~Q. (2012).
+\newblock {Fixed Income Performance Attribution}.
+\newblock {\em SSRN Electronic Journal}, (November).
+
+\bibitem[Demetrius, 1974]{demetrius1974demographic}
+Demetrius, L. (1974).
+\newblock Demographic parameters and natural selection.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  71(12):4645--4647.
+
+\bibitem[Di~Palo, 2025]{di2025decomposing}
+Di~Palo, C. (2025).
+\newblock Decomposing changes in life annuities.
+\newblock {\em European Actuarial Journal}, pages 1--23.
+
+\bibitem[Djeundje et~al., 2022]{djeundje2022slowdown}
+Djeundje, V.~B., Haberman, S., Bajekal, M., and Lu, J. (2022).
+\newblock The slowdown in mortality improvement rates 2011--2017: a
+  multi-country analysis.
+\newblock {\em European Actuarial Journal}, pages 1--40.
+
+\bibitem[Fisher and Weil, 1971]{fisher1971coping}
+Fisher, L. and Weil, R.~L. (1971).
+\newblock Coping with the risk of interest-rate fluctuations: returns to
+  bondholders from naive and optimal strategies.
+\newblock {\em Journal of {B}usiness}, pages 408--431.
+
+\bibitem[Goldman and Lord, 1986]{goldman1986new}
+Goldman, N. and Lord, G. (1986).
+\newblock A new look at entropy and the life table.
+\newblock {\em Demography}, 23(2):275--282.
+
+\bibitem[Green and Silverman, 1993]{green1993nonparametric}
+Green, P.~J. and Silverman, B.~W. (1993).
+\newblock {\em Nonparametric regression and generalized linear models: a
+  roughness penalty approach}.
+\newblock Crc Press.
+
+\bibitem[Haberman et~al., 2011]{Haberman2011}
+Haberman, S., Khalaf-Allah, M., and Verrall, R. (2011).
+\newblock {Entropy, longevity and the cost of annuities}.
+\newblock {\em Insurance: Mathematics and Economics}, 48(2):197--204.
+
+\bibitem[Ho, 1992]{Ho1992}
+Ho, T.~S. (1992).
+\newblock {Key Rate Durations}.
+\newblock {\em The Journal of Fixed Income}, 2(2):29--44.
+
+\bibitem[{Human Mortality Database}, 2024a]{HCD2024}
+{Human Mortality Database} (2024a).
+\newblock {H}uman {C}ause-of-{D}eath {D}ata {S}eries. {F}rench {I}nstitute for
+  {D}emographic {S}tudies (france), {M}ax {P}lanck {I}nstitute for
+  {D}emographic {R}esearch ({G}ermany) and the {U}niversity of {C}alifornia,
+  {B}erkeley ({USA}).
+\newblock \url{www.mortality.org}.
+
+\bibitem[{Human Mortality Database}, 2024b]{HMD2024}
+{Human Mortality Database} (2024b).
+\newblock University of {C}alifornia, {B}erkeley ({USA}), and {M}ax {P}lanck
+  {I}nstitute for {D}emographic {R}esearch ({G}ermany).
+\newblock \url{www.mortality.org}.
+
+\bibitem[Kallestrup-Lamb et~al., 2020]{kallestrup2020insight}
+Kallestrup-Lamb, M., Kj{\ae}rgaard, S., and Rosenskjold, C.~P. (2020).
+\newblock Insight into stagnating adult life expectancy: Analyzing cause of
+  death patterns across socioeconomic groups.
+\newblock {\em Health Economics}, 29(12):1728--1743.
+
+\bibitem[Keyfitz, 1977]{keyfitz1977difference}
+Keyfitz, N. (1977).
+\newblock What difference would it make if cancer were eradicated? an
+  examination of the taeuber paradox.
+\newblock {\em Demography}, 14(4):411--418.
+
+\bibitem[Leser, 1955]{leser1955variations}
+Leser, C. (1955).
+\newblock Variations in mortality and life expectation.
+\newblock {\em Population Studies}, 9(1):67--71.
+
+\bibitem[Levantesi and Menzietti, 2018]{levantesi2018natural}
+Levantesi, S. and Menzietti, M. (2018).
+\newblock Natural hedging in long-term care insurance.
+\newblock {\em ASTIN Bulletin: The Journal of the IAA}, 48(1):233--274.
+
+\bibitem[Li and Hardy, 2011]{Li2011}
+Li, J. S.-H. and Hardy, M.~R. (2011).
+\newblock {Measuring basis risk in longevity hedges}.
+\newblock {\em North American Actuarial Journal}, 15(2):177--200.
+
+\bibitem[Li and Luo, 2012a]{li2012key}
+Li, J. S.-H. and Luo, A. (2012a).
+\newblock Key q-duration: A framework for hedging longevity risk.
+\newblock {\em ASTIN Bulletin: The Journal of the IAA}, 42(2):413--452.
+
+\bibitem[Li and Luo, 2012b]{Li2012}
+Li, J. S.-H. and Luo, A. (2012b).
+\newblock {Key q-duration: A framework for hedging longevity risk}.
+\newblock {\em Astin Bulletin}, (July).
+
+\bibitem[Lin and Tsai, 2020]{Lin2020}
+Lin, T. and Tsai, C. C.~L. (2020).
+\newblock {Natural Hedges with Immunization Strategies of Mortality and
+  Interest Rates}.
+\newblock {\em ASTIN Bulletin}, 50(1):155--185.
+
+\bibitem[Lin and Cox, 2005]{lin2005securitization}
+Lin, Y. and Cox, S.~H. (2005).
+\newblock Securitization of mortality risks in life annuities.
+\newblock {\em Journal of risk and Insurance}, 72(2):227--252.
+
+\bibitem[Luciano et~al., 2015]{Luciano2015}
+Luciano, E., Regis, L., and Vigna, E. (2015).
+\newblock {Single- and Cross-Generation Natural Hedging of Longevity and
+  Financial Risk}.
+\newblock {\em Journal of Risk and Insurance}, pages n/a--n/a.
+
+\bibitem[Milevsky, 2012a]{Milevsky2012}
+Milevsky, M.~A. (2012a).
+\newblock {\em {Life Annuities: An Optimal Product for Retirement Income}}.
+\newblock Research Foundation of the CFA Institute.
+
+\bibitem[Milevsky, 2012b]{Milevsky2012a}
+Milevsky, M.~A. (2012b).
+\newblock {\em {The 7 most important equations for your retirement: the
+  fascinating people and ideas behind planning your retirement income}}.
+\newblock John Wiley {\&} Sons.
+
+\bibitem[Milevsky, 2013]{milevsky2013life}
+Milevsky, M.~A. (2013).
+\newblock Life annuities: An optimal product for retirement income.
+\newblock {\em CFA Institute Research Foundation Monograph}.
+
+\bibitem[Rabitti and Borgonovo, 2020]{rabitti2020mortality}
+Rabitti, G. and Borgonovo, E. (2020).
+\newblock Is mortality or interest rate the most important risk in annuity
+  models? a comparison of sensitivity analysis methods.
+\newblock {\em Insurance: Mathematics and Economics}, 95:48--58.
+
+\bibitem[Redington and Clarke, 1951]{redington1951papers}
+Redington, F.~M. and Clarke, R. (1951).
+\newblock The papers of the royal commission on population.
+\newblock {\em Journal of the Institute of Actuaries (1886-1994)},
+  77(1):81--97.
+
+\bibitem[Santomero and Babbel, 1997]{santomero1997financial}
+Santomero, A.~M. and Babbel, D.~F. (1997).
+\newblock Financial risk management by insurers: An analysis of the process.
+\newblock {\em Journal of risk and insurance}, pages 231--270.
+
+\bibitem[Shiu, 1990]{shiu1990redington}
+Shiu, E.~S. (1990).
+\newblock On {R}edington's theory of immunization.
+\newblock {\em Insurance: Mathematics and Economics}, 9(2-3):171--175.
+
+\bibitem[Tsai and Chung, 2013]{Tsai2013a}
+Tsai, C. C.~L. and Chung, S.~L. (2013).
+\newblock {Actuarial applications of the linear hazard transform in mortality
+  immunization}.
+\newblock {\em Insurance: Mathematics and Economics}, 53(1):48--63.
+
+\bibitem[Tsai and Jiang, 2011]{tsai2011actuarial}
+Tsai, C. C.-L. and Jiang, L. (2011).
+\newblock Actuarial applications of the linear hazard transform in life
+  contingencies.
+\newblock {\em Insurance: Mathematics and Economics}, 49(1):70--80.
+
+\bibitem[Vaupel and Canudas-Romo, 2003]{Vaupel2003}
+Vaupel, J.~W. and Canudas-Romo, V. (2003).
+\newblock {Decomposing change in life expectancy: a bouquet of formulas in
+  honor of Nathan Keyfitz's 90th birthday.}
+\newblock {\em Demography}, 40(2):201--16.
+
+\bibitem[Wang et~al., 2010]{wang2010optimal}
+Wang, J.~L., Huang, H., Yang, S.~S., and Tsai, J.~T. (2010).
+\newblock An optimal product mix for hedging longevity risk in life insurance
+  companies: The immunization theory approach.
+\newblock {\em Journal of Risk and Insurance}, 77(2):473--497.
+
+\bibitem[W{\'e}ber et~al., 2023]{weber2023gains}
+W{\'e}ber, A., Laversanne, M., Nagy, P., Kenessey, I., Soerjomataram, I., and
+  Bray, F. (2023).
+\newblock Gains in life expectancy from decreasing cardiovascular disease and
+  cancer mortality--an analysis of 28 european countries 1995--2019.
+\newblock {\em European Journal of Epidemiology}, 38(11):1141--1152.
+
+\bibitem[Wong et~al., 2015]{Wong2015}
+Wong, A., Sherris, M., and Stevens, R. (2015).
+\newblock {Natural Hedging Strategies for Life Insurers: Impact of Product
+  Design and Risk Measure}.
+\newblock {\em Journal of Risk and Insurance}, pages n/a--n/a.
+
+\end{thebibliography}

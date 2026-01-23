@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: DecompLifeAnnuity_ReplyIME.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+The style file: apalike.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Database file #1: library.bib
+Warning--there's a number but no volume in Daul2012
+Warning--there's a number but no volume in Li2012
+You've used 40 entries,
+            1935 wiz_defined-function locations,
+            717 strings with 10291 characters,
+and the built_in function-call counts, 15592 in all, are:
+= -- 1588
+> -- 538
+< -- 34
++ -- 187
+- -- 172
+* -- 1309
+:= -- 2676
+add.period$ -- 120
+call.type$ -- 40
+change.case$ -- 281
+chr.to.int$ -- 37
+cite$ -- 42
+duplicate$ -- 591
+empty$ -- 1111
+format.name$ -- 243
+if$ -- 3055
+int.to.chr$ -- 4
+int.to.str$ -- 0
+missing$ -- 40
+newline$ -- 203
+num.names$ -- 120
+pop$ -- 207
+preamble$ -- 1
+purify$ -- 284
+quote$ -- 0
+skip$ -- 477
+stack$ -- 0
+substring$ -- 1244
+swap$ -- 83
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 234
+warning$ -- 2
+while$ -- 148
+width$ -- 0
+write$ -- 515
+(There were 2 warnings)
