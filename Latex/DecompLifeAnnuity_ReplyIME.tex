@@ -139,9 +139,9 @@ From a mathematical perspective, duration corresponds to the first-order derivat
 
 \textbf{Entropy}
 
-In demography, entropy (denoted as $H$) is \textcolor{blue}{interpreted} as a measure of the sensitivity of life expectancy to changes in mortality rates \citep{leser1955variations,keyfitz1977difference,demetrius1974demographic,goldman1986new, aburto2019threshold}. Mathematically, the entropy is the first-order derivative of life expectancy with respect to the force of mortality $\mu$ \citep{keyfitz1977difference}. Higher entropy values indicate greater responsiveness of life expectancy to proportional changes in mortality rates.
+In demography, entropy (denoted as $H$) is \textcolor{blue}{interpreted} as a measure of the sensitivity of life expectancy to changes in mortality rates \citep{leser1955variations,keyfitz1977difference,demetrius1974demographic,goldman1986new, aburto2019threshold}. Mathematically, the entropy is the first-order derivative of life expectancy with respect to the force of mortality $\mu$ \revision{\citep{keyfitz1977difference}}. Higher entropy values indicate greater responsiveness of life expectancy to proportional changes in mortality rates.
 
-\citet{Vaupel2003} made a significant contribution by expressing the time derivative of life expectancy, $e(0, t)$, \color{blue}as a function of the pace of reducing mortality at all ages, $\bar{\rho}_e(t)$, and entropy, $H_e(t)$:
+\citet{Vaupel2003} made a significant contribution by expressing the time derivative of life expectancy, $e(0, t)$, \color{blue}as a function of the (weighted) pace of reducing mortality at all ages, $\bar{\rho}_e(t)$, and entropy, $H_e(t)$:
 
 \begin{equation}\label{eq:lifeexpdecomp}
 	\dfrac{\partial e(0,t)}{\partial t} = \bar{\rho}_e(t) H_e(t) e(0,t).
@@ -151,7 +151,7 @@ This formulation underscores the interplay between mortality improvements and th
 
 \citet{Haberman2011} extended the concept of entropy to life annuities, defining it as a measure of the sensitivity of a life annuity to proportional changes in the force of mortality. This extension links entropy directly to longevity risk in life annuity portfolios \citep{rabitti2020mortality} and has been applied to analyze socio-economic disparities in pension systems \citep{alvarez2021linking}.
 
-Entropy has also found applications in mortality-immunization research, where strategies analogous to interest rate immunization are employed to mitigate the impact of mortality rate changes on portfolio values. Discrete formulas for life annuity entropies and convexities have been derived under the assumption of constant or proportional changes in the force of mortality, $\mu$ \citep{wang2010optimal,tsai2011actuarial,Tsai2013a,Li2011}. These methods have been generalized to a wide range of life insurance and annuity products \citep{li2012key,Li2012,Wong2015,Luciano2015,levantesi2018natural}.
+Entropy has also found applications in mortality-immunization research, where strategies analogous to interest rate immunization are employed to mitigate the impact of mortality rate changes on portfolio values. Discrete formulas for life annuity entropies and convexities have been derived under the assumption of constant or proportional changes in the force of mortality, $\mu$ \citep{wang2010optimal,tsai2011actuarial,Tsai2013a,Li2011}. These methods have been generalized to a wide range of life insurance and annuity products \citep{li2012key,Wong2015,Luciano2015,levantesi2018natural}.
 
 \textbf{Merging Perspectives}
 
@@ -168,7 +168,7 @@ In this article, we build on actuarial and demographic literature to develop a s
 
 In this section, we introduce the time variables and notation required to describe the dynamics of life annuities. Let $(x)$ denote an insured individual aged $x$, where $x > 0$. The random variable \( S_x \) represents the future lifetime of $(x)$, such that \( x + S_x \) corresponds to the total lifetime of the individual. 
 
-The actuarial value of the policy associated with life $(x)$ is determined based on information about the economic-demographic environment in which the life annuity is issued. Let \(t\) denote the  time at which this information about the \textit{economic-demographic environment} becomes available. We assume that \(t\) is continuous, reflecting the continuous evolution of this information. Separately, we use  the time variable \(u\) to denote the \textit{time of valuation of the policy}. \textcolor{blue}{Note that the insured individual is assumed to be $(x)$ at time zero and \(t\) and \(u\) are not earlier than zero.}
+The actuarial value of the policy associated with life $(x)$ is determined based on information about the economic-demographic environment in which the life annuity is issued. Let \(t\) denote the  time at which this information about the \textit{economic-demographic environment} becomes available. We assume that \(t\) is continuous, reflecting the continuous evolution of this information. Separately, we use  the time variable \(u\) to denote the \textit{time of valuation of the policy}. \textcolor{blue}{Note that the insured individual is assumed to be aged $x$ at time $t$ and both \(t\) and \(u\) are not earlier than zero, such that $u\geq$ and $t\geq 0$.}
 
 Although \( t \) and \( u \) are both time variables, they are not necessarily the same. The economic-demographic information used to evaluate life annuities is indexed by \( t \). However, there may be a lag between the time at which actuarial assumptions are set (denoted by \( t \)) and the time corresponding to the valuation of the policy (denoted by \( u \)). This lag is common, particularly for mortality data, which is often collected by national statistical offices with a delay of several years. In some cases, \( t = u \), such as when companies have access to up-to-date experience data for insured lives or when market interest rates are continuously available. However, this is not always the case.
 
@@ -187,13 +187,13 @@ In this paper, we adopt the convention that time-$t$ derivatives of quantities a
 
 
 \begin{equation} \label{eq:mudot}
-\dot{\mu}(x,t)=\frac{\partial\mu(x,t)}{\partial t},
+\dot{\mu}(x,t)\revision{=}\frac{\partial\mu(x,t)}{\partial t},
 \end{equation}
 
 and 
 
 \begin{equation} \label{eq:deltadot}
-\dot{\delta}(s,t)=\frac{\partial\delta(s,t)}{\partial t}.
+\dot{\delta}(s,t)\revision{=}\frac{\partial\delta(s,t)}{\partial t}.
 \end{equation}
 
 The rate of mortality improvement at age \(x\) and time $t$, is defined as
@@ -208,7 +208,7 @@ Similarly, the relative change over time in the forward force of interest at mat
 \upvarphi(s,t)=-\frac{\frac{\partial \delta(s,t)}{\partial t}}{\delta(s,t)} = -\frac{\dot{\delta}(s,t)}{\delta(s,t)}.
 \end{equation}
 
-The actuarial present value of a continuous life annuity at age $x$, evaluated at time $t$, is given by
+\revision{The actuarial present value of a continuous life annuity at age $x$, evaluated at time $t$, is given by}
 
 \begin{equation}\label{eq:Annuity}
 \revision{\bar{a}_x(t) = \int_0^\infty {}_yp_x(t) {v}(y,t)dy.}
@@ -227,17 +227,17 @@ The actuarial present value of a continuous life annuity at age $x$, evaluated a
 \subsection{Two Types of Changes: Constant and Proportional to $\mu$ and $\delta$}
 
 
-We are interested in measuring the changes in the actuarial present value of a life annuity, \( \bar{a}_x(t) \), with respect to the time variable \( t \), which represents the time where mortality and interest information is updated. To achieve this, we first derive the corresponding expressions for the durations and entropies associated with \( \bar{a}_x(t) \). As mentioned in Section \ref{sec:SensitivityMortalityInterest}, the entropy of a life annuity captures the sensitivity of \( \bar{a}_x(t) \) to changes in the force of mortality, \( \mu(x,t) \). The entropy of a life annuity issued at age \( x \) and evaluated at time \( t \), is denoted as \( H_x(t) \)   \citep{Haberman2011}. This quantity can be expressed in general terms as:
+We are interested in measuring the changes in the actuarial present value of a life annuity, \( \bar{a}_x(t) \), with respect to the time variable \( t \), which represents the time where mortality and interest information is updated. To achieve this, we first derive the corresponding expressions for the durations and entropies associated with \( \bar{a}_x(t) \). As mentioned in Section \ref{sec:SensitivityMortalityInterest}, the entropy of a life annuity captures the sensitivity of \( \bar{a}_x(t) \) to changes in the force of mortality, \( \mu(x,t) \). The entropy of a life annuity issued at age \( x \) and evaluated at time \( t \), is denoted as \( H_x(t) \)   \revision{\citep{Haberman2011}}. This quantity can be expressed in general terms as:
 
 \begin{equation}\label{eq:EntropyGeneral}
-{H}_{x}(t) = -\frac{ 1}{\bar{a}_x(t)}\cdot \frac{\partial \bar{a}_x(t) }{\partial \mu(x,t)}.
+{H}_{x}(t) = \revision{-}\frac{ 1}{\bar{a}_x(t)}\cdot \frac{\partial \bar{a}_x(t) }{\partial \mu(x,t)}.
 \end{equation}
 
-Analogously, duration captures the sensitivity of $\bar{a}_x(t)$ to changes in interest rates. It is defined as the relative derivative of the annuity factor with respect to changes in the force of interest \citep{Milevsky2012,Milevsky2012a}:
+Analogously, duration captures the sensitivity of $\bar{a}_x(t)$ to changes in interest rates. It is defined as the relative derivative of the annuity factor with respect to changes in the force of interest \citep{milevsky2013life,Milevsky2012a}:
 
 
 \begin{equation}\label{eq:DurationGeneral}
-{D}_{x}(t) = -\frac{1}{\bar{a}_x(t)}\cdot  \frac{\partial \bar{a}_x(t) }{\partial \delta(s,t)}.
+{D}_{x}(t) = \revision{-}\frac{1}{\bar{a}_x(t)}\cdot  \frac{\partial \bar{a}_x(t) }{\partial \delta(s,t)}.
 \end{equation}
 
 
@@ -245,7 +245,7 @@ Analogously, duration captures the sensitivity of $\bar{a}_x(t)$ to changes in i
 
 Entropy and duration measure this sensitivity under assumed relationships between changes in $\mu(x,t)$, $\delta(s,t)$, and $\bar{a}_x(t)$. Higher values of ${H}_{x}(t)$ and ${D}_{x}(t)$ indicate greater sensitivity of $\bar{a}_x(t)$ to changes in $\mu(x,t)$ and $\delta(s,t)$, respectively. 
 
-\textcolor{blue}{It is worth noting that the entropy and duration in Equations (\ref{eq:EntropyGeneral}) and (\ref{eq:DurationGeneral}) are expressed as functional derivatives, however, one must specify the direction of perturbation of the underlying functions. In the subsequent sections, we consider two types of perturbations: constant adjustments (i.e., additive shifts) and proportional shifts applied to $\mu(x,t)$ and $\delta(s,t)$. Each of these perturbations lead to different analytical forms of ${H}{x}(t)$ and ${D}{x}(t)$. }
+\textcolor{blue}{It is worth noting that the entropy and duration in Equations (\ref{eq:EntropyGeneral}) and (\ref{eq:DurationGeneral}) are expressed as functional derivatives, however, one must specify the direction of perturbation of the underlying functions. In the subsequent sections, we consider two types of perturbations: constant adjustments (i.e., additive shifts) and proportional shifts applied to $\mu(x,t)$ and $\delta(s,t)$. Each of these perturbations lead to different analytical forms of ${H}_{x}(t)$ and ${D}_{x}(t)$. }
 
 \textbf{{Changes in $\bar{a}_x(t)$ with Respect to Mortality}}
 
@@ -265,7 +265,7 @@ where ${h}^{c}_{x}(t)=\int_{0}^\infty s {}_s p_x(t) {v}(s,t) \, ds$. The term ${
 	{H}^{p}_{x}(t) = -\frac{ \int_{0}^{\infty}{}_s p_x(t)\ln\left({}_s p_x(t)\right) {v}(s,t) \, ds}{\int_0^\infty {}_s p_x(t) {v}(s,t) \, ds}.
 \end{equation}
 
-Alternatively, we show that Equation (\ref{eq:EntropyP}) can be expressed as (see proof in Appendix \ref{sec:EntropyAlt}):
+Alternatively, we show that Equation (\ref{eq:EntropyP}) can be expressed as \revision{(see proof in Appendix \ref{sec:EntropyAlt}):}
 
 \begin{equation} \label{eq:EntropyP2}
 	\begin{split}
@@ -339,7 +339,7 @@ We now compute the derivative of $\bar{a}_x(t)$ with respect to the time variabl
 \end{equation}
 
 
-To develop a closed-form expression for Equation (\ref{eq:TimeDeriv}), we consider the general case where $_s p_x(t) = e^{-\int_{0}^{s} \mu(x+y,t) \, dy}$ and ${v}(s,t) = e^{-\int_{0}^{s} \delta(y,t) \, dy}$. We analyze each of the two terms on the right-hand side of Equation (\ref{eq:TimeDeriv}) separately. Let us first focus on the first term:
+To develop a closed-form expression for Equation (\ref{eq:TimeDeriv}), we consider the general case where $_s p_x(t) = e^{-\int_{0}^{s} \mu(x+y,t) \, dy}$ and ${v}(s,t) = e^{-\int_{0}^{s} \delta(\revision{y},t) \, dy}$. We analyze each of the two terms on the right-hand side of Equation (\ref{eq:TimeDeriv}) separately. Let us first focus on the first term:
 
 
 \begin{equation}\label{eq:TimeDerivP1}
@@ -390,11 +390,12 @@ where ${}_sM_x(t)= \mu(x+s,t){}_s|\bar{a}_x(t)$ and ${}_sW_x(t)=\delta(s,t)  {}_
 \end{equation}
 
 where $\bar{\rho}_x(t) = \frac{\int_0^\infty \rho(x+s,t) {}_s M_x(t) \, ds}{\int_0^\infty {}_s M_x(t) \, ds}$ and 
-$\bar{\upvarphi}(t) = \frac{\int_0^\infty \upvarphi(s,t) {}_s W_x(t) \, ds}{\int_0^\infty {}_s W_x(t) \, ds}$ are the weighted-average changes in mortality and interest rates, respectively. The functions $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$ capture the changes in the forces of mortality and interest, whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ represent the sensitivities due to changes in $\mu$ and $\delta$. Equation (\ref{eq:TimeDerivP}) \textcolor{blue}{indicates that the relative variation in life annuity factors} are driven by $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$, respectively
+$\bar{\upvarphi}(t) = \frac{\int_0^\infty \upvarphi(s,t) {}_s W_x(t) \, ds}{\int_0^\infty {}_s W_x(t) \, ds}$ are the weighted-average changes in mortality and interest rates, respectively. The functions $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$ capture the changes in the forces of mortality and interest, whereas ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$ represent the sensitivities due to changes in $\mu$ and $\delta$. Equation (\ref{eq:TimeDerivP}) \textcolor{blue}{indicates that the relative variation in life annuity factors} are driven by $\bar{\rho}_x(t)$ and $\bar{\upvarphi}(t)$, which are modulated by ${H}^{p}_x(t)$ and ${D}^{p}_x(t)$, respectively\color{blue}\footnote{Equation (\ref{eq:TimeDerivP}) can be seen as an extension of \revision{Equations (12) and (21)} in \citet{Vaupel2003} to measure changes over time in life expectancy, and of Equation \revision{(24)} in \citet{di2025decomposing} to measure changes over time in life annuities.}. \color{black}
 
-\color{blue}\footnote{Equation (\ref{eq:TimeDerivP}) can be viewed as an extension of the equations developed by \citet{Vaupel2003} for measuring changes over time in life expectancy, and by \citet{di2025decomposing} for measuring changes over time in life annuities.}. \color{black}
+ \textcolor{blue}{The decomposition in Equation (\ref{eq:TimeDerivP}) is formulated in terms of relative changes in life annuity factors, thereby providing insight into the drivers of their development in relative terms. If one wishes to obtain the absolute percentage contribution to the annuity factor, $\dot{\bar{a}}_{x}(t)$, this can be achieved either by multiplying Equation (\ref{eq:TimeDerivP}) by $\bar{a}_{x}(t)$ or by using Equation (\ref{eq:TimeDerivP3}) directly, depending on the application.}
 
- \textcolor{blue}{The decomposition in Equation (\ref{eq:TimeDerivP}) is formulated in terms of relative changes in life annuity factors, thereby providing insight into the drivers of their development in relative terms. If one wishes to obtain the absolute percentage contribution to the annuity factor, $\dot{\bar{a}}_{x}(t)$, this can be achieved either by multiplying Equation (\ref{eq:TimeDerivP}) by $\bar{a}{x}(t)$ or by using Equation (\ref{eq:TimeDerivP3}) directly, depending on the application.}
+\revision{Finally, we emphasize that the decomposition in Equation (\ref{eq:TimeDerivP}) is purely analytical and should not be interpreted as implying independence between mortality and financial risks. While Equation (\ref{eq:TimeDerivP}) expresses relative changes additively in terms of longevity and financial components, it does not impose any restriction on the joint evolution of mortality rates (through $\bar{\rho}_x(t)$) and interest rates (through $\bar{\phi}(t)$). As such, Equation (\ref{eq:TimeDerivP}) can accommodate situations in which mortality and financial conditions move jointly over time, such as during the COVID-19 pandemic, where mortality rates increased while interest rates declined \citep{li2023pricing}.}
+
 
 \subsection{Age and Term Contributions to Changes in $\bar{a}_x(t)$}
 
@@ -422,7 +423,7 @@ We can also decompose the entropy $h_x^p(t)$ into $n$ age groups as follows:
 \end{equation}
 with ${h}^{p}_{x}(t;x_{i-1},x_{i})=\int_{x_{i-1}-x}^{x_i-x} \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$, denoting the dollar entropy associated to proportional changes in the force of mortality between ages $x_{i-1}$ and $x_{i}$ and ${H}^{p}_{x}(t;x_{i-1},x_{i}) = \frac{{h}^{p}_{x}(t;x_{i-1},x_{i})}{\bar{a}_x(t)}$, the corresponding dimensionless entropy. 
 
-Similarly, we can decompose the dollar duration ${d}^{p}_{x}(t)$ into $m$ term groups as follows:
+Similarly, we can decompose the dollar duration \revision{${d}^{p}_{x}(t)$} into $m$ term groups as follows:
 
 \begin{equation}\label{eq:DurationAge}
 \begin{split}
@@ -432,7 +433,7 @@ Similarly, we can decompose the dollar duration ${d}^{p}_{x}(t)$ into $m$ term g
 \end{equation}
 
 
-with ${d}^{p}_{x}(t;t_{j-1},t_{j}) = \int_{t_{j-1}}^{t_j} \delta(s,t) {}_s|\bar{a}_x(t) \, ds$, denoting the dollar duration associated with proportional changes in the term structure between terms $t_{j-1}$ and $t_{j}$, and ${D}^{p}_{x}(t;t_{j-1},t_{j}) = \frac{{d}^{p}_{x}(t;t_{j-1},t_{j})}{\bar{a}_x(t)}$, the corresponding dimensionless duration. These age-specific entropies and term-specific durations are analogous to the key q-durations \citep{li2012key} and key rate durations \citep{Ho1992}, which measure the sensitivity of financial instruments to changes in specific portions of the life table and the term structure of interest rates.
+with ${d}^{p}_{x}(t;t_{j-1},t_{j}) = \int_{t_{j-1}}^{t_j} \delta(s,t) {}_s|\bar{a}_x(t) \, ds$, denoting the dollar duration associated with proportional changes in the term structure between terms $t_{j-1}$ and $t_{j}$, and ${D}^{p}_{x}(t;t_{j-1},t_{j}) = \frac{{d}^{p}_{x}(t;t_{j-1},t_{j})}{\bar{a}_x(t)}$, the corresponding \revision{dimensionless duration. These age-specific entropies} and term-specific durations are analogous to the key q-durations \citep{li2012key} and key rate durations \citep{Ho1992}, which measure the sensitivity of financial instruments to changes in specific portions of the life table and the term structure of interest rates.
 
 
 
@@ -483,7 +484,7 @@ Dividing by $\bar{a} _x(t)$ we have
 
 \begin{equation}\label{eq:TimeDerivCoD3}
 \begin{split}
-\acute{\bar{a}} _x(t) &= \sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)+\bar{\upvarphi}(t){D}{^p_x}(t),
+\acute{\bar{a}} _x(t) &= \sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)+\bar{\upvarphi}(t)\revision{{D}{^p_x}(t)},
 \end{split}
 \end{equation}
 
@@ -508,7 +509,7 @@ Substituting Equations (\ref{eq:TimeDerivP1}) and (\ref{eq:TimeDerivC1}) in Equa
 
 \begin{equation}\label{eq:TimeDerivC2}
 \begin{split}
-\acute{\bar{a}}_x(t) =  \bar{\rho}_x(t){H}^{p}_x(t)+\dot{\delta}(t)  D^{c}_x(t).
+\acute{\bar{a}}_x(t) =  \revision{\bar{\rho}_x(t)}{H}^{p}_x(t)+\dot{\delta}(t)  D^{c}_x(t).
 \end{split}
 \end{equation}
 
@@ -522,8 +523,8 @@ Given that ${D}^{p}_{x}(t) = \delta(t){D}^{c}_{x}(t)$ (see Equation (\ref{eq:Dur
 
 Throughout Section \ref{sec:TimeDynamics}, we derived equations that facilitate the identification of the sources of change in life annuities over time. These equations consist of a financial component and a longevity component. Depending on the specific application, insights can be gained regarding the age-specific and term-specific attribution of these components, as well as the cause-specific contributions. Additionally, assumptions can be made about the yield rate used in the calculation of life annuity portfolios. A summary of the equations introduced in this section is provided in Table \ref{table:Table1}.
 
-
 \begin{table}[ht]
+	\color{blue}
 	\centering
 	\begin{tabular}{lcc}
 		\toprule
@@ -541,12 +542,13 @@ Throughout Section \ref{sec:TimeDynamics}, we derived equations that facilitate 
 	\label{table:Table1}
 \end{table}
 
+\color{black}
 
 %One of the main advantages of our framework is that the financial and longevity components are additive. Thus, the expressions in Table \ref{table:Table1} can be easily combined to get insights about the sources of change in $\acute{\bar{a}}_x(t)$. For example, it can be the case that the actuary analysing fluctuations in the pension fund is interested in determining the term-specific contribution to the financial component as well as the causes of death that drive the longevity component. To this aim, the actuary can apply the equation $\acute{\bar{a}}_x(t)=\sum_{j=1}^m\bar{\upvarphi}(t;t_{j-1},t_{j}){D}_x(t;t_{j-1},t_{j})+\sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)$ to examine such dynamics. In the following section, we illustrate how our equations can be used using empirical data.
 
 
 One of the key advantages of our framework is the additivity of the financial and longevity components. As a result, the expressions in Table \ref{table:Table1} can be easily combined to gain insights into the sources of change in $\acute{\bar{a}}_x(t)$. For instance, an actuary analyzing fluctuations in a pension fund may be interested in determining the term-specific contribution to the financial component, as well as the cause-specific contributions to the longevity component. To achieve this, the actuary can apply the equation 
-$\acute{\bar{a}}_x(t)=\sum_{j=1}^m\bar{\upvarphi}(t;t_{j-1},t_{j}){D}^p_x(t;t_{j-1},t_{j})+\sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)$ to examine these dynamics. In the following section, we illustrate how our equations can be used using empirical data. Moreover, note that, up to this point, the time dynamics have been assumed to be deterministic. In Section \ref{sec:Reserves}, we extend the equations developed here to incorporate the stochastic representation of a payment process and the corresponding reserves for life annuities. 
+$\acute{\bar{a}}_x(t)=\sum_{j=1}^m\bar{\upvarphi}(t;t_{j-1},t_{j})\revision{{D}^p_x(t;t_{j-1},t_{j})}+\sum_{i=1}^{n} \bar{\rho}{^i_x}(t){H}^{i}_x(t)$ to examine these dynamics. In the following section, we illustrate how our equations can be used using empirical data. Moreover, note that, up to this point, the time dynamics have been assumed to be deterministic. In Section \ref{sec:Reserves}, we extend the equations developed here to incorporate the stochastic representation of a payment process and the corresponding reserves for life annuities. 
 
 
 
@@ -578,26 +580,26 @@ The lower panel of Figure \ref{fig:Fig2} illustrates the changes in \( \bar{a}_{
 As shown in Section \ref{sec:TimeDynamics}, when a single interest rate is used for each observation period, changes over time in \( \bar{a}_x(t) \) can be decomposed into longevity and financial components, expressed as 
 
 \[
-\acute{\bar{a}}_x(t) = \bar{\rho}_x(t) {H}^{p}_x(t) + \dot{\delta}(t) D^{c}_x(t).
+\acute{\bar{a}}_x(t) = \revision{\bar{\rho}_x(t)} {H}^{p}_x(t) + \dot{\delta}(t) D^{c}_x(t).
 \]
 
-Each component is influenced by the time fluctuations of \( \mu(x,t) \) and \( \delta(s,t) \), represented by \( \bar{\rho}_x(t) \) and \( \dot{\delta}(t) \), respectively. These fluctuations are further modulated by the sensitivity of \( \bar{a}_x(t) \) to each factor, characterized by entropy (\( {H}^{p}_x(t) \)) and modified duration (\( {D}^{c}_x(t) \)). We begin by analyzing the development of each component driving the time fluctuations in \( \bar{a}_x(t) \).
+Each component is influenced by the time fluctuations of \( \mu(x,t) \) and \( \delta(s,t) \), represented by \( \revision{\bar{\rho}_x(t)} \) and \( \dot{\delta}(t) \), respectively. These fluctuations are further modulated by the sensitivity of \( \bar{a}_x(t) \) to each factor, characterized by entropy (\( {H}^{p}_x(t) \)) and modified duration (\( {D}^{c}_x(t) \)). We begin by analyzing the development of each component driving the time fluctuations in \( \bar{a}_x(t) \).
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{Fig/changeMortalityInterestAndSensitivities}
-	\caption{{Development in changes in mortality and interest and sensitivities. Upper panel shows the average mortality improvement ($\bar{\rho}_x(t)$), and change in interest rates ($\dot{\delta}(t)$). Lower panel depicts the entropy ($H$) and modified duration ($D$). Males at age 65, 1860-2021.}}
+	\caption{{Development in changes in mortality and interest and sensitivities. Upper panel shows the average mortality improvement ($\revision{\bar{\rho}_x(t)}$), and change in interest rates ($\dot{\delta}(t)$). Lower panel depicts the entropy ($H$) and modified duration ($D$). Males at age 65, 1860-2021.}}
 	\label{fig:Fig3}
 \end{figure}
 
 
-The upper panel of Figure \ref{fig:Fig3} shows that between 1860 and 1940, there were periods of both mortality improvement and deterioration (e.g., during the World Wars and the Spanish Flu pandemic). Starting in the 1980s, \( \bar{\rho}_x(t) \) increased steadily, reflecting average annual mortality improvements of 2\% to 3\%. In recent years, however, \( \bar{\rho}_x(t) \) has trended downward, reflecting the stagnation in mortality improvements in the United Kingdom, as documented by \citet{djeundje2022slowdown}. The substantial impact of the Covid-19 pandemic is evident in the sharp decline in \( \bar{\rho}_x(t) \) observed in 2020 and 2021.
+The upper panel of Figure \ref{fig:Fig3} shows that between 1860 and 1940, there were periods of both mortality improvement and deterioration (e.g., during the World Wars and the Spanish Flu pandemic). Starting in the 1980s, \( \revision{\bar{\rho}_x(t)} \) increased steadily, reflecting average annual mortality improvements of 2\% to 3\%. In recent years, however, \( \revision{\bar{\rho}_x(t)} \) has trended downward, reflecting the stagnation in mortality improvements in the United Kingdom, as documented by \citet{djeundje2022slowdown}. The substantial impact of the Covid-19 pandemic is evident in the sharp decline in \( \revision{\bar{\rho}_x(t)} \) observed in 2020 and 2021.
 
 
 With respect to interest rates, \( \dot{\delta}(t) \) remained relatively stable throughout most of the observation period, with some fluctuations between 1930 and 1950. Starting in the 1960s, \( \dot{\delta}(t) \) increased rapidly, peaking in the 1970s before declining sharply and turning negative, reflecting the prolonged decline in interest rates observed through the 2010s. However, since the Covid-19 pandemic, interest rates have risen rapidly once again.
 
 
-The impact of fluctuations in \( \bar{\rho}_x(t) \) and \( \dot{\delta}(t) \) on the time dynamics of \( \bar{a}_x(t) \) is modulated by entropy (\( {H}^{p}_x(t) \)) and modified duration (\( {D}^{c}_x(t) \)). The lower panel of Figure \ref{fig:Fig3} indicates that, up until the 1960s, \( \bar{a}_x(t) \) was more sensitive to changes in mortality than to changes in interest rates, as entropy was higher than duration during this period. Starting in the 1960s, entropy exhibited a sharp decline, reaching its lowest point in the 1980s, before beginning to rise again.
+The impact of fluctuations in \( \revision{\bar{\rho}_x(t)} \) and \( \dot{\delta}(t) \) on the time dynamics of \( \bar{a}_x(t) \) is modulated by entropy (\( {H}^{p}_x(t) \)) and modified duration (\( {D}^{c}_x(t) \)). The lower panel of Figure \ref{fig:Fig3} indicates that, up until the 1960s, \( \bar{a}_x(t) \) was more sensitive to changes in mortality than to changes in interest rates, as entropy was higher than duration during this period. Starting in the 1960s, entropy exhibited a sharp decline, reaching its lowest point in the 1980s, before beginning to rise again.
 
 Duration remained relatively constant from 1860 until the 1950s, when it began trending upward, peaking in the 1980s. Thereafter, duration declined through the 2010s, reflecting the low-interest rate environment during this period, which reduced sensitivity to interest rate changes. More recently, duration has increased in tandem with the rapid rise in interest rates.
 
@@ -625,7 +627,7 @@ To further explore the interplay between entropy and duration, Table \ref{tab:en
 
 These results stand in contrast to the findings of \citet{rabitti2020mortality}, who argued that duration is the primary driver of changes in life annuities. Table \ref{tab:entropyDuration}, however, underscores the interplay between mortality and interest rates, demonstrating that both factors contribute substantially to changes in life annuities during specific periods.
 
-Using the equation \( \acute{\bar{a}}_x(t) = \bar{\rho}_x(t) {H}^{p}_x(t) + \dot{\delta}(t) D^{c}_x(t) \), the contributions of financial and longevity components to changes in life annuity factors are calculated. The upper panel of Figure \ref{fig:Fig4} presents \( \acute{\bar{a}}_{65}(t) \) (as shown in Figure \ref{fig:Fig2}), while the lower panel illustrates the respective contributions of financial and longevity components. Positive values indicate upward contributions, whereas negative values represent downward effects. Figure \ref{fig:Fig4} clearly highlights the significant roles that both longevity and financial risks play in shaping the long-term development of \( \bar{a}_x(t) \).
+Using the equation \( \acute{\bar{a}}_x(t) = \revision{\bar{\rho}_x(t)} {H}^{p}_x(t) + \dot{\delta}(t) D^{c}_x(t) \), the contributions of financial and longevity components to changes in life annuity factors are calculated. The upper panel of Figure \ref{fig:Fig4} presents \( \acute{\bar{a}}_{65}(t) \) (as shown in Figure \ref{fig:Fig2}), while the lower panel illustrates the respective contributions of financial and longevity components. Positive values indicate upward contributions, whereas negative values represent downward effects. Figure \ref{fig:Fig4} clearly highlights the significant roles that both longevity and financial risks play in shaping the long-term development of \( \bar{a}_x(t) \).
 
 
 \begin{figure}[H]
@@ -670,7 +672,7 @@ Figure \ref{fig:Fig5} illustrates the contributions of 10-year age groups (i.e.,
 Finally, in this section, we examine the causes of death driving changes in observed life annuity factors using the equation 
 
 \[
-\acute{\bar{a}}_x(t) = \sum_{i=1}^{n} \bar{\rho}^i_x(t) {H}^i_x(t) + \bar{\upvarphi}(t) {D}^p_x(t),
+\acute{\bar{a}}_x(t) = \sum_{i=1}^{n} \bar{\rho}^i_x(t) {H}^i_x(t) + \bar{\upvarphi}(t) \revision{{D}^p_x(t)},
 \]
 
 where the longevity component is represented by \( \sum_{i=1}^{n} \bar{\rho}^i_x(t) {H}^i_x(t) \), and \( n \) causes of death are considered in the analysis.
@@ -684,19 +686,19 @@ We use cause-specific mortality rates from the Human Cause-of-Death Data Series,
 	\label{fig:Fig7}
 \end{figure}
 
-Figure \ref{fig:Fig7} illustrates the cause-specific contributions to changes in life annuity factors for the periods 2009–2010, and 2019–2020. Positive values represent increases in the relative derivative $\acute{\bar{a}}_x(t)$, while negative values indicate reductions. Contributions from changes in interest rates are also shown. For illustrative purposes, we focus on the 2019–2020 period to demonstrate the application of our equations to empirical cause-of-death data.  
+\revision{Figure \ref{fig:Fig7} illustrates the cause-specific contributions to changes in life annuity factors for the periods 2009–2010, and 2019–2020. Positive values represent increases in the relative derivative $\acute{\bar{a}}_x(t)$, while negative values indicate reductions. Contributions from changes in interest rates are also shown. For illustrative purposes, we focus on the 2019–2020 period to demonstrate the application of our equations to empirical cause-of-death data, while the 2009-2010 period serves as a contrasting point to highlight the sheer magnitude of the Covid-19 pandemic.}  
 
-\textcolor{blue}{The life annuity factor for males aged 65 increased from 16.46 in 2019 to 17.42 in 2020. This corresponds to an absolute increase of 5.81\% and a relative change of 0.35\%. Two main drivers explain this change: increased mortality due to the Covid-19 pandemic and the decline in interest rates between 2019 and 2020.}
+\textcolor{blue}{The life annuity factor for males aged 65 increased from 16.46 in 2019 to 17.42 in 2020. This corresponds to an absolute increase of 0.96 and a relative change of 0.35\%. Two main drivers explain this change: increased mortality due to the Covid-19 pandemic and the decline in interest rates between 2019 and 2020.}
 	
 \textcolor{blue}{Regarding mortality, the emergence of Covid-19 in 2020 had a substantial impact on life annuity prices. Our decomposition shows that elevated mortality from respiratory diseases, including Covid-19, led to a -5.73\% contribution to the relative change in life annuity factors.}
 	
 \textcolor{blue}{At the same time, financial markets experienced a decline in interest rates in 2020. Our decomposition indicates that this effect contributed positively, increasing life annuity factors by 5.21\%.}
 	
-\textcolor{blue}{These opposing effects largely offset each other. The combined contribution of neoplasms, heart diseases, cerebrovascular diseases, and other causes of death accounts for an additional 0.67\%. Altogether, the components shown in Figure 6 result in a relative change of 0.35\% in the life annuity factor at age 65 from 2019 to 2020.}
+\textcolor{blue}{These opposing effects largely offset each other. The combined contribution of neoplasms, heart diseases, cerebrovascular diseases, and other causes of death accounts for an additional 0.87\%. Altogether, the components shown in Figure \ref{fig:Fig7} result in a relative change of $$0.35\% = -5.73\% +  5.21\%  + 0.87\%$$ in the life annuity factor at age 65 from 2019 to 2020.}
 	
-\textcolor{blue}{It is worth noting that the decomposition is based on relative changes in life annuity factors; therefore, the results in this section should be interpreted in terms of the relative derivatives of annuity values. If one wishes to obtain contributions of the absolute changes, the reported factors can be multiplied by the initial annuity value.}
+\textcolor{blue}{The decomposition is based on relative changes in life annuity factors; therefore, the results in this section should be interpreted in terms of relative derivatives of annuity values. If one wishes to obtain contributions in absolute (monetary) terms, the reported factors can be multiplied by the corresponding annuity value.}
 	
-\textcolor{blue}{It is also important to emphasize that the results presented here are intended solely to illustrate how the equations developed in this article can be applied to empirical cause-of-death data. A detailed analysis of the impact of the Covid-19 pandemic on life annuities lies outside the scope of this paper as has been extensively documented elsewhere.}
+% \textcolor{blue}{It is also important to emphasize that the results presented here are intended solely to illustrate how the equations developed in this article can be applied to empirical cause-of-death data. A detailed analysis of the impact of the Covid-19 pandemic on life annuities lies outside the scope of this paper as has been extensively documented elsewhere.}
 
 
 Understanding the sources of changes in life annuities is crucial for several reasons. First, it allows actuaries and risk managers to link fluctuations in life annuities to specific health trends, facilitating more thorough risk assessments. Second, it provides valuable insights into how improvements or setbacks in public health impact life annuity portfolios. For instance, advances in cancer treatment and cardiovascular care have significantly improved mortality rates in high-income countries \citep{weber2023gains}, contributing to rising life expectancies. In contrast, the Covid-19 pandemic has had a profound effect on the life annuity sector, as the mortality shock led to lower longevity expectations. These findings highlight the importance of incorporating cause-of-death analysis into actuarial practice, particularly when managing longevity risk in life annuity portfolios.
@@ -707,9 +709,9 @@ Understanding the sources of changes in life annuities is crucial for several re
 
 In this section, we extend the equations developed in Section \ref{sec:TimeDynamics} and illustrated in Section \ref{sec:UK_Illustration} to incorporate a stochastic representation of the payment process and the corresponding reserves for life annuities. This extension establishes a connection with the Thiele differential equations and may enable the application of our results in risk management and solvency assessments.
 
-Let us recall that in Section \ref{preliminaries}, we defined time variable \(t\) as the moment when information about the \textit{economic-demographic environment} becomes available and time variable \(u\) denote the \textit{time of valuation of the policy}. \textcolor{blue}{Note that both time $t$ and $u$ are not earlier than zero. such that $t\ge0$ and $u\ge0$.}
+Let us recall that in Section \ref{preliminaries}, we defined time variable \(t\) as the moment when information about the \textit{economic-demographic environment} becomes available and time variable \(u\) denote the \textit{time of valuation of the policy}\textcolor{blue}{, with both $t\ge0$ and $u\ge0$.}
 
-Let us now define a probability space \( \{\Omega, \mathcal{F}, \mathbb{P}\} \), with \(\textbf{F} = \{\mathcal{F}_t\}\) representing a family of sub-\(\sigma\)-algebras that encodes the information available at time \( t \) regarding the economic-demographic environment. Let \( I_{s} = \mathds{1}_{\{S_x > s\}} \) and \( \mathbb{E}[I_{s} | \mathcal{F}_t] = {}_s p_x(t) \), we define the payment stream process as \( dB(s) = b(s) I_{s} \, ds \), where \( b(s) \) is the annuity benefit payable continuously over the development of the policy for the insured life \( (x) \).  Notably, both mortality and interest rates are stochastic processes evaluated with information at time \( t \), as they are not deterministically known at the time of policy issuance (i.e., at time zero). 
+Let us now define a probability space \( \{\Omega, \mathcal{F}, \mathbb{P}\} \), with \(\textbf{F} = \{\mathcal{F}_t\}\) representing a family of sub-\(\sigma\)-algebras that encodes the information available at time \( t \) regarding the economic-demographic environment. \revision{Assume that the insured invididual $(x)$ is age $x$ at time 0 and let \( I_{s} = \mathds{1}_{\{S_x > s\}} \) and \( \mathbb{E}[I_{s} | \mathcal{F}_t] = {}_s p_x(t) \). We define the payment stream process as \( dB(s) = b(s) I_{s} \, ds \), where \( b(s) \) is the annuity benefit payable continuously over the development of the policy for the insured life \( (x) \).}  Notably, both mortality and interest rates are stochastic processes evaluated with information at time \( t \), as they are not deterministically known at the time of policy issuance (i.e., at time zero). 
 
 \color{blue}{The expected value of the future discounted payments $dB(y)$ is denoted by:
 
@@ -865,7 +867,7 @@ The primary advantage of our approach lies in its ability to capture the simulta
 
 Traditionally, actuaries and risk managers have analyzed changes in interest and mortality rates in isolation, often overlooking their simultaneous interaction. However, in reality, mortality and interest rates evolve together, with durations and entropies dynamically adjusting to the changing economic-demographic environment. Although the correlation between mortality and interest rates remains an open question, both clearly influence the value of life annuities and reserves. The differential equations presented here explicitly account for this simultaneous behavior and the evolving sensitivities to mortality and interest rates.
 
-A notable strength of these equations is their flexibility. Being model-free, they provide general expressions for the time dynamics of life annuities, avoiding restrictive assumptions about the underlying demographic or economic environment. One of their most valuable applications lies in monitoring the sources of change in life annuity portfolios using real-world data. \color{blue}To illustrate this, we applied our framework to data from the United Kingdom from 1841 to 2021,\color{black} yielding data-driven insights into the evolution of life annuity portfolios at granular levels, such as age-term-specific contributions and causes of death.
+A notable strength of these equations is their flexibility. Being model-free, they provide general expressions for the time dynamics of life annuities, avoiding restrictive assumptions about the underlying demographic or economic environment. One of their most valuable applications lies in monitoring the sources of change in life annuity portfolios using real-world data. \color{blue}To illustrate this, we applied our framework to data from the United Kingdom from 1841 to 2021, \color{black} yielding data-driven insights into the evolution of life annuity portfolios at granular levels, such as age-term-specific contributions and causes of death.
 
 
 While this article focuses primarily on the time dynamics of life annuities and reserves, the framework we propose is readily extendable to other life-contingent products. Future developments could incorporate lump sums, expenses, and more complex payment processes, broadening the applicability of this approach.
@@ -874,7 +876,17 @@ An important direction for future research is the adaptation of these equations 
 
 Looking ahead, we anticipate that the differential equations developed in this paper could find broad applications in both actuarial practice and academic research. Regardless of the specific application, the ability of these equations to provide valuable insights into the time dynamics of life annuities ensures their continued relevance and utility in advancing the field.
 
-\newpage
+\subsection*{Declaration of competing interest}
+
+The authors declare that they have no known competing financial
+interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\subsection*{Declaration of generative AI and AI-assisted technologies}
+
+During the preparation of this work, the authors used ChatGPT in
+order to improve the readability and language of the manuscript in the
+writing process. After using this tool/service, the authors reviewed
+and edited the content as needed, and takes full responsibility for the content of the published article.
 
 \bibliographystyle{apalike}
 %\bibliography{/Users/Jesus/Documents/Papers/BibTex/Proposal}
