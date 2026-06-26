@@ -125,7 +125,7 @@ We begin by developing differential equations for a deterministic single life an
 
 Our equations are simple, intuitive, and easily applicable, enabling actuaries and risk managers to assess the financial and longevity risks embedded in their life annuity portfolios. From an actuarial perspective, these differential equations provide valuable insights for developing strategies to improve risk management by leveraging well-established concepts from mathematical demography and immunization theory.
 
-The remainder of the article is structured as follows. In Section \ref{sec:SensitivityMortalityInterest}, we review key results from the actuarial and demographic literature on mortality and interest rate sensitivities. Section \ref{sec:TimeDynamics} presents a set of differential equations for the time dynamics of life annuities in the deterministic case. Section \ref{sec:UK_Illustration} illustrates the application of our equations using historical data from the United Kingdom.  In Section \ref{sec:Reserves}, the equations are extended to the stochastic representation of annuity reserves. Lastly, we conclude with a discussion on the potential applications of the equations developed in this paper. The code to replicate the results and all derivations presented in this article are available in the open-source repository: \textit{link available upon publication}.
+The remainder of the article is structured as follows. In Section \ref{sec:SensitivityMortalityInterest}, we review key results from the actuarial and demographic literature on mortality and interest rate sensitivities. Section \ref{sec:TimeDynamics} presents a set of differential equations for the time dynamics of life annuities in the deterministic case. Section \ref{sec:UK_Illustration} illustrates the application of our equations using historical data from the United Kingdom.  In Section \ref{sec:Reserves}, the equations are extended to the stochastic representation of annuity reserves. Lastly, we conclude with a discussion on the potential applications of the equations developed in this paper. The code to replicate the results and all derivations presented in this article are available in the open-source repository: https://github.com/jssalvrz/TimeAnnuities.
 
 
 
@@ -277,7 +277,7 @@ where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) \, ds$. Analo
 
 
 
-{\textbf{{Changes in $\bar{a}_x(t)$ with Respect to Interest}}
+\textbf{Changes in $\bar{a}_x(t)$ with Respect to Interest}
 
 
 Similar to the entropy, changes in $\bar{a}_x(t)$ with respect to $\delta(s,t)$ can be assumed to be either constant or proportional. For the former case, where changes are constant (or parallel), duration is expressed as \color{blue}(see proof in Appendix \ref{sec:DurConst})\color{black}:
@@ -713,7 +713,7 @@ Let us recall that in Section \ref{preliminaries}, we defined time variable \(t\
 
 Let us now define a probability space \( \{\Omega, \mathcal{F}, \mathbb{P}\} \), with \(\textbf{F} = \{\mathcal{F}_t\}\) representing a family of sub-\(\sigma\)-algebras that encodes the information available at time \( t \) regarding the economic-demographic environment. \revision{Assume that the insured invididual $(x)$ is age $x$ at time 0 and let \( I_{s} = \mathds{1}_{\{S_x > s\}} \) and \( \mathbb{E}[I_{s} | \mathcal{F}_t] = {}_s p_x(t) \). We define the payment stream process as \( dB(s) = b(s) I_{s} \, ds \), where \( b(s) \) is the annuity benefit payable continuously over the development of the policy for the insured life \( (x) \).}  Notably, both mortality and interest rates are stochastic processes evaluated with information at time \( t \), as they are not deterministically known at the time of policy issuance (i.e., at time zero). 
 
-\color{blue}{The expected value of the future discounted payments $dB(y)$ is denoted by:
+\color{blue}The expected value of the future discounted payments $dB(y)$ is denoted by:
 
 
 \begin{equation}\label{eq:Reserve1}
@@ -976,7 +976,7 @@ where ${h}^{p}_{x}(t)=\int_0^\infty \mu(x+s,t)   {}_s|\bar{a}_x(t) ds$.
 Expanding $e^{-\gamma s}$ as $1-\gamma s+\frac{\gamma^2}{2} s^{2} +...$, we have that
 
 
-\begin{equation}\label{eq:DurationConst1}
+\begin{equation}\label{eq:DurationConstExpansion}
 \begin{split}
 \bar{a}_{x}(t) &= \int_0^\infty {}_sp_x(t) {v}(s,t)[1-\gamma s+\frac{\gamma^2}{2} s^{2} +...]ds
 \end{split}
